@@ -9,8 +9,7 @@
 
 
 
-//定数読み込み
-require './../config.php';
+//読み込み
 require './func.php';
 
 
