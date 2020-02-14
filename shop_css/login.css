@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/*初期化*/
+*{
+	margin:0px;
+	padding:0px;
+}
+html{
+	scroll-behavior: smooth;
+}
+li{
+	list-style-type: none;
+	list-style-position: outside;
+}
+a{
+	text-decoration: none;
+}
+div{
+   box-sizing: border-box;
+}
+img{
+	height: 80vh;
+}
+/*-----------------------------------------*/
+
+/*---------------center----------------*/
+.center{
+    width: 75%;
+    margin: auto;
+}
+
+/*--------------header--------------*/
+#header{
+    border-bottom: solid 1px #c4c2c2;
+    outline: solid 3px #e9e7e7;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+/*-----------content-----------*/
+#login{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+#login table{
+    margin: auto;
+}
+#login table td{
+    padding: 5px;
+}
+.btn{
+    text-align: center;
+}
+#login a{
+    font-size: 0.8em;
+}
