@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>新規登録　確認</title>
-        <link rel="stylesheet" href="css/S_login.css">
+        <link rel="stylesheet" href="../shop_css/sign_up2.css">
     </head>
     <body>
         <div id="wrapper">
