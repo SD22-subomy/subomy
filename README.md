@@ -14,8 +14,18 @@
 10. 作業ブランチからリモートのmasterにpull request
 
 ## コマンドプロンプト(ターミナル)で上記の流れを追う
-> 番号は一致していない。
+> 上記の番号とは一致していない。
 1. cd {subomyのフォルダまでのパス}
 2. git branch
-> 現在のローカルのブランチを全て表示かつ、現在いるブランチを確認
-3. 
+3. git pull
+4. git branch {新しい作業プランチ}      // 以下作業ブランチ
+5. git checkout {作業ブランチ}
+6. 編集
+7. git add .
+8. git commit -m "{コメント}"
+9. git checkout master
+10. git pull
+11. git checkout {作業ブランチ}
+12. git merge master
+13. git push origin {作業ブランチ}
+14. GitHubに移動し、以下上記と同様
