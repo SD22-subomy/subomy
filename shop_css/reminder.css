@@ -46,18 +46,57 @@ img{
     border-left: 5px solid #CC0000;
 }
 #navi{
-    margin-top: 10px;
-
+    margin: 10px 0 10px 0;
 }
 #navi ul{
     display: flex;
     font-size: 0.9em;
 }
-#navi li:first-child{
+#navi li{
+    padding: 5px;
+    border: solid 1px #c4c2c2;
+    font-size: 0.8em;
+}
+.color{
     background-color: #CC0000;
     color: #fff;
-    padding: 5px;
+}
+.san:first-child{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #CC0000;
 }
 #c_right{
     width: 20%;
+}
+
+#left_con{
+    font-size: 0.8em;
+    width: 800px;
+    padding: 10px;
+}
+#left_con table{
+    margin: auto;
+    border-collapse: collapse;
+}
+#left_con form{
+    margin: 20px;
+}
+#left_con table th{
+    background-color: #e9e7e7;
+    font-weight: 500;
+    width: 200px;
+}
+#left_con table th,#left_con table tr{
+    border: solid 1px #c4c2c2;
+    padding: 10px;
+}
+#left_con table tr td:nth-child(2){
+    width: 400px;
+}
+#left_con table input{
+    height: 20px;
+    margin: 5px;
 }
