@@ -11,7 +11,7 @@
 <body>
  
 <h1>管理画面</h1>
-
+<a href="user_info"><div>利用者一覧</div></a>
 
 </body>
 
