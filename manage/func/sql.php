@@ -6,7 +6,7 @@ require_once './../../config.php';
  * 
  * 
  */
-function select_user() {
+function select_user_all() {
   $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
   mysqli_set_charset($cn,'utf8');
   $sql = "SELECT * from user ;";
