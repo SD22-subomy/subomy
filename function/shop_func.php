@@ -10,7 +10,7 @@
 
 
 //読み込み
-require './func.php';
+require_once './func.php';
 
 
 /**

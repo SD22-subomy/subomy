@@ -1,6 +1,6 @@
 <?php
 /*---------------------------------------
-/* pg_name: shop_login
+/* pg_name: main_func
 /*---------------------------------------
 /* HEW team3:
 /*---------------------------------------
@@ -10,7 +10,7 @@
 
 
 //読み込み
-require './../config.php';
+require_once './../config.php';
 
 
 
@@ -46,5 +46,43 @@ function isEmail(string $address)
   }
   return false;
 }
+
+
+/**
+ * 渡されたパスワードをすべて*にする関数
+ *
+ * @param string $pass 変換したい文字列
+ * @return string すべて*になった文字列
+ */
+function wrap_pass(string $pass)
+{
+  return str_repeat('*', strlen($pass));
+}
+
+
+/**
+ * 指定したDBの情報を全て取って配列に格納する関数
+ *
+ * @param string $db 取り出したいDB名
+ * @return array 取得したレコードの二次元配列
+ */
+function read_db(string $db)
+{
+  $list = [];
+  /*--------------データベース接続-------------------------*/
+  $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+  mysqli_set_charset($cn,"utf8");
+  $sql = "SELECT * FROM ".$db.";";
+  var_dump($sql);
+  $result = mysqli_query($cn,$sql);
+  mysqli_close($cn);
+
+  while($row = mysqli_fetch_assoc($result)){
+    $list[] = $row;
+  }
+
+  return $list;
+}
+
 
 ?>
