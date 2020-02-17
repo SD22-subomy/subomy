@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>ログインID・パスワードの確認</title>
-        <link rel="stylesheet" href="css/reminder.css">
+        <link rel="stylesheet" href="../shop_css/reminder.css">
     </head>
     <body>
         <div id="wrapper">
@@ -14,19 +14,19 @@
             <div id="content">
                 <div class="center">
                     <div id="c_left">
-                        <h3>ログインID・パスワードの確認</h3>
-                        <div id="navi">
-                            <ul>
-                                <li>店舗番号・通知用メールアドレスの入力</li>
+                        <h2>ログインID・パスワードの確認</h2>
+                        <div id="nav">
+                            <ul id="navi">
+                                <li class="color">店舗番号・通知用メールアドレスの入力</li><span class="san"></span>
                                 <li>店舗番号・通知用メールアドレスの確認</li>
                                 <li>ログインID・仮パスワードの送信</li>
                             </ul>
                         </div>
-                        <div id="">
+                        <div id="left_con">
                             <div id="err">
                                 <p>
                                     入力された店舗番号、もしくは通知用メールアドレスが
-                                    現在登録されているものと一致しませんでした。
+                                    現在登録されているものと一致しませんでした。<br>
                                     ご確認の上、再度入力してください。
                                 </p>
                             </div>
@@ -38,32 +38,38 @@
                             <form action="" method="">
                                 <table>
                                     <tr>
-                                        <td>店舗番号</td>
+                                        <th>店舗番号</th>
                                         <td><input type="text" name="" placeholder="例）a123456"></td>
                                     </tr>
                                     <tr>
-                                        <td>通知用メールアドレス</td>
-                                        <td><input type="text" name="" placeholder="メールアドレス"></td>
+                                        <th>通知用メールアドレス</th>
+                                        <td><input type="text" class="mail" name="" placeholder="メールアドレス"></td>
                                     </tr>
                                 </table>
                             </form>
                             <div id="veri">
-                                <h3>今一度ご確認ください。</h3>
-                                <p>大文字と小文字を間違って入力していませんか？</p>
-                                <p>余計な文字やスペースが入力されていませんか？</p>
+                                <div id="bun">
+                                    <h3>今一度ご確認ください。</h3>
+                                    <p>大文字と小文字を間違って入力していませんか？</p>
+                                    <p>余計な文字やスペースが入力されていませんか？</p>    
+                                </div>
+                            </div>
+                            <div id="btn">
+                                <input type="submit" name="" value="戻る">
+                                <input type="submit" name="" value="確認する">
                             </div>
                         </div>
                     </div>
                     <div id="c_right">
-                        <h3>仮パスワード発行までの流れ</h3>
+                        <h2>仮パスワード発行までの流れ</h3>
                         <div id="R_content">
                             <div id="step1">
                                 <p>
                                     通知用メールアドレスは<br>
                                     <span>
                                         <ul>
-                                            <li>ご登録済みですか？</li>
-                                            <li>ご利用可能ですか？</li>
+                                            <li>・ご登録済みですか？</li>
+                                            <li>・ご利用可能ですか？</li>
                                         </ul>
                                     </span>
                                 </p>
@@ -77,7 +83,7 @@
                                         <p>「ログインID・パスワードの確認」で店舗番号、通知用メールアドレスを入力・送信し、メールにてお取り寄せください。</p>
                                     </div>
                                     <div class="yes">
-                                        <p>yes</p>
+                                        <p>YES</p>
                                     </div>
                                     <div id="step3">
                                         <p>メールに記載されているID・仮パスワードでログイン</p>
@@ -85,9 +91,10 @@
                                 </div>
                                 <div id="no">
                                     <p>NO</p>
+                                    <p class="san"></p>
                                 </div>
                             </div>
-                            <div >
+                            <div id="support">
                                 <p>
                                     ご登録されている通知用メールアドレスを忘れてしまった場合やご利用できなくなっている場合は、サポートセンター までお問い合わせください。
                                 </p>
