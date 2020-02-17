@@ -21,6 +21,7 @@
                             <li>完了</li>
                         </ul>
                     </div>
+<<<<<<< HEAD:shop/shop_tpl/sign_up1.html
                     <form action="" method="">
                         <p class="keikoku">全ての項目は必須です</p>
                         <table>
@@ -43,6 +44,30 @@
                             <tr>
                                 <th>パスワード</th>
                                 <td><input type="password" name=""></td>
+=======
+                    <form action="sign_up2.php" method="post">
+                        <p>全ての項目は必須です</p>
+                        <table>
+                            <tr>
+                                <td>店舗名</td>
+                                <td><input type="text" name="name"></td>
+                            </tr>
+                            <tr>
+                                <td>店舗住所</td>
+                                <td><input type="text" name="address"></td>
+                            </tr>
+                            <tr>
+                                <td>電話番号</td>
+                                <td><input type="text" name="tel"></td>
+                            </tr>
+                            <tr>
+                                <td>メールアドレス</td>
+                                <td><input type="email" name="mail"></td>
+                            </tr>
+                            <tr>
+                                <td>パスワード</td>
+                                <td><input type="password" name="pass"></td>
+>>>>>>> 8f9e74beec9d527dd404588496e4a5f59fc429bf:shop/shop_tpl/sign_up1.php
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="submit" value="次へ"></td>

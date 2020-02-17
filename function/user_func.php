@@ -10,7 +10,7 @@
 
 
 //読み込み
-require_once './func.php';
+require_once(dirname(__FILE__).'./func.php');
 
 
 /**

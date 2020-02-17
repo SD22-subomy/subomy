@@ -1,14 +1,13 @@
 <?php
 /*---------------------------------------
-/* pg_name: controller
+/* pg_name: user_top
 /*---------------------------------------
 /* HEW-team3:
 /*---------------------------------------
-/* date: 2020/02/15
+/* date: 2020/02/17
 /*--------------------------------------*/
 
-require_once './../function/user_func.php';
 
-session_start();
+require_once 'user_tpl/top_page.html';
 
 ?>
