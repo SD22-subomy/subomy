@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>新規登録</title>
-        <link rel="stylesheet" href="css/S_login.css">
+        <link rel="stylesheet" href="../shop_css/sign_up1.css">
     </head>
     <body>
         <div id="wrapper">
@@ -16,7 +16,7 @@
                     <h2>新規登録</h2>
                     <div id="navi">
                         <ul>
-                            <li>入力</li>
+                            <li class="color">入力</li>
                             <li>確認</li>
                             <li>完了</li>
                         </ul>
