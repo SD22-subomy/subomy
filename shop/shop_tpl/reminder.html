@@ -15,14 +15,11 @@
                 <div class="center">
                     <div id="c_left">
                         <h2>ログインID・パスワードの確認</h2>
-                        <div id="navi">
-                            <ul>
-                                <li class="color">店舗番号・通知用メールアドレスの入力</li>
-                                <li class="san color"></li>
+                        <div id="nav">
+                            <ul id="navi">
+                                <li class="color">店舗番号・通知用メールアドレスの入力</li><span class="san"></span>
                                 <li>店舗番号・通知用メールアドレスの確認</li>
-                                <li class="san"></li>
                                 <li>ログインID・仮パスワードの送信</li>
-                                <ll class="san"></ll>
                             </ul>
                         </div>
                         <div id="left_con">
@@ -39,31 +36,33 @@
                                     </tr>
                                     <tr>
                                         <th>通知用メールアドレス</th>
-                                        <td><input type="text" name="" placeholder="メールアドレス"></td>
+                                        <td><input type="text" class="mail" name="" placeholder="メールアドレス"></td>
                                     </tr>
-                                    <!-- <tr>
-                                        <td><input type="submit" name="" value="確認する"></td>
-                                        <td><input type="submit" name="" value="戻る"></td>
-                                    </tr> -->
                                 </table>
                             </form>
                             <div id="veri">
-                                <h3>今一度ご確認ください。</h3>
-                                <p>大文字と小文字を間違って入力していませんか？</p>
-                                <p>余計な文字やスペースが入力されていませんか？</p>
+                                <div id="bun">
+                                    <h3>今一度ご確認ください。</h3>
+                                    <p>大文字と小文字を間違って入力していませんか？</p>
+                                    <p>余計な文字やスペースが入力されていませんか？</p>    
+                                </div>
+                            </div>
+                            <div id="btn">
+                                <input type="submit" name="" value="戻る">
+                                <input type="submit" name="" value="確認する">
                             </div>
                         </div>
                     </div>
                     <div id="c_right">
-                        <h3>仮パスワード発行までの流れ</h3>
+                        <h2>仮パスワード発行までの流れ</h3>
                         <div id="R_content">
                             <div id="step1">
                                 <p>
                                     通知用メールアドレスは<br>
                                     <span>
                                         <ul>
-                                            <li>ご登録済みですか？</li>
-                                            <li>ご利用可能ですか？</li>
+                                            <li>・ご登録済みですか？</li>
+                                            <li>・ご利用可能ですか？</li>
                                         </ul>
                                     </span>
                                 </p>
@@ -77,7 +76,7 @@
                                         <p>「ログインID・パスワードの確認」で店舗番号、通知用メールアドレスを入力・送信し、メールにてお取り寄せください。</p>
                                     </div>
                                     <div class="yes">
-                                        <p>yes</p>
+                                        <p>YES</p>
                                     </div>
                                     <div id="step3">
                                         <p>メールに記載されているID・仮パスワードでログイン</p>
@@ -85,9 +84,10 @@
                                 </div>
                                 <div id="no">
                                     <p>NO</p>
+                                    <p class="sita"></p>
                                 </div>
                             </div>
-                            <div >
+                            <div id="support">
                                 <p>
                                     ご登録されている通知用メールアドレスを忘れてしまった場合やご利用できなくなっている場合は、サポートセンター までお問い合わせください。
                                 </p>
