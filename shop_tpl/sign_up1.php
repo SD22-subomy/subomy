@@ -21,33 +21,33 @@
                             <li>完了</li>
                         </ul>
                     </div>
-                    <form action="" method="">
+                    <form action="sign_up2.php" method="post">
                         <p>全ての項目は必須です</p>
                         <table>
                             <tr>
                                 <td>店舗名</td>
-                                <td><input type="text" name=""></td>
+                                <td><input type="text" name="name"></td>
                             </tr>
                             <tr>
                                 <td>店舗住所</td>
-                                <td><input type="text" name=""></td>
+                                <td><input type="text" name="address"></td>
                             </tr>
                             <tr>
                                 <td>電話番号</td>
-                                <td><input type="tel" name=""></td>
+                                <td><input type="text" name="tel"></td>
                             </tr>
                             <tr>
                                 <td>メールアドレス</td>
-                                <td><input type="text" name=""></td>
+                                <td><input type="email" name="mail"></td>
                             </tr>
                             <tr>
                                 <td>パスワード</td>
-                                <td><input type="pass" name=""></td>
+                                <td><input type="password" name="pass"></td>
                             </tr>
                             <tr>
                                 <td><input type="submit" value="次へ"></td>
                             </tr>
-                        </table>    
+                        </table>
                     </form>
                 </div>
             </div>

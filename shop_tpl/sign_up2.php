@@ -21,34 +21,34 @@
                             <li>完了</li>
                         </ul>
                     </div>
-                    <form action="" method="">
-                        <p>全ての項目は必須です</p>
+                    <form action="func_signup1.html" method="post">
+                        <p>この内容でよろしいですか</p>
                         <table>
                             <tr>
                                 <td>店舗名</td>
-                                <td><input type="text" name=""></td>
+                                <td><?php echo $_POST['name']; ?></td>
                             </tr>
                             <tr>
                                 <td>店舗住所</td>
-                                <td><input type="text" name=""></td>
+                                <td><?php echo $_POST['address']; ?></td>
                             </tr>
                             <tr>
                                 <td>電話番号</td>
-                                <td><input type="tel" name=""></td>
+                                <td><?php echo $_POST['tel']; ?></td>
                             </tr>
                             <tr>
                                 <td>メールアドレス</td>
-                                <td><input type="text" name=""></td>
+                                <td><?php echo $_POST['mail']; ?></td>
                             </tr>
                             <tr>
                                 <td>パスワード</td>
-                                <td><input type="pass" name=""></td>
+                                <td><?php echo $_POST['pass']; ?></td>
                             </tr>
                             <tr>
-                                <td><input type="submit" value="戻る"></td>
+                                <td><input type="submit" value="戻る" ></td>
                                 <td><input type="submit" value="次へ"></td>
                             </tr>
-                        </table>    
+                        </table>
                     </form>
                 </div>
             </div>
