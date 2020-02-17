@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/*初期化*/
+*{
+	margin:0px;
+	padding:0px;
+}
+html{
+	scroll-behavior: smooth;
+}
+li{
+	list-style-type: none;
+	list-style-position: outside;
+}
+a{
+	text-decoration: none;
+}
+div{
+   box-sizing: border-box;
+}
+img{
+	height: 80vh;
+}
+/*--------------header--------------*/
+#header{
+    border-bottom: solid 1px #c4c2c2;
+    outline: solid 3px #e9e7e7;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+/*---------------center----------------*/
+.center{
+    width: 75%;
+    margin: auto;
+    display: flex;
+}
+/*-----------c_left-----------*/
+#c_left{
+    width: 80%;
+}
+#c_left h2{
+    font-size: 1em;
+    margin: 0;
+    padding: 0 0 0 5px;
+    border-left: 5px solid #CC0000;
+}
+#navi{
+    margin: 10px 0 10px 0;
+}
+#navi ul{
+    display: flex;
+    font-size: 0.9em;
+}
+#navi li{
+    padding: 5px;
+    border: solid 1px #c4c2c2;
+    font-size: 0.8em;
+}
+.color{
+    background-color: #CC0000;
+    color: #fff;
+}
+.san:first-child{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #CC0000;
+}
+#c_right{
+    width: 20%;
+}
+
+#left_con{
+    font-size: 0.8em;
+    width: 800px;
+    padding: 10px;
+}
+#left_con table{
+    margin: auto;
+    border-collapse: collapse;
+}
+#left_con form{
+    margin: 20px;
+}
+#left_con table th{
+    background-color: #e9e7e7;
+    font-weight: 500;
+    width: 200px;
+}
+#left_con table th,#left_con table tr{
+    border: solid 1px #c4c2c2;
+    padding: 10px;
+}
+#left_con table tr td:nth-child(2){
+    width: 400px;
+}
+#left_con table input{
+    height: 20px;
+    margin: 5px;
+}
