@@ -8,6 +8,6 @@
 /*--------------------------------------*/
 
 
-echo 'user_TOP';
+require_once 'user_tpl/top_page.html';
 
 ?>
