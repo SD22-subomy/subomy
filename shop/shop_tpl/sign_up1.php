@@ -21,56 +21,46 @@
                             <li>完了</li>
                         </ul>
                     </div>
-<<<<<<< HEAD:shop/shop_tpl/sign_up1.html
-                    <form action="" method="">
+                    <form action="../func/sign_up1.php" method="post">
                         <p class="keikoku">全ての項目は必須です</p>
                         <table>
                             <tr>
                                 <th>店舗名</th>
-                                <td><input type="text" name=""></td>
+                                <td>
+                                    <input type="text" name="name" value= "<?php if (!empty($_POST['name'])) {print$_POST['name'];} ?>"><br>
+                                    <span class = "err"><?= $msg[0] ?></span>
+                                </td>
                             </tr>
                             <tr>
                                 <th>店舗住所</th>
-                                <td><textarea wrap="soft" name=""></textarea></td>
+                                <td>
+                                    <textarea wrap="soft" name="address"><?php if (!empty($_POST['address'])) {print$_POST['address'];} ?></textarea><br>
+                                    <span class = "err"><?= $msg[1] ?></span>
+                                </td>
                             </tr>
                             <tr>
                                 <th>電話番号</th>
-                                <td><input type="text" name=""></td>
+                                <td>
+                                    <input type="text" name="tel" value= "<?php if (!empty($_POST['tel'])) {print$_POST['tel'];} ?>"><br>
+                                    <span class = "err"><?= $msg[2] ?></span>
+                                </td>
                             </tr>
                             <tr>
                                 <th>メールアドレス</th>
-                                <td><input type="text" name=""></td>
+                                <td>
+                                    <input type="text" name="mail" value= "<?php if (!empty($_POST['mail'])) {print$_POST['mail'];} ?>"><br>
+                                    <span class = "err"><?= $msg[3] ?></span>
+                                </td>
                             </tr>
                             <tr>
                                 <th>パスワード</th>
-                                <td><input type="password" name=""></td>
-=======
-                    <form action="sign_up2.php" method="post">
-                        <p>全ての項目は必須です</p>
-                        <table>
-                            <tr>
-                                <td>店舗名</td>
-                                <td><input type="text" name="name"></td>
+                                <td>
+                                    <input type="password" name="pass"><br>
+                                    <span class = "err"><?= $msg[4] ?></span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>店舗住所</td>
-                                <td><input type="text" name="address"></td>
-                            </tr>
-                            <tr>
-                                <td>電話番号</td>
-                                <td><input type="text" name="tel"></td>
-                            </tr>
-                            <tr>
-                                <td>メールアドレス</td>
-                                <td><input type="email" name="mail"></td>
-                            </tr>
-                            <tr>
-                                <td>パスワード</td>
-                                <td><input type="password" name="pass"></td>
->>>>>>> 8f9e74beec9d527dd404588496e4a5f59fc429bf:shop/shop_tpl/sign_up1.php
-                            </tr>
-                            <tr>
-                                <td colspan="2"><input type="submit" value="次へ"></td>
+                                <td colspan="2"><input type="submit" value="次へ" name="next"></td>
                             </tr>
                         </table>
                     </form>
