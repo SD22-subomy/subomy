@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>新規会員確認画面</title>
+<title>登録確認画面</title>
 <link rel="stylesheet" href="#">
 </head>
 <body>
@@ -19,29 +19,29 @@
                 <table>
                     <tr>
                         <td>氏名:</td>
-                        <td><input type="text" name="name"></td>
+                        <td><?php echo $_SESSION['name'];?></td>
                     </tr>
                     <tr>
                         <td>電話番号:</td>
-                        <td><input type="password" name="tel"></td>
+                        <td><?php echo $_SESSION['tel'];?></td>
                     </tr>
                     <tr>
                         <td>性別:</td>
                         <td>
-                            <input type="radio" name="gender" value="0" checked>男
-                            <input type="radio" name="gender" value="1">女
+                            <?php echo($_SESSION['gender'] == 0 ? '男':'女');?>
                         </td>
                     </tr>
                     <tr>
                         <td>メールアドレス:</td>
-                        <td><input type="text" name="mail"></td>
+                        <td><?php echo $_SESSION['mail'];?></td>
                     </tr>
                     <tr>
                         <td>パスワード:</td>
-                        <td><input type="text" name="pass"></td>
+                        <td><?php echo $_SESSION['pass'];?></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name='send' value="確認"></td>
+                        <td><input type="submit" name="back" value="戻る"></td>
+                        <td><input type="submit" name="regist" value="登録"></td>
                     </tr>
                 </table>
             </form>
