@@ -16,7 +16,7 @@
     <div id="content">
         <div class="center">
             <form action="" method="POST">
-                <p>登録をされていない方は<a href="./controller/sign_up.php">こちら</a></p>
+                <p>登録をされていない方は<a href="./sign_up.php">こちら</a></p>
                 <table>
                     <tr>
                         <td>メールアドレス:</td>
