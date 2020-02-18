@@ -23,6 +23,10 @@ require_once(dirname(__FILE__).'./func.php');
 
 function user_login($mail,$pass){
 
+    if(empty($mail) || empty($pass)){
+        return false;
+    }
+
     /*--------------データベース処理-------------------------*/
     $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
     mysqli_set_charset($cn,'utf8');
