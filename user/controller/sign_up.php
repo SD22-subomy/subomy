@@ -33,8 +33,6 @@ if(isset($_POST['send'])){
 		exit;
 	}else{
 
-		if(empty($name))
-
 		$_SESSION['pass'] = '';
 		require_once './../user_tpl/sign_up.php';
 		exit;
@@ -43,7 +41,11 @@ if(isset($_POST['send'])){
 
 if(isset($_POST['back'])){
 
-	$_SESSION['pass'] = '';
+	$name = $_SESSION['name'];
+	$tel = $_SESSION['tel'];
+	$gender = $_SESSION['gender'];
+	$mail = $_SESSION['mail'];
+	$pass = '';
 	require_once './../user_tpl/sign_up.php';
 	exit;
 }

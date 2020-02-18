@@ -34,7 +34,7 @@ function user_login($mail,$pass){
     /*----メッセージを返す------------------*/
     // if(is_null($row['pass'])){
     //     $msg = 'メールアドレスが正しくありません';
-	// }else if($row['pass'] == h($pass)){
+    // }else if($row['pass'] == h($pass)){
     //     $msg = 'ログイン完了';
     // }else{
     //     $msg = 'パスワードが正しくありません';
@@ -65,7 +65,7 @@ function user_regist($name,$tel,$gender,$mail,$pass){
     /*--------------データベース処理-------------------------*/
     $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
     mysqli_set_charset($cn,'utf8');
-	$sql = "INSERT INTO user(name,tel,gender,mail,pass)VALUES('".$name."','".$tel."','".$gender."','".$mail."','".$pass."');";
+    $sql = "INSERT INTO user(name,tel,gender,mail,pass)VALUES('".$name."','".$tel."','".$gender."','".$mail."','".$pass."');";
     mysqli_query($cn,$sql);
     mysqli_close($cn);
 
@@ -119,12 +119,18 @@ function user_tel_exist($tel){
 /**
  * ＜利用者＞新規会員登録時に入力情報が正しいか調べる関数
  *
+ * @param string $name 入力氏名
  * @param string $tel 入力電話番号
  * @param string $mail 入力メールアドレス
+ * @param string $pass 入力パスワード
  * @return bool 登録可能な場合はtrue 不可能な場合はfalse
  */
 
-function user_regist_check($tel,$mail){
+function user_regist_check($name,$tel,$mail,$pass){
+
+    if(empty($name) || empty($tel) || empty($mail) ||empty($pass)){
+        return false;
+    }
 
     if(is_numeric($tel) && isEmail($mail)){
         if(user_tel_exist($tel) || user_mail_exist($mail)){

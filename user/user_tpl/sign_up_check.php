@@ -19,25 +19,25 @@
                 <table>
                     <tr>
                         <td>氏名:</td>
-                        <td><?php echo $_SESSION['name'];?></td>
+                        <td><?php echo $name;?></td>
                     </tr>
                     <tr>
                         <td>電話番号:</td>
-                        <td><?php echo $_SESSION['tel'];?></td>
+                        <td><?php echo $tel;?></td>
                     </tr>
                     <tr>
                         <td>性別:</td>
                         <td>
-                            <?php echo($_SESSION['gender'] == 0 ? '男':'女');?>
+                            <?php echo($gender == 0 ? '男':'女');?>
                         </td>
                     </tr>
                     <tr>
                         <td>メールアドレス:</td>
-                        <td><?php echo $_SESSION['mail'];?></td>
+                        <td><?php echo $mail;?></td>
                     </tr>
                     <tr>
                         <td>パスワード:</td>
-                        <td><?php echo $_SESSION['pass'];?></td>
+                        <td><?php echo $pass;?></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="back" value="戻る"></td>
