@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>新規登録　確認</title>
-        <link rel="stylesheet" href="../shop_css/sign_up2.css">
+        <link rel="stylesheet" href="../shop_css/sign_up1.css">
     </head>
     <body>
         <div id="wrapper">
@@ -14,34 +14,34 @@
             <div id="content">
                 <div class="center">
                     <h2>新規登録</h2>
-                    <div id="navi">
-                        <ul>
+                    <div id="nav">
+                        <ul id="navi">
                             <li>入力</li>
-                            <li>確認</li>
+                            <li class="color">確認</li>
                             <li>完了</li>
                         </ul>
                     </div>
-                    <form action="func_signup1.html" method="post">
-                        <p>この内容でよろしいですか</p>
+                    <form action="sign_up2.php" method="post">
+                        <p class="keikoku">この内容でよろしいですか</p>
                         <table>
                             <tr>
-                                <td>店舗名</td>
+                                <th>店舗名</th>
                                 <td><?php echo $_POST['name']; ?></td>
                             </tr>
                             <tr>
-                                <td>店舗住所</td>
+                                <th>店舗住所</th>
                                 <td><?php echo $_POST['address']; ?></td>
                             </tr>
                             <tr>
-                                <td>電話番号</td>
+                                <th>電話番号</th>
                                 <td><?php echo $_POST['tel']; ?></td>
                             </tr>
                             <tr>
-                                <td>メールアドレス</td>
+                                <th>メールアドレス</th>
                                 <td><?php echo $_POST['mail']; ?></td>
                             </tr>
                             <tr>
-                                <td>パスワード</td>
+                                <th>パスワード</th>
                                 <td><?php echo $_POST['pass']; ?></td>
                             </tr>
                             <tr>

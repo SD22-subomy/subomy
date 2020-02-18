@@ -14,38 +14,53 @@
             <div id="content">
                 <div class="center">
                     <h2>新規登録</h2>
-                    <div id="navi">
-                        <ul>
+                    <div id="nav">
+                        <ul id="navi">
                             <li class="color">入力</li>
                             <li>確認</li>
                             <li>完了</li>
                         </ul>
                     </div>
-                    <form action="sign_up2.php" method="post">
-                        <p>全ての項目は必須です</p>
+                    <form action="../func/sign_up1.php" method="post">
+                        <p class="keikoku">全ての項目は必須です</p>
                         <table>
                             <tr>
-                                <td>店舗名</td>
-                                <td><input type="text" name="name"></td>
+                                <th>店舗名</th>
+                                <td>
+                                    <input type="text" name="name" value= "<?php if (!empty($_POST['name'])) {print$_POST['name'];} ?>"><br>
+                                    <span class = "err"><?= $msg[0] ?></span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>店舗住所</td>
-                                <td><input type="text" name="address"></td>
+                                <th>店舗住所</th>
+                                <td>
+                                    <textarea wrap="soft" name="address"><?php if (!empty($_POST['address'])) {print$_POST['address'];} ?></textarea><br>
+                                    <span class = "err"><?= $msg[1] ?></span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>電話番号</td>
-                                <td><input type="text" name="tel"></td>
+                                <th>電話番号</th>
+                                <td>
+                                    <input type="text" name="tel" value= "<?php if (!empty($_POST['tel'])) {print$_POST['tel'];} ?>"><br>
+                                    <span class = "err"><?= $msg[2] ?></span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>メールアドレス</td>
-                                <td><input type="email" name="mail"></td>
+                                <th>メールアドレス</th>
+                                <td>
+                                    <input type="text" name="mail" value= "<?php if (!empty($_POST['mail'])) {print$_POST['mail'];} ?>"><br>
+                                    <span class = "err"><?= $msg[3] ?></span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>パスワード</td>
-                                <td><input type="password" name="pass"></td>
+                                <th>パスワード</th>
+                                <td>
+                                    <input type="password" name="pass"><br>
+                                    <span class = "err"><?= $msg[4] ?></span>
+                                </td>
                             </tr>
                             <tr>
-                                <td><input type="submit" value="次へ"></td>
+                                <td colspan="2"><input type="submit" value="次へ" name="next"></td>
                             </tr>
                         </table>
                     </form>
