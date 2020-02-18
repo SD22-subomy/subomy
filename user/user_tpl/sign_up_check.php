@@ -15,7 +15,7 @@
 
     <div id="content">
         <div class="center">
-            <form action="#" method="POST">
+            <form action="" method="POST">
                 <table>
                     <tr>
                         <td>氏名:</td>

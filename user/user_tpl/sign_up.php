@@ -15,26 +15,26 @@
 
     <div id="content">
         <div class="center">
-            <form action="#" method="POST">
+            <form action="" method="POST">
                 <table>
                     <tr>
                         <td>氏名:</td>
-                        <td><input type="text" name="name"></td>
+                        <td><input type="text" name="name" value="<?php echo $name;?>"></td>
                     </tr>
                     <tr>
                         <td>電話番号:</td>
-                        <td><input type="text" name="tel"></td>
+                        <td><input type="text" name="tel" value="<?php echo $tel;?>"></td>
                     </tr>
                     <tr>
                         <td>性別:</td>
                         <td>
-                            <input type="radio" name="gender" value="0" checked>男
-                            <input type="radio" name="gender" value="1">女
+                            <input type="radio" name="gender" value="0" <?php if(empty($gender) || $gender == 0){ echo 'checked';}?>>男
+                            <input type="radio" name="gender" value="1" <?php if($gender == 1){ echo 'checked';}?>>女
                         </td>
                     </tr>
                     <tr>
                         <td>メールアドレス:</td>
-                        <td><input type="text" name="mail"></td>
+                        <td><input type="text" name="mail" value="<?php echo $mail;?>"></td>
                     </tr>
                     <tr>
                         <td>パスワード:</td>
