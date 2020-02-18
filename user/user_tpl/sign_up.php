@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>登録確認画面</title>
+<title>新規会員確認画面</title>
 <link rel="stylesheet" href="#">
 </head>
 <body>
@@ -19,27 +19,29 @@
                 <table>
                     <tr>
                         <td>氏名:</td>
-                        <td>山田太郎</td>
+                        <td><input type="text" name="name"></td>
                     </tr>
                     <tr>
                         <td>電話番号:</td>
-                        <td>01234567</td>
+                        <td><input type="text" name="tel"></td>
                     </tr>
                     <tr>
                         <td>性別:</td>
-                        <td>男</td>
+                        <td>
+                            <input type="radio" name="gender" value="0" checked>男
+                            <input type="radio" name="gender" value="1">女
+                        </td>
                     </tr>
                     <tr>
                         <td>メールアドレス:</td>
-                        <td>aaaa@aaa.jp</td>
+                        <td><input type="text" name="mail"></td>
                     </tr>
                     <tr>
                         <td>パスワード:</td>
-                        <td>sample</td>
+                        <td><input type="text" name="pass"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" name="back" value="戻る"></td>
-                        <td><input type="submit" name="regist" value="登録"></td>
+                        <td colspan="2"><input type="submit" name='send' value="確認"></td>
                     </tr>
                 </table>
             </form>

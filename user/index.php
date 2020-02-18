@@ -8,6 +8,6 @@
 /*--------------------------------------*/
 
 
-require_once 'user_tpl/top_page.html';
+require_once 'user_tpl/top_page.php';
 
 ?>
