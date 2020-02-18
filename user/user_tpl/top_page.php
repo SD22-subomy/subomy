@@ -17,7 +17,7 @@
         <div class="center">
             <ul>
                 <li><a href="./controller/sign_up.php">新規会員登録</a></li>
-                <li><a href="#">ログイン</a></li>
+                <li><a href="./controller/login.php">ログイン</a></li>
             </ul>
         </div>
     </div>
