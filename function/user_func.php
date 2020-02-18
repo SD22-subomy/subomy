@@ -50,6 +50,29 @@ function user_login($mail,$pass){
 
 
 /**
+ * ＜利用者＞メールアドレス,パスワードからユーザIDを呼び出す関数
+ *
+ * @param string $mail メールアドレス
+ * @param string $pass パスワード
+ * @return int ユーザID
+ */
+
+function user_id_check($mail,$pass){
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT user_id FROM user WHERE mail = '".h($mail)."' AND pass = '".h($pass)."';";
+    $result = mysqli_query($cn,$sql);
+    $row = mysqli_fetch_assoc($result);
+    mysqli_close($cn);
+
+    return $row['user_id'];
+
+}
+
+
+/**
  * ＜利用者＞新規登録者情報をDBに書き込む関数
  *
  * @param string $name 名前
@@ -143,6 +166,5 @@ function user_regist_check($name,$tel,$mail,$pass){
     }
 
 }
-
 
 ?>
