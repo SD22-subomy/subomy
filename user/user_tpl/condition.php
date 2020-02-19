@@ -17,38 +17,33 @@
         <div class="center">
             <form action="" method="POST">
                 <select name="prefectures">
-                <option value="0">未選択</option>
-                <option value="1">北海道</option>
-                <option value="2">青森県</option>
-                <option valie="3">岩手県</option>
+                <?php foreach($pre_list as $v){?>
+                <option value="<?php echo $v['pre_id'];?>"><?php echo $v['prefectures'];?></option>
+                <?php }?>
                 </select>
 
                 <select name="genre">
-                <option value="0">未選択</option>
-                <option value="1">和風</option>
-                <option value="2">洋風</option>
-                <option valie="3">魚介・海鮮</option>
+                <?php foreach($genre_list as $v){?>
+                <option value="<?php echo $v['genre_id'];?>"><?php echo $v['genre'];?></option>
+                <?php }?>
                 </select>
 
                 <select name="cuisine">
-                <option value="0">未選択</option>
-                <option value="1">寿司</option>
-                <option value="2">焼肉</option>
-                <option valie="3">ラーメン</option>
+                <?php foreach($cuisine_list as $v){?>
+                <option value="<?php echo $v['cuisine_id'];?>"><?php echo $v['cuisine'];?></option>
+                <?php }?>
                 </select>
 
                 <select name="use_scene">
-                <option value="0">未選択</option>
-                <option value="1">宴会</option>
-                <option value="2">接待</option>
-                <option valie="3">デート</option>
+                <?php foreach($use_list as $v){?>
+                <option value="<?php echo $v['use_id'];?>"><?php echo $v['use_scene'];?></option>
+                <?php }?>
                 </select>
 
                 <select name="commitment">
-                <option value="0">未選択</option>
-                <option value="1">食べ放題</option>
-                <option value="2">飲み放題</option>
-                <option valie="3">個室</option>
+                <?php foreach($com_list as $v){?>
+                <option value="<?php echo $v['com_id'];?>"><?php echo $v['commitment'];?></option>
+                <?php }?>
                 </select>
 
                 <input type="submit" name="send" value="登録">
