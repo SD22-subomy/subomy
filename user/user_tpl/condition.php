@@ -15,7 +15,7 @@
 
     <div id="content">
         <div class="center">
-            <form action="" method="GET">
+            <form action="" method="POST">
                 <select name="prefectures">
                 <option value="0">未選択</option>
                 <option value="1">北海道</option>
