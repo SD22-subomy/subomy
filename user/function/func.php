@@ -73,7 +73,6 @@ function read_db(string $db)
   $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
   mysqli_set_charset($cn,"utf8");
   $sql = "SELECT * FROM ".$db.";";
-  var_dump($sql);
   $result = mysqli_query($cn,$sql);
   mysqli_close($cn);
 
