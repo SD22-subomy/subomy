@@ -17,39 +17,21 @@
                         <h2>ログインID・パスワードの確認</h2>
                         <div id="nav">
                             <ul id="navi">
-                                <li class="color">店舗番号・通知用メールアドレスの入力</li><span class="san"></span>
+                                <li>店舗番号・通知用メールアドレスの入力</li><span class="san"></span>
                                 <li>店舗番号・通知用メールアドレスの確認</li>
-                                <li>ログインID・仮パスワードの送信</li>
+                                <li class="color">ログインID・仮パスワードの送信</li>
                             </ul>
                         </div>
                         <div id="left_con">
-                            <p>
-                                ご登録されている店舗の店舗番号、通知用メールアドレスを入力してください。仮パスワードを発行し、メールにてログインＩＤ・仮パスワードをお知らせいたします。店舗番号は（システム名）から届くアクセス報告書に記載されています。<br>
-                                尚、１日のご利用回数は３回までとなっております。<br>
-                                店舗番号は7桁の英数字の組み合わせとなります。
-                            </p>
-                            <form action="" method="">
-                                <table>
-                                    <tr>
-                                        <th>店舗番号</th>
-                                        <td><input type="text" name="" placeholder="例）a123456"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>通知用メールアドレス</th>
-                                        <td><input type="text" class="mail" name="" placeholder="メールアドレス"></td>
-                                    </tr>
-                                </table>
-                            </form>
-                            <div id="veri">
-                                <div id="bun">
-                                    <h3>今一度ご確認ください。</h3>
-                                    <p>大文字と小文字を間違って入力していませんか？</p>
-                                    <p>余計な文字やスペースが入力されていませんか？</p>    
-                                </div>
-                            </div>
-                            <div id="btn">
-                                <input type="submit" name="" value="戻る">
-                                <input type="submit" name="" value="確認する">
+                            <div id="msg">
+                                <p>
+                                    <?= $mail?>宛にメールを送信しました。<br>
+                                    メールに記載されているID・仮パスワードでログインしてください。<br>
+                                    メールが届かない場合は、迷惑メールフォルダーなどに振り分けられてしまう場合がありますので、すべてのメールをご確認ください。
+                                </p>
+                                <form action="../func/reminder2.php" method="POST">
+                                    <input type="submit" name="login" value="ログイン">
+                                </form>
                             </div>
                         </div>
                     </div>

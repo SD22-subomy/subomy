@@ -17,47 +17,40 @@
                         <h2>ログインID・パスワードの確認</h2>
                         <div id="nav">
                             <ul id="navi">
-                                <li class="color">店舗番号・通知用メールアドレスの入力</li><span class="san"></span>
-                                <li>店舗番号・通知用メールアドレスの確認</li>
+                                <li>店舗番号・通知用メールアドレスの入力</li><span class="san"></span>
+                                <li class="color">店舗番号・通知用メールアドレスの確認</li>
                                 <li>ログインID・仮パスワードの送信</li>
                             </ul>
                         </div>
                         <div id="left_con">
-                            <div id="err">
-                                <p>
-                                    入力された店舗番号、もしくは通知用メールアドレスが
-                                    現在登録されているものと一致しませんでした。<br>
-                                    ご確認の上、再度入力してください。
-                                </p>
-                            </div>
                             <p>
-                                ご登録されている店舗の店舗番号、通知用メールアドレスを入力してください。仮パスワードを発行し、メールにてログインＩＤ・仮パスワードをお知らせいたします。店舗番号は（システム名）から届くアクセス報告書に記載されています。<br>
+                                ご登録されている店舗の店舗番号、通知用メールアドレスを入力してください。仮パスワードを発行し、メールにてログインＩＤ・仮パスワードをお知らせいたします。店舗番号は「ぐるんて」から届くアクセス報告書に記載されています。<br>
                                 尚、１日のご利用回数は３回までとなっております。<br>
                                 店舗番号は7桁の英数字の組み合わせとなります。
                             </p>
-                            <form action="" method="">
+                            <form action="../func/reminder1.php" method="POST">
                                 <table>
                                     <tr>
                                         <th>店舗番号</th>
-                                        <td><input type="text" name="" placeholder="例）a123456"></td>
+                                        <td><span class="mar"><?=$login_id?></span></td>
                                     </tr>
                                     <tr>
                                         <th>通知用メールアドレス</th>
-                                        <td><input type="text" class="mail" name="" placeholder="メールアドレス"></td>
+                                        <td><span class="mar"><?=$mail?></span></td>
                                     </tr>
                                 </table>
-                            </form>
-                            <div id="veri">
-                                <div id="bun">
-                                    <h3>今一度ご確認ください。</h3>
-                                    <p>大文字と小文字を間違って入力していませんか？</p>
-                                    <p>余計な文字やスペースが入力されていませんか？</p>    
+                                <div id="veri">
+                                    <div id="bun">
+                                        <h3>今一度ご確認ください。</h3>
+                                        <p>大文字と小文字を間違って入力していませんか？</p>
+                                        <p>余計な文字やスペースが入力されていませんか？</p>    
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="btn">
-                                <input type="submit" name="" value="戻る">
-                                <input type="submit" name="" value="確認する">
-                            </div>
+                                <div id="btn">
+                                    <input type="submit" name="back" value="戻る">
+                                    <input type="submit" name="regist" value="送信">
+                                </div>
+                            </form>    
                         </div>
                     </div>
                     <div id="c_right">
@@ -91,7 +84,7 @@
                                 </div>
                                 <div id="no">
                                     <p>NO</p>
-                                    <p class="san"></p>
+                                    <p class="sita"></p>
                                 </div>
                             </div>
                             <div id="support">
