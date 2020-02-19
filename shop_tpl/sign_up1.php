@@ -21,7 +21,7 @@
                             <li>完了</li>
                         </ul>
                     </div>
-                    <form action="sign_up2.php" method="post">
+                    <form action="../func/func_sign_up1.php" method="post">
                         <p>全ての項目は必須です</p>
                         <table>
                             <tr>

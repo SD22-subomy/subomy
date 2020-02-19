@@ -21,7 +21,7 @@
                             <li>完了</li>
                         </ul>
                     </div>
-                    <form action="func_signup1.html" method="post">
+                    
                         <p>この内容でよろしいですか</p>
                         <table>
                             <tr>
@@ -45,7 +45,7 @@
                                 <td><?php echo $_POST['pass']; ?></td>
                             </tr>
                             <tr>
-                                <td><input type="submit" value="戻る" ></td>
+                                <td><input type="submit" value="戻る"  ></td>
                                 <td><input type="submit" value="次へ"></td>
                             </tr>
                         </table>
