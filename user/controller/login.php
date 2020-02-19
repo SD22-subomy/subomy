@@ -7,7 +7,7 @@
 /* date: 2020/02/18
 /*--------------------------------------*/
 
-require_once './../../function/user_func.php';
+require_once './../function/user_func.php';
 
 session_start();
 
@@ -17,6 +17,7 @@ session_start();
 // var_dump(,$_SESSION['mail'],$_SESSION['pass']);
 
 
+//ログイン
 if(isset($_POST['login'])){
 
 	$mail = $_POST['mail'];
