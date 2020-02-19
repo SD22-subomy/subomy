@@ -27,6 +27,7 @@ $com_list = read_db('commitment');
 if(isset($_POST['send'])){
 
 	echo '登録完了';
+	condition_regist($_SESSION['user_id'],$_POST['prefectures'],$_POST['genre'],$_POST['cuisine'],$_POST['use_scene'],$_POST['commitment']);
 }
 
 //戻る

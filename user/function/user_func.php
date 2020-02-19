@@ -58,7 +58,7 @@ function user_login($mail,$pass){
  *
  * @param string $mail メールアドレス
  * @param string $pass パスワード
- * @return int ユーザID
+ * @return string ユーザID
  */
 
 function user_id_check($mail,$pass){
@@ -168,6 +168,29 @@ function user_regist_check($name,$tel,$mail,$pass){
     }else{
         return false;
     }
+
+}
+
+/**
+ * ＜利用者＞絞り込み条件を登録する関数関数
+ *
+ *.@param string $id ユーザID
+ * @param string $pre_id 選択都道府県ID
+ * @param string $genre_id 選択ジャンルID
+ * @param string $cuisine_id 選択料理ジャンルID
+ * @param string $use_id 選択利用シーンID
+ * @param string $com_id 選択こだわり条件ID
+ * @return なし
+ */
+
+function condition_regist($id,$pre_id,$genre_id,$cuisine_id,$use_id,$com_id){
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "INSERT INTO conditions(user_id,pre_id,genre_id,cuisine_id,use_id,com_id)VALUES('".$id."','".$pre_id."','".$genre_id."','".$cuisine_id."','".$use_id."','".$com_id."');";
+    mysqli_query($cn,$sql);
+    mysqli_close($cn);
 
 }
 
