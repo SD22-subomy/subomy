@@ -10,15 +10,23 @@
 session_start();
 
 //デバック用
+//var_dump($_POST['logout']);
 //var_dump($_SESSION['user_id']);
 
-/*----ログイン時--------------*/
+
+//ログアウト
+if(isset($_POST['logout'])){
+
+	$_SESSION = array();
+	session_destroy();
+}
+
+//ログイン時
 if(isset($_SESSION['user_id'])){
 
 	require_once 'user_tpl/my_page.php';
 	exit;
 }
-
 
 require_once 'user_tpl/top_page.php';
 
