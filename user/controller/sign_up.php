@@ -7,7 +7,7 @@
 /* date: 2020/02/17
 /*--------------------------------------*/
 
-require_once './../../function/user_func.php';
+require_once './../function/user_func.php';
 
 $name = '';
 $tel = '';
@@ -23,6 +23,7 @@ session_start();
 // var_dump($_SESSION['name'],$_SESSION['tel'],$_SESSION['gender'],$_SESSION['mail'],$_SESSION['pass']);
 
 
+//確認
 if(isset($_POST['send'])){
 
 	$name = $_POST['name'];
@@ -48,6 +49,7 @@ if(isset($_POST['send'])){
 	}
 }
 
+//戻る
 if(isset($_POST['back'])){
 
 	$name = $_SESSION['name'];
@@ -59,6 +61,7 @@ if(isset($_POST['back'])){
 	exit;
 }
 
+//登録
 if(isset($_POST['regist'])){
 
 	$name = $_SESSION['name'];
