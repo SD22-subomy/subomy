@@ -13,25 +13,27 @@
             </div>
             <div id="content">
                 <div class="center">
-                    <form action="" method="">
+                    <form action="../func/login.php" method="post">
                         <div id="login">
                             <div id="registration">
-                                <p>登録をされていない方は<a href="sign_up1.php">こちら</a></p>
+                                <p>登録をされていない方は<a href="../func/sign_up1.php">こちら</a></p>
                             </div>
+                            <!--phpのエラーメッセージ出力場所-->
+                            <!-- <?= $msg ?> -->
                             <table>
                                 <tr>
                                     <td>ログインID:</td>
-                                    <td><input type="text" name=""></td>
+                                    <td><input type="text" name="id"></td>
                                 </tr>
                                 <tr>
                                     <td>パスワード:</td>
-                                    <td><input type="password" name=""></td>
+                                    <td><input type="password" name="pass"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="btn"><input type="submit" value="ログイン"></td>
+                                    <td colspan="2" class="btn"><input type="submit" value="ログイン" name="login"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"><a href="">ID、パスワードを紛失された方はこちら</a></td>
+                                    <td colspan="2"><a href="../func/reminder.php">ID、パスワードを紛失された方はこちら</a></td>
                                 </tr>
                             </table>
                         </div>
