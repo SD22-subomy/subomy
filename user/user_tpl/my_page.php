@@ -16,7 +16,7 @@
     <div id="content">
         <div class="center">
             <ul>
-                <li><a href="#">条件登録</a></li>
+                <li><a href="./controller/condition.php">条件登録</a></li>
                 <li><a href="#">予約確認</a></li>
                 <li><a href="#">会員情報設定</a></li>
             </ul>
