@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>店舗情報</title>
-        <link rel="stylesheet" href="css/S_mypage.css">
+        <link rel="stylesheet" href="../shop_css/shop_info.css">
+        <script src="../../jquery-3.4.1.min.js"></script>
+        <script src="../javascript/shop_info.js"></script>
+        
     </head>
     <body>
         <div id="wrapper">
-            <div id="header">
-                
-            </div>
             <div id="content">
                 <div id="left">
                     <div id="navi">
@@ -24,8 +24,19 @@
                     </div>
                 </div>
                 <div id="right">
-                    <h2></h2>
-                    <h2>店舗情報</h2>
+                    <div id="header">
+                    
+                    </div>
+                        <div id="nav">
+                        <ul>
+                            <li id="intro">店舗基本情報</li>
+                            <li id="info">店舗紹介文</li>
+                            <li id="cour">コース情報</li>
+                        </ul>    
+                    </div>
+                    <span id="shop_content">
+
+                    </span>
                 </div>
             </div>
             <div id="footer">

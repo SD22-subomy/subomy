@@ -7,6 +7,7 @@ require '../../config.php';
 session_start();
 $mail = $_SESSION['mail'];
 if(isset($_POST['login'])){
+    session_destroy();
     header('Location:login.php');
     exit;
 }
