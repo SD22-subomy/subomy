@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/*初期化*/
+*{
+	margin:0px;
+	padding:0px;
+}
+html{
+	scroll-behavior: smooth;
+}
+li{
+	list-style-type: none;
+	list-style-position: outside;
+}
+a{
+	text-decoration: none;
+}
+div{
+   box-sizing: border-box;
+}
+img{
+	height: 80vh;
+}
+/*--------------header--------------*/
+#header{
+    border-bottom: solid 1px #c4c2c2;
+    outline: solid 3px #e9e7e7;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+/*---------------center----------------*/
+#content{
+    display: flex;
+}
+#left{
+    width: 20%;
+}
+#right{
+    width: 80%;
+}
+.center{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+.center input{
+    margin-top: 30px;
+}
+
+#nav ul{
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+}
+#nav li{
+    cursor:pointer;
+    line-height: 50px;
+    width: 500px;
+    text-align: center;
+    font-weight: bolder;
+    background-color: #b0fdb0;
+    color: #069c06;
+    border-right: solid 2px #008300;
+}
+#nav li:last-child{
+    border-right: none;
+}
+#nav li:hover{
+    font-size: 1.05em;
+    color: #fff;
+    background-color: #90f390;
+}
+
+/*-----------content-----------*/
+#information{
+    padding: 50px;
+    width: 1000px;
+    border: solid 1px #90f390;
+    margin: auto;
+    text-align: center;
+}
+#information table{
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+#information table th{
+    width: 200px;
+    background-color: #fff;
+    font-weight: 500;
+    padding: 10px;
+}
+
+#information table td{
+    background-color: #b0fdb062;
+    border-left-style:none;
+    width: 500px;
+}
+#information table th,
+#information table td{
+    border: solid 1px #069c06a9;
+
+}
+
+#information  tr:last-child td{
+    border-right-style:none; 
+    border-left-style:none;
+    border-style: none;
+    background-color: #fff;
+    padding: 20px;
+}
+

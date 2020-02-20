@@ -1,0 +1,9 @@
+<?php
+//////////////////////////////////////
+require 'func.php';//関数呼び出し
+require '../../config.php';
+
+/////////////////////////////////////
+require '../shop_tpl/shop_info.php';
+
+?>
