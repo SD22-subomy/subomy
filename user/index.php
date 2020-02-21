@@ -7,6 +7,8 @@
 /* date: 2020/02/17
 /*--------------------------------------*/
 
+require_once './function/user_func.php';
+
 session_start();
 
 //デバック用
@@ -30,6 +32,10 @@ $login_flg = isset($_SESSION['user_id']);
 // 	require_once 'user_tpl/my_page.php';
 // 	exit;
 // }
+
+$genre = read_db('genre');
+$use_scene = read_db('use_scene');
+$commitment = read_db('commitment');
 
 require_once 'user_tpl/top_page.php';
 

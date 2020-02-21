@@ -27,22 +27,37 @@
         <?php }?>
     </div>
 </form>
+
     <div id="content">
         <div class="center">
             <div class="section">
             <h2>ジャンル</h2>
             <ul>
-                <li>和風</li>
-                <li>洋風</li>
-                <li>魚介・海鮮</li>
-                <li>イタリアン</li>
-                <li>中華</li>
-                <li>韓国</li>
-                <li>居酒屋</li>
-                <li>スペイン</li>
-                <li>カフェ</li>
-                <li>フレンチ</li>
-                <li>バー・お酒</li>
+                <?php foreach($genre as $v){?>
+                <?php if($v['genre_id'] != 0){?>
+                <li><a href="./controller/shop_list.php?genre=<?php echo $v['genre_id']?>"><?php echo $v['genre'];?></a></li>
+                <?php }?>
+                <?php }?>
+            </ul>
+            </div>
+            <div class="section">
+            <h2>利用シーン</h2>
+            <ul>
+                <?php foreach($use_scene as $v){?>
+                <?php if($v['use_id'] != 0){?>
+                <li><a href="./controller/shop_list.php?use_scene=<?php echo $v['use_id']?>"><?php echo $v['use_scene'];?></a></li>
+                <?php }?>
+                <?php }?>
+            </ul>
+            </div>
+            <div class="section">
+            <h2>こだわり条件</h2>
+            <ul>
+                <?php foreach($commitment as $v){?>
+                <?php if($v['com_id'] != 0){?>
+                <li><a href="./controller/shop_list.php?commitment=<?php echo $v['com_id']?>"><?php echo $v['commitment'];?></a></li>
+                <?php }?>
+                <?php }?>
             </ul>
             </div>
         </div>
