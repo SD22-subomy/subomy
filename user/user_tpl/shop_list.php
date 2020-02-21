@@ -18,10 +18,13 @@
         <div class="center">
             <div class="shop_list">
                 <ul>
-                    <li>あああ</li>
-                    <li>いいい</li>
-                    <li>ううう</li>
-                    <li>えええ</li>
+                    <?php foreach($shop_info as $v){?>
+                    <li>
+                    <a href="./shop_info.php?shop_id=<?php echo $v['id'];?>">
+                        店舗名：<?php echo $v['name'];?>
+                    </a>
+                    </li>
+                    <?php }?>
                 </ul>
             </div>
         </div>
