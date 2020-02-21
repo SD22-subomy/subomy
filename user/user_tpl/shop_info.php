@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>店舗詳細ページ</title>
-<link rel="stylesheet" href="#">
+<link rel="stylesheet" href="./user_css/shop_info.css">
+<link rel="stylesheet" href="./user_css/main.css">
 </head>
 <body>
 <div id="wrapper">
