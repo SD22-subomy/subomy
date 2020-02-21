@@ -194,4 +194,30 @@ function condition_regist($id,$pre_id,$genre_id,$cuisine_id,$use_id,$com_id){
 
 }
 
+/**
+ * ＜利用者＞ジャンルで店舗を検索する関数
+ *
+ * @param string $genre 絞り込みジャンル
+ * @return array 取得した店舗IDの配列
+ */
+
+function search_genre($genre){
+
+    $list = [];
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT shop_id FROM shop_pos WHERE genre_id = '".$genre."';";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+    while($row = mysqli_fetch_assoc($result)){
+        $list[] = $row;
+    }
+
+    return $list;
+
+}
+
 ?>
