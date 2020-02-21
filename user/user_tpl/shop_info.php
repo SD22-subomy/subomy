@@ -14,6 +14,7 @@
         </div>
     </div>
 
+    <form action="" method="get">
     <div id="content">
         <div class="center">
             <ul>
@@ -35,8 +36,10 @@
                 </tr>
                 <?php }?>
             </table>
+            <input type="submit" name="reserve" value="予約">
         </div>
     </div>
+    </form>
 
     <div id="footer">
         <div class="center">
