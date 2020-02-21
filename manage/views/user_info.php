@@ -1,3 +1,6 @@
+<?php
+  require_once './../func/user_info.php';
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,11 +14,11 @@
 <body>
 
 
-<?php if (isset($row_list)) { ?>
+<?php if (isset($user_list)) { ?>
   <table>
     <thead><tr><th>利用者ID</th><th>名前</th><th>性別</th><th>電話番号</th><th>メールアドレス</th><th>パスワード</th></tr></thead>
 
-    <?php foreach ($row_list as $key => $value) { ?>
+    <?php foreach ($user_list as $key => $value) { ?>
 
       <tbody>
         <tr>
@@ -23,7 +26,7 @@
         <td><?php echo $value['name']; ?></td>
         <td><?php echo $value['gender']; ?></td>
         <td><?php echo $value['tel']; ?></td>
-        <td><?php echo $value['mail']; ?></td>
+        <td><?php echo $value['mall']; ?></td>
         <td><?php echo $value['pass']; ?></td>
         </tr>
       </tbody>

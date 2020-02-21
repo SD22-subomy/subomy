@@ -12,10 +12,12 @@ function select_user_all() {
   $sql = "SELECT * from user ;";
   $result = mysqli_query($cn,$sql);
   while($row = mysqli_fetch_assoc($result)){
-    $row_list[] = $row3;
+    $row_list[] = $row;
   }
   mysqli_close($cn);
-  return $row_list;
+  if ( isset($row_list) ) {
+    return $row_list;
+  }
 }
 
 ?>

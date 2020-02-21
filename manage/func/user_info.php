@@ -1,7 +1,8 @@
 <?php
 
-require_once './sql.php';
+require_once 'sql.php';
 
-select_user_all();
+$user_list = select_user_all();
+
 
 ?>
