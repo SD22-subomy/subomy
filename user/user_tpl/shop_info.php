@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>店舗詳細ページ</title>
+<link rel="stylesheet" href="./../user_css/calendar.css">
 <link rel="stylesheet" href="./../user_css/shop_info.css">
 <link rel="stylesheet" href="./../user_css/main.css">
 </head>
@@ -36,6 +37,14 @@
                 </tr>
                 <?php }?>
             </table>
+
+            <ul>
+            <li><button id="prev" type="button">＜</button></li>
+            <li><div id="calendar"></div></li>
+            <li><button id="next" type="button">＞</button></li>
+            </ul>
+
+            <div id="hidden_date"></div>
             <input type="submit" name="reserve" value="予約">
         </div>
     </div>
@@ -47,5 +56,6 @@
     </div>
 
 </div>
+<script src="./../user_js/calendar.js"></script>
 </body>
 </html>
