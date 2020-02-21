@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>検索画面</title>
-<link rel="stylesheet" href="#">
+<link rel="stylesheet" href="./../user_css/shop_list.css">
+<link rel="stylesheet" href="./../user_css/main.css">
 </head>
 <body>
 <div id="wrapper">
@@ -15,6 +16,14 @@
 
     <div id="content">
         <div class="center">
+            <div class="shop_list">
+                <ul>
+                    <li>あああ</li>
+                    <li>いいい</li>
+                    <li>ううう</li>
+                    <li>えええ</li>
+                </ul>
+            </div>
         </div>
     </div>
 
