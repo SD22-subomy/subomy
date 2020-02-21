@@ -21,12 +21,15 @@ if(isset($_POST['logout'])){
 	session_destroy();
 }
 
-//ログイン時
-if(isset($_SESSION['user_id'])){
+//ログイン判定
+$login_flg = isset($_SESSION['user_id']);
 
-	require_once 'user_tpl/my_page.php';
-	exit;
-}
+// //ログイン時
+// if($login_flg){
+
+// 	require_once 'user_tpl/my_page.php';
+// 	exit;
+// }
 
 require_once 'user_tpl/top_page.php';
 

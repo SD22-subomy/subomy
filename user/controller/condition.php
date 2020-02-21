@@ -33,7 +33,7 @@ if(isset($_POST['send'])){
 //戻る
 if(isset($_POST['back'])){
 
-	header("location: ./../index.php");
+	header("location: ./my_page.php");
 	exit;
 }
 

@@ -17,11 +17,12 @@
         <div class="center">
             <form action="" method="POST">
             <ul>
-                <li><a href="./controller/condition.php">条件登録</a></li>
+                <li>マイページメニュー</li>
+                <li><a href="./condition.php">条件登録</a></li>
                 <li><a href="#">予約確認</a></li>
                 <li><a href="#">会員情報設定</a></li>
             </ul>
-            <input type="submit" name="logout" value="ログアウト">
+            <input type="submit" name="back" value="TOPへ戻る">
             </form>
         </div>
     </div>
