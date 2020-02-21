@@ -247,6 +247,68 @@ function get_shop_info($id){
 }
 
 /**
+ * ＜利用者＞IDで店舗詳細情報を取得する関数
+ *
+ * @param string $id 店舗ID
+ * @return array 取得した店舗詳細情報の連想配列
+ */
+
+function get_shop_detail($id){
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT name,addres,tel FROM shop WHERE shop_id = '".$id."';";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+    $row = mysqli_fetch_assoc($result);
+    $info = [
+        'id' => $id,
+        'name' => $row['name'],
+        'address' => $row['addres'],
+        'tel' => $row['tel']
+    ];
+    
+    return $info;
+
+}
+
+/**
+ * ＜利用者＞店舗IDでコース情報を取得する関数
+ *
+ * @param string $id 店舗ID
+ * @return array 取得したコース情報の連想二次配列
+ */
+
+function get_course_list($id){
+
+    $list = [];
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT course_id,name,price,other FROM course WHERE shop_id = '".$id."';";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+    while($row = mysqli_fetch_assoc($result)){
+
+        $info = [
+            'id' => $row['course_id'],
+            'name' => $row['name'],
+            'price' => $row['price'],
+            'other' => $row['other']
+        ];
+
+        $list[] = $info;
+    }
+
+    return $list;
+
+}
+
+/**
  * ＜利用者＞IDの配列で店舗情報の配列を作成する関数
  *
  * @param array $id 店舗IDの配列
@@ -264,6 +326,7 @@ function get_shop_list($id){
     return $shop_info;
 
 }
+
 
 
 ?>
