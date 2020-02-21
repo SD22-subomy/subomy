@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>店舗詳細ページ</title>
-<link rel="stylesheet" href="./user_css/shop_info.css">
-<link rel="stylesheet" href="./user_css/main.css">
+<link rel="stylesheet" href="./../user_css/shop_info.css">
+<link rel="stylesheet" href="./../user_css/main.css">
 </head>
 <body>
 <div id="wrapper">
@@ -14,12 +14,13 @@
         </div>
     </div>
 
+    <form action="" method="get">
     <div id="content">
         <div class="center">
             <ul>
-                <li>PIZZA SALVATORE CUOMO&GRILL</li>
-                <li>050-1234-5678</li>
-                <li>大阪府北区</li>
+                <li><?php echo $shop_info['name'];?></li>
+                <li><?php echo $shop_info['address'];?></li>
+                <li><?php echo $shop_info['tel'];?></li>
             </ul>
             <table border="1">
                 <tr>
@@ -27,19 +28,18 @@
                     <td>料金</td>
                     <td>備考</td>
                 </tr>
+                <?php foreach($course_list as $v){?>
                 <tr>
-                    <td>飲み放題コース</td>
-                    <td>5000</td>
-                    <td>土日祝は+500円</td>
+                    <td><?php echo $v['name'];?></td>
+                    <td><?php echo $v['price'];?></td>
+                    <td><?php echo $v['other'];?></td>
                 </tr>
-                <tr>
-                    <td>スタンダードコース</td>
-                    <td>4000</td>
-                    <td>ピザ食べ放題</td>
-                </tr>
+                <?php }?>
             </table>
+            <input type="submit" name="reserve" value="予約">
         </div>
     </div>
+    </form>
 
     <div id="footer">
         <div class="center">
