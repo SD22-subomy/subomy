@@ -34,6 +34,14 @@
                 <td><?= $row['budget']?></td>
             </tr>
             <tr>
+                <th>テーブル座席数</th>
+                <td><?= $row['table_re']?>席</td>
+            </tr>
+            <tr>
+                <th>カウンター座席数</th>
+                <td><?= $row['counter_re']?>席</td>
+            </tr>
+            <tr>
                 <th>ホームページ</th>
                 <td><?= $row['url']?></td>
             </tr>
