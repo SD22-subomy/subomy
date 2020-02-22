@@ -1,6 +1,6 @@
 <?php
 /*---------------------------------------
-/* pg_name: shop_info
+/* pg_name: reserve
 /*---------------------------------------
 /* HEW-team3:
 /*---------------------------------------
@@ -11,19 +11,15 @@ require_once './../function/user_func.php';
 
 session_start();
 
-//店舗情報取得
-if(isset($_GET['shop_id'])){
 
-	$shop_info = get_shop_detail($_GET['shop_id']);
-	$course_list = get_course_list($_GET['shop_id']);
+if(isset($_GET['id'])){
+
 }
 
-
 //デバック用
-// var_dump($shop_info);
-// var_dump($course_list);
+//var_dump($_GET['id'],$_GET['date']);
 
-require_once './../user_tpl/shop_info.php';
+require_once './../user_tpl/reserve.php';
 
 
 ?>
