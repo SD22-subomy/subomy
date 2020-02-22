@@ -12,8 +12,10 @@ require_once './../function/user_func.php';
 session_start();
 
 
-if(isset($_GET['id'])){
+if(is_null($_SESSION['user_id'])){
 
+	header("location: ./login.php");
+	exit;
 }
 
 //デバック用
