@@ -35,6 +35,22 @@ img{
 }
 #left{
     width: 20%;
+    border-right: solid 1px red;
+
+}
+#navi{
+    /* margin-top: 125px; */
+    /* border: solid 1px red; */
+    padding-left: 30px;
+}
+#navi li{
+    margin: 30px;
+    /* font-size: 1.2em; */
+    /* background-color: red; */
+}
+#navi li a{
+    display: block;
+    line-height: 30px;
 }
 #right{
     width: 80%;
@@ -47,12 +63,18 @@ img{
 .center input{
     margin-top: 30px;
 }
-
+#nav{
+    border: solid 1px #90f390;
+    width: 1000px;
+    margin: auto;
+}
 #nav ul{
     margin: auto;
     width: 1000px;
     display: flex;
     justify-content: space-around;
+    border-bottom: solid 1px #90f390;
+    color: #069c06;
 }
 #nav li{
     cursor:pointer;
@@ -60,8 +82,6 @@ img{
     width: 500px;
     text-align: center;
     font-weight: bolder;
-    background-color: #b0fdb0;
-    color: #069c06;
     border-right: solid 2px #008300;
 }
 #nav li:last-child{
@@ -72,12 +92,15 @@ img{
     color: #fff;
     background-color: #90f390;
 }
+.color{
+    color: #fff;
+    background-color: #90f390;
 
+}
 /*-----------content-----------*/
 #information{
     padding: 50px;
     width: 1000px;
-    border: solid 1px #90f390;
     margin: auto;
     text-align: center;
 }
@@ -91,19 +114,19 @@ img{
     background-color: #fff;
     font-weight: 500;
     padding: 10px;
+    border-right-style: none;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-left: solid 1px #069c06a9;
 }
 
 #information table td{
     background-color: #b0fdb062;
-    border-left-style:none;
     width: 500px;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-right: solid 1px #069c06a9;
 }
-#information table th,
-#information table td{
-    border: solid 1px #069c06a9;
-
-}
-
 #information  tr:last-child td{
     border-right-style:none; 
     border-left-style:none;
@@ -112,3 +135,40 @@ img{
     padding: 20px;
 }
 
+/*-----------------紹介文-------------------*/
+#introdu{
+    padding: 50px;
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+#introdu table{
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+#introdu table th{
+    width: 200px;
+    background-color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border-right-style: none;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-left: solid 1px #069c06a9;
+}
+
+#introdu table td{
+    background-color: #b0fdb062;
+    width: 500px;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-right: solid 1px #069c06a9;
+}
+#introdu  tr:last-child td{
+    border-right-style:none; 
+    border-left-style:none;
+    border-style: none;
+    background-color: #fff;
+    padding: 20px;
+}

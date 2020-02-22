@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ログイン画面</title>
-<link rel="stylesheet" href="#">
+<link rel="stylesheet" href="../user_css/login.css">
 </head>
 <body>
 <div id="wrapper">
@@ -16,7 +16,23 @@
     <div id="content">
         <div class="center">
             <form action="" method="POST">
-                <p>登録をされていない方は<a href="./sign_up.php">こちら</a></p>
+                <div id="registration">
+                    <p>アカウントをお持ちでない方はこちら</p>
+                    <a href="./sign_up.php">新規会員登録</a>
+                </div>
+                <div id="login">
+                    <h2>ログイン</h2>
+                    <p class="err">IDまたはパスワードが違います。</p>
+                    <div class="input">
+                        <input type="text" name="mail" value="" placeholder="メールアドレス">
+                    </div>
+                    <div class="input">
+                        <input type="password" name="password" placeholder="パスワード">
+                    </div>
+                    <input type="submit" class="btn" name="next" value="ログイン">
+                    <p><a href="#">パスワードをお忘れの方はこちら</a></p>
+                </div>
+                <!-- <p>登録をされていない方は<a href="./sign_up.php">こちら</a></p>
                 <table>
                     <tr>
                         <td>メールアドレス:</td>
@@ -32,7 +48,7 @@
                     <tr>
                         <td colspan="2"><a href="#">ID、パスワードを紛失された方はこちら</a></td>
                     </tr>
-                </table>
+                </table> -->
             </form>
         </div>
     </div>

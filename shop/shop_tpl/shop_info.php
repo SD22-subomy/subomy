@@ -10,33 +10,33 @@
     </head>
     <body>
         <div id="wrapper">
+            <div id="header">
+                    
+            </div>
+
             <div id="content">
                 <div id="left">
                     <div id="navi">
                         <ul>
-                            <li>ホーム</li>
-                            <li>店舗情報</li>
-                            <li>デザイン</li>
-                            <li>予約情報</li>
-                            <li>月額コース</li>
-                            <li>設定</li>
+                            <li><a href ="mypage.php">ホーム</a></li>
+                            <li><a href="">サイト作成</a></li>
+                            <li><a href="shop_info.php">店舗情報</a></li>
+                            <li><a href="">デザイン</a></li>
+                            <li><a href ="">予約情報</a></li>
+                            <li><a href="">月額コース</a></li>
+                            <li><a href="">設定</a></li>
                         </ul>
                     </div>
                 </div>
                 <div id="right">
-                    <div id="header">
-                    
-                    </div>
-                        <div id="nav">
+                    <div id="nav">
                         <ul>
-                            <li id="intro">店舗基本情報</li>
-                            <li id="info">店舗紹介文</li>
-                            <li id="cour">コース情報</li>
+                            <li id="intro" class="item">店舗基本情報</li>
+                            <li id="info" class="item">店舗紹介文</li>
+                            <li id="cour" class="item">コース情報</li>
                         </ul>    
+                        <span id="shop_content"></span>
                     </div>
-                    <span id="shop_content">
-
-                    </span>
                 </div>
             </div>
             <div id="footer">

@@ -1,5 +1,7 @@
 $(function(){
     $("#shop_content").load("../func/information.php");
+    $("#intro").addClass("color");
+    
     $("#intro").click(function(){
       $.ajax({
         url : '../func/information.php',
@@ -8,6 +10,10 @@ $(function(){
       })
       .done(function(data){
         $("#shop_content").html(data);
+        $("#nav").each(function(){
+          $("#nav li").removeClass("color")
+        });
+        $("#intro").addClass("color");
       })
     });
     $("#info").click(function(){
@@ -18,7 +24,11 @@ $(function(){
         })
         .done(function(data){
           $("#shop_content").html(data);
-        })
+          $("#nav").each(function(){
+            $("#nav li").removeClass("color")
+          });
+            $("#info").addClass("color");
+          })
     });
     $("#cour").click(function(){
         $.ajax({
@@ -28,6 +38,10 @@ $(function(){
         })
         .done(function(data){
           $("#shop_content").html(data);
+          $("#nav").each(function(){
+            $("#nav li").removeClass("color")
+          });
+            $("#cour").addClass("color");
         })
     });
 })
