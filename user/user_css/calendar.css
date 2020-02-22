@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 }
 
-li{
+#calendar_form li{
     display: inline-block;
 }
 
@@ -13,30 +13,30 @@ section {
     margin: 10px;
 }
 
-table {
+#calendar_form table {
     border-spacing: 0;
     border-collapse: collapse;
 }
 
-td {
+#calendar_form td {
     border: 1px solid #ddd;
     padding: 5px;
     text-align: center;
 }
 
-td:first-child {
+#calendar_form td:first-child {
     color: red;
 }
 
-td:last-child {
+#calendar_form td:last-child {
     color: royalblue;
 }
 
-td.is-disabled {
+#calendar_form td.is-disabled {
     color: #ccc;
 }
 
-td.calendar_index {
+#calendar_form td.calendar_index {
     color: black;
     font-weight: bold;
 }
