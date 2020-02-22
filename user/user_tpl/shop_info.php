@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <form action="" method="get">
+    <form action="./reserve.php" method="get">
     <div id="content">
         <div class="center">
             <ul>
@@ -47,6 +47,7 @@
             </div>
 
             <div id="hidden_date"></div>
+            <input type="hidden" name="id" value="<?php echo $shop_info['id'];?>">
             <input type="submit" name="reserve" value="予約">
         </div>
     </div>
