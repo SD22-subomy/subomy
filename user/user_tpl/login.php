@@ -29,8 +29,7 @@
                     <div class="input">
                         <input type="password" name="password" placeholder="パスワード">
                     </div>
-                    <input type="submit" class="btn" name="next" value="ログイン">
-                    <p><a href="#">パスワードをお忘れの方はこちら</a></p>
+                    <input type="submit" class="btn" name='login' value="ログイン">                    <p><a href="#">パスワードをお忘れの方はこちら</a></p>
                 </div>
                 <!-- <p>登録をされていない方は<a href="./sign_up.php">こちら</a></p>
                 <table>
