@@ -357,11 +357,12 @@ function get_course_info($id){
 /**
  * ＜利用者＞予約情報をDBに書き込む関数
  *
- * @param string $name 名前
- * @param string $tel 電話番号
- * @param int $gender 性別
- * @param string $mail メールアドレス
- * @param string $pass パスワード
+ * @param string $user_id ユーザID
+ * @param string $shop_id 店舗ID
+ * @param string $date 予約日
+ *.@param string $time 予約時間
+ * @param string $num 予約人数
+ * @param string $course 予約コース
  * @return なし
  */
 
