@@ -16,12 +16,13 @@ session_start();
 // var_dump($_POST['mail'],$_POST['pass']);
 // var_dump(,$_SESSION['mail'],$_SESSION['pass']);
 
+$err_flg = 0;
 
 //ログイン
 if(isset($_POST['login'])){
 
 	$mail = $_POST['mail'];
-	$pass = $_POST['pass'];
+	$pass = $_POST['password'];
 
 	if(user_login($mail,$pass)){
 
@@ -30,11 +31,11 @@ if(isset($_POST['login'])){
 		exit;
 	}else{
 
+		$err_flg = 1;
 		require_once './../user_tpl/login.php';
 		exit;
 	}
 }
-
 
 require_once './../user_tpl/login.php';
 
