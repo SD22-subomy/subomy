@@ -366,7 +366,7 @@ function get_course_info($id){
  * @return なし
  */
 
-function user_regist($user_id,$shop_id,$date,$time,$num,$course){
+function reserve($user_id,$shop_id,$date,$time,$num,$course){
 
     /*--------------データベース処理-------------------------*/
     $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
