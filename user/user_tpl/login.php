@@ -22,14 +22,17 @@
                 </div>
                 <div id="login">
                     <h2>ログイン</h2>
+                    <?php if($err_flg){?>
                     <p class="err">IDまたはパスワードが違います。</p>
+                    <?php }?>
                     <div class="input">
                         <input type="text" name="mail" value="" placeholder="メールアドレス">
                     </div>
                     <div class="input">
                         <input type="password" name="password" placeholder="パスワード">
                     </div>
-                    <input type="submit" class="btn" name='login' value="ログイン">                    <p><a href="#">パスワードをお忘れの方はこちら</a></p>
+                    <input type="submit" class="btn" name='login' value="ログイン">
+                    <p><a href="#">パスワードをお忘れの方はこちら</a></p>
                 </div>
                 <!-- <p>登録をされていない方は<a href="./sign_up.php">こちら</a></p>
                 <table>
