@@ -48,8 +48,11 @@
                     <td><?php echo $course['other'];?></td>
                 </tr>
             </table>
-
             <input type="hidden" name="id" value="<?php echo $shop_id;?>">
+            <input type="hidden" name="num" value="<?php echo $number;?>">
+            <input type="hidden" name="date" value="<?php echo $date;?>">
+            <input type="hidden" name="time" value="<?php echo $time;?>">
+            <input type="hidden" name="course_id" value="<?php echo $course_id;?>">
             <input type="submit" name="back" value="戻る">
             <input type="submit" name="confirm" value="確定">
 
