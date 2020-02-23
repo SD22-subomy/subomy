@@ -11,8 +11,10 @@ require_once './../function/user_func.php';
 
 session_start();
 
+$user_id = $_SESSION['user_id'];
+
 //ログインしていないとき
-if(is_null($_SESSION['user_id'])){
+if(is_null($user_id)){
 
 	header("location: ./login.php");
 	exit;
@@ -47,6 +49,12 @@ if(isset($_GET['check'])){
 //予約確定
 if(isset($_GET['confirm'])){
 
+	$num = $_GET['num'];
+	$date = $_GET['date'];
+	$time = $_GET['time'];
+	$course_id = $_GET['course_id'];
+
+	reserve($user_id,$shop_id,$date,$time,$num,$course_id);
 	require_once './../user_tpl/reserve_over.php';
 	exit;
 }
