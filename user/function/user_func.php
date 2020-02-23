@@ -354,6 +354,27 @@ function get_course_info($id){
 
 }
 
+/**
+ * ＜利用者＞予約情報をDBに書き込む関数
+ *
+ * @param string $name 名前
+ * @param string $tel 電話番号
+ * @param int $gender 性別
+ * @param string $mail メールアドレス
+ * @param string $pass パスワード
+ * @return なし
+ */
+
+function user_regist($user_id,$shop_id,$date,$time,$num,$course){
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "INSERT INTO reservation(user_id,shop_id,reser_date,reser_time,reser_many,reser_course)VALUES('".$user_id."','".$shop_id."','".$date."','".$time."','".$num."','".$course."');";
+    mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+}
 
 
 ?>
