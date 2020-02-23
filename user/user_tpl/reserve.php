@@ -55,13 +55,14 @@
 
             <p>コース名：
             <select name="course">
+            <option value="0">選択なし</option>
             <?php foreach($course_list as $v){?>
             <option value="<?php echo $v['course_id'];?>"><?php echo $v['name'];?>/<?php echo $v['price'];?>/<?php echo $v['other'];?></option>
             <?php }?>
             </select>
             </p>
             <input type="hidden" name="id" value="<?php echo $shop_id;?>">
-            <input type="submit" name="reserve" value="予約">
+            <input type="submit" name="check" value="確認">
 
         </div>
     </div>

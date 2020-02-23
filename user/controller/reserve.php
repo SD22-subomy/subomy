@@ -22,6 +22,21 @@ $shop_id = $_GET['id'];
 $course_list = get_course_list($_GET['id']);
 
 
+//確認
+if(isset($_GET['check'])){
+
+	require_once './../user_tpl/reserve_check.php';
+	exit;
+}
+
+//予約確定
+if(isset($_GET['confirm'])){
+
+	require_once './../user_tpl/reserve_over.php';
+	exit;
+}
+
+
 //デバック用
 //var_dump($_GET['id'],$_GET['date']);
 
