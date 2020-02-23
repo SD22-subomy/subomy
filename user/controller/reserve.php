@@ -19,11 +19,26 @@ if(is_null($_SESSION['user_id'])){
 }
 
 $shop_id = $_GET['id'];
-$course_list = get_course_list($_GET['id']);
+$shop_info = get_shop_info($shop_id);
 
 
 //確認
 if(isset($_GET['check'])){
+
+	$number = $_GET['number'];
+	$date = $_GET['date'];
+	$time = $_GET['time'];
+	$course_id = $_GET['course'];
+
+	if($course_id == 0){
+		$course = [
+			'name' => '選択なし',
+			'price' => '',
+			'other' => ''
+		];
+	}else{
+		$course = get_course_info($course_id);
+	}
 
 	require_once './../user_tpl/reserve_check.php';
 	exit;
@@ -37,8 +52,7 @@ if(isset($_GET['confirm'])){
 }
 
 
-//デバック用
-//var_dump($_GET['id'],$_GET['date']);
+$course_list = get_course_list($_GET['id']);
 
 require_once './../user_tpl/reserve.php';
 
