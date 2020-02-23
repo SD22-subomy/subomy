@@ -61,6 +61,7 @@
             <?php }?>
             </select>
             </p>
+            <div id="hidden_date"></div>
             <input type="hidden" name="id" value="<?php echo $shop_id;?>">
             <input type="submit" name="check" value="確認">
 

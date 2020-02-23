@@ -21,23 +21,31 @@
             <table>
                 <tr>
                     <th>店名</th>
-                    <td></td>
+                    <td><?php echo $shop_info['name'];?></td>
                 </tr>
                 <tr>
                     <th>人数</th>
-                    <td></td>
+                    <td><?php echo $number;?></td>
                 </tr>
                 <tr>
                     <th>日付</th>
-                    <td></td>
+                    <td><?php echo $date;?></td>
                 </tr>
                 <tr>
                     <th>時間</th>
-                    <td></td>
+                    <td><?php echo $time;?></td>
                 </tr>
                 <tr>
                     <th>コース</th>
-                    <td></td>
+                    <td><?php echo $course['name'];?></td>
+                </tr>
+                <tr>
+                    <th>コース料金</th>
+                    <td><?php echo $course['price'];?></td>
+                </tr>
+                <tr>
+                    <th>コース備考</th>
+                    <td><?php echo $course['other'];?></td>
                 </tr>
             </table>
 
