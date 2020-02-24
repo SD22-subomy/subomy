@@ -23,10 +23,10 @@
                     </div>
                     <div id="commnt">
                         <p>
-                            店舗番号はxxxxxxxです<br>
+                            店舗番号は<span class="font"><?= $data['login_id'] ?></span>です<br>
                             これはログインIDとして使われます。忘れないようにしてください。
                         </p>
-                        <p><input type="submit" value="ログイン画面へ"></p>
+                        <p><a href="login.php">ログイン画面</a></p>
                     </div>
                 </div>
             </div>

@@ -22,7 +22,12 @@ img{
 	height: 80vh;
 }
 /*-----------------------------------------*/
-
+.err{
+    color: #ee0000;
+    font-weight: bolder;
+    margin: 20px;
+    /* border: solid 1px red; */
+}
 /*---------------center----------------*/
 .center{
     width: 75%;

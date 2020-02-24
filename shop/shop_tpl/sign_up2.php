@@ -21,32 +21,32 @@
                             <li>完了</li>
                         </ul>
                     </div>
-                    <form action="sign_up2.php" method="post">
+                    <form action="../func/sign_up2.php" method="POST">
                         <p class="keikoku">この内容でよろしいですか</p>
                         <table>
                             <tr>
                                 <th>店舗名</th>
-                                <td><?php echo $_POST['name']; ?></td>
+                                <td><?= $name ?></td>
                             </tr>
                             <tr>
                                 <th>店舗住所</th>
-                                <td><?php echo $_POST['address']; ?></td>
+                                <td><?= $address ?></td>
                             </tr>
                             <tr>
                                 <th>電話番号</th>
-                                <td><?php echo $_POST['tel']; ?></td>
+                                <td><?= $tel ?></td>
                             </tr>
                             <tr>
                                 <th>メールアドレス</th>
-                                <td><?php echo $_POST['mail']; ?></td>
+                                <td><?= $mail ?></td>
                             </tr>
                             <tr>
                                 <th>パスワード</th>
-                                <td><?php echo $_POST['pass']; ?></td>
+                                <td><?= $pass ?></td>
                             </tr>
                             <tr>
-                                <td><input type="submit" value="戻る" ></td>
-                                <td><input type="submit" value="次へ"></td>
+                                <td><input type="submit" name="back" value="戻る" ></td>
+                                <td><input type="submit" name="next" value="次へ"></td>
                             </tr>
                         </table>
                     </form>
