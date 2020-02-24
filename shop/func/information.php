@@ -4,9 +4,8 @@ require 'func.php';//関数呼び出し
 require '../../config.php';
 /////////////////////////////////////////
 
-// session_start();
-// $id = $_SESSION['id'];
-$id= 1;
+session_start();
+$id = $_SESSION['shop_id'];
 
 //データベース接続
 $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
@@ -18,11 +17,10 @@ $table = ['shop','shop_pos','genre'];
 $sql = shop_inner($table,$col,$id);
 
 //SQL取得
-$row = mysqli_fetch_assoc(shop_select($cn,$id,$sql));
+$row = mysqli_fetch_assoc(shop_select($cn,$sql));
 
 if(isset($_POST['info'])){
-    session_start();
-    $_SESSION['id'] = $id;
+    $_SESSION['shop_id'] = $id;
     $_SESSION['name'] = $row['name'];
     $_SESSION['genre'] = $row['genre'];
     $_SESSION['tel'] = $row['tel'];

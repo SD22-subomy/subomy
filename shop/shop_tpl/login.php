@@ -19,14 +19,14 @@
                                 <p>登録をされていない方は<a href="../func/sign_up1.php">こちら</a></p>
                             </div>
                             <!--phpのエラーメッセージ出力場所-->
-                            <!-- <?= $msg ?> -->
+                            <div class="err"><?= $msg ?></div>
                             <table>
                                 <tr>
-                                    <td>ログインID:</td>
-                                    <td><input type="text" name="id"></td>
+                                    <td>ログインID</td>
+                                    <td><input type="text" name="id" value= "<?php if (!empty($_POST['id'])) {print$_POST['id'];} ?>"></td>
                                 </tr>
                                 <tr>
-                                    <td>パスワード:</td>
+                                    <td>パスワード</td>
                                     <td><input type="password" name="pass"></td>
                                 </tr>
                                 <tr>

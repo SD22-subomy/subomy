@@ -1,6 +1,15 @@
 <?php
 //関数作成
 
+//ランダムな文字列を作成(shopのログインIDとなる)
+function CreateRandom($length) {
+    $str = array_merge(range('a', 'z'), range('A', 'Z"'), range('0', '9'));
+    for ($i = 0; $i < $length; $i++) {
+        $result .= $str[rand(0, count($str)-1)];
+    }
+    return $result;
+} 
+
 //英数字が含まれているか
 function is_alphanum($data) {
     if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i', $data)) {
@@ -13,6 +22,24 @@ function is_alphanum($data) {
     }
 }
 
+
+//DB関係
+//DB登録
+function db_Register($cn,$table,$data){
+    $col = '';
+    $value = '';
+    foreach ($data as $key => $val) {
+        $col .= $key.',';
+        $value .= "'".$val."',";
+    }
+    $col = "(".substr($col,0,strlen($col)-1).")";
+    $value = "(".substr($value,0,strlen($value)-1).")";
+    $sql = "INSERT INTO ".$table.$col." VALUES".$value.";";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close();
+    return $result;
+}
+
 function login($cn,$table,$w_column,$id,$what){
     $id = "'".$id."'";
     $what = "'".$what. "'";
@@ -23,8 +50,7 @@ function login($cn,$table,$w_column,$id,$what){
 }
 
 //店舗情報DB取得
-function shop_select($cn,$id,$sql){
-    $id = "'".$id."'";
+function shop_select($cn,$sql){
     $result = mysqli_query($cn,$sql);
     mysqli_close($cn);
     return $result;
@@ -33,10 +59,30 @@ function shop_select($cn,$id,$sql){
 
 //////////////////////////////////////////////////
 //SQL文
-function db_sql($table,$id){
+
+//SQL SELECT文
+function sql_info($table,$id){
     $sql = "SELECT * FROM ".$table." WHERE shop_id = ".$id.";";
     return $sql;
 }
+
+function sql_shop_login($table,$data,$id){
+    $col = '';
+    $value = '';
+    foreach ($data as $key => $val) {
+        $col .= $key." = '".$val."' AND ";
+        // $value .= "'".$val."',";
+    }
+    $col = substr($col,0,strlen($col)-4);
+
+    if($id != ""){
+        $sql = "SELECT * FROM ".$table." WHERE ".$table."_id = ".$id.";";
+    }else{
+        $sql = "SELECT * FROM ".$table." WHERE ".$col.";";
+    }
+    return $sql;
+}
+
 
 //SQL結合
 function shop_inner($table,$col,$id){

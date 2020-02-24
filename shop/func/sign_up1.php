@@ -56,7 +56,6 @@ if (isset($_POST['next'])) {
         $cnt++;
     }
 
-
 //フラグチェック
     if ($cnt == 0) {
 //ページ遷移
@@ -66,8 +65,7 @@ if (isset($_POST['next'])) {
         $_SESSION['tel'] = $data[2];
         $_SESSION['mail'] = $data[3];
         $_SESSION['pass'] = $data[4];
-        $_SESSION['address'] = $data[5];
-        header('Location:../shop_tpl/sign_up2.php'); //次のページへ
+        header('Location:sign_up2.php'); //次のページへ
     }
 }
 
