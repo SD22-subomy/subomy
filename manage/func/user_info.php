@@ -2,13 +2,15 @@
 
 require_once 'sql.php';
 
+$table_name = "user";
+
 if ( isset($_GET['del']) ) {
 
-  delete($_GET['del'], $_GET['cate']);
-  
+  delete($_GET['del'], $table_name);
+
 }
 
-$table_name = "user";
+
 $user_list = select_user_all($table_name);
 
 

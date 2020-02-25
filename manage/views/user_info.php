@@ -16,7 +16,7 @@
 
 <?php if (isset($user_list)) { ?>
   <table>
-    <thead><tr><th>利用者ID</th><th>名前</th><th>性別</th><th>電話番号</th><th>メールアドレス</th><th>パスワード</th><th>削除</th></tr></thead>
+    <thead><tr><th>利用者ID</th><th>名前</th><th>性別</th><th>電話番号</th><th>メールアドレス</th><th>パスワード</th><th>削除</th><th>パスワード変更</th></tr></thead>
 
     <?php foreach ($user_list as $key => $value) { ?>
 
@@ -28,7 +28,8 @@
         <td><?php echo $value['tel']; ?></td>
         <td><?php echo $value['mail']; ?></td>
         <td><?php echo $value['pass']; ?></td>
-        <td><a href="?del=<?php echo $value['user_id']; ?>&cate=user">削除</a></td>
+        <td><a href="?del=<?php echo $value['user_id']; ?>">削除</a></td>
+        <td><a href="permute_pass.php?id=<?php echo $value['user_id']; ?>">変更</a></td>
         </tr>
       </tbody>
 
