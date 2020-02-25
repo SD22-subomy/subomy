@@ -12,6 +12,9 @@
  
 <h1>管理画面</h1>
 <a href="user_info.php"><div>利用者一覧</div></a>
+<a href="user_info.php"><div>店舗一覧</div></a>
+<a href="user_info.php"><div>予約一覧</div></a>
+
 
 </body>
 
