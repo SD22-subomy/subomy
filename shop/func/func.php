@@ -61,8 +61,8 @@ function shop_select($cn,$sql){
 //SQL文
 
 //SQL SELECT文
-function sql_info($table,$id){
-    $sql = "SELECT * FROM ".$table." WHERE shop_id = ".$id.";";
+function sql_info($table,$col,$id){
+    $sql = "SELECT * FROM ".$table." WHERE ".$col." = ".$id.";";
     return $sql;
 }
 
@@ -85,7 +85,7 @@ function sql_shop_login($table,$data,$id){
 
 
 //SQL結合
-function shop_inner($table,$col,$id){
+function shop_inner($table,$col,$id,$where){
     $sql = "SELECT * FROM ".$table[0];
     if($table[1] != ""){
         $linking1 = $table[0].".".$col[0];
@@ -116,7 +116,11 @@ function shop_inner($table,$col,$id){
         }
     }
     if($id != ""){
-        $sql = $sql." WHERE ".$linking1." = ".$id.";";
+        if($where != ""){
+            $sql = $sql." WHERE ".$where." = ".$id.";";
+        }else{
+            $sql = $sql." WHERE ".$linking1." = ".$id.";";
+        }
     }else{
         $sql = $sql.";";
     }
