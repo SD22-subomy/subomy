@@ -2,7 +2,8 @@
 
 require_once 'sql.php';
 
-$user_list = select_user_all();
+$table_name = "user";
+$user_list = select_user_all($table_name);
 
 
 ?>
