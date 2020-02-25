@@ -20,4 +20,11 @@ function select_user_all($table) {
   }
 }
 
+function delete($id, $table) {
+  $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+  mysqli_set_charset($cn,'utf8');
+  $sql = "DELETE FROM ".$table." WHERE user_id = '".$id."' ;";
+  mysqli_query($cn,$sql);
+  mysqli_close($cn);
+}
 ?>
