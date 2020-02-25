@@ -32,7 +32,7 @@ $(function(){
     });
     $("#cour").click(function(){
         $.ajax({
-          url : '../func/cour.php',
+          url : '../func/course.php',
           dataType : 'html',
           type:'post'
         })

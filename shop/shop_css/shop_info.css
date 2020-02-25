@@ -21,22 +21,34 @@ div{
 img{
 	height: 80vh;
 }
+body {overflow-y:hidden;}
 /*--------------header--------------*/
 #header{
     border-bottom: solid 1px #c4c2c2;
     outline: solid 3px #e9e7e7;
     height: 100px;
-    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+    /* margin-bottom: 50px; */
+}
+#header p{
+	line-height: 100px;
+}
+#header p:first-child{
+	margin-left: 30px;
+}
+#header p:last-child{
+	margin-right: 20px;
 }
 
 /*---------------center----------------*/
 #content{
+    margin-top: 50px;
     display: flex;
 }
 #left{
     width: 20%;
-    border-right: solid 1px red;
-
 }
 #navi{
     /* margin-top: 125px; */
@@ -98,11 +110,14 @@ img{
 
 }
 /*-----------content-----------*/
+
 #information{
     padding: 50px;
     width: 1000px;
+    height: 600px;
     margin: auto;
     text-align: center;
+    overflow-y:scroll;
 }
 #information table{
     margin: auto;
@@ -166,6 +181,94 @@ img{
     border-right: solid 1px #069c06a9;
 }
 #introdu  tr:last-child td{
+    border-right-style:none; 
+    border-left-style:none;
+    border-style: none;
+    background-color: #fff;
+    padding: 20px;
+}
+/*------------course_list-------------*/
+#course_list{
+    padding: 50px;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+    overflow-y:scroll;
+}
+
+#course_list h3{
+    margin-bottom: 30px;
+}
+
+.top{
+    margin: auto;
+    width: 720px;
+    display: flex;
+    justify-content: space-between;
+}
+.top img{
+    max-width: 120px;
+    max-height: 120px;
+}
+.top p:last-child{
+    width: 575px;
+
+}
+#course_list table{
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 100px;
+}
+#course_list table th{
+    width: 200px;
+    background-color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border-right-style: none;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-left: solid 1px #069c06a9;
+}
+#course_list table td{
+    background-color: #b0fdb062;
+    width: 500px;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-right: solid 1px #069c06a9;
+}
+
+/*------------course-------------*/
+#course{
+    padding: 50px;
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+#course table{
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+#course table th{
+    width: 200px;
+    background-color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border-right-style: none;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-left: solid 1px #069c06a9;
+}
+#course table td{
+    background-color: #b0fdb062;
+    width: 500px;
+    border-top: solid 1px #069c06a9;
+    border-bottom: solid 1px #069c06a9;
+    border-right: solid 1px #069c06a9;
+}
+#course  tr:last-child td{
     border-right-style:none; 
     border-left-style:none;
     border-style: none;

@@ -22,9 +22,57 @@ img{
 	height: 80vh;
 }
 /*--------------header--------------*/
+/* #header{
+	background-color: rgba(154, 240, 206, 0.55);
+	display: flex;
+	justify-content: space-between;
+    height: 100px;
+} */
 #header{
     border-bottom: solid 1px #c4c2c2;
     outline: solid 3px #e9e7e7;
     height: 100px;
-    margin-bottom: 50px;
+	/* padding-bottom: 50px; */
+	display: flex;
+	justify-content: space-between;
+}
+
+#header p{
+	line-height: 100px;
+}
+#header p:first-child{
+	margin-left: 30px;
+}
+#header p:last-child{
+	margin-right: 20px;
+}
+#left{
+	border-right: solid 3px #e9e7e7;
+	width: 20%;
+
+}
+/* #navi{
+	margin-top: 50px;
+}
+#navi li{
+	padding: 25px 0 25px 50px;
+}
+#navi a{
+	display: block;
+	width: 200px;
+	line-height: 40px;
+}
+ */
+#navi{
+	margin-top: 50px;
+    padding-left: 30px;
+}
+#navi li{
+    margin: 30px;
+    /* font-size: 1.2em; */
+    /* background-color: red; */
+}
+#navi li a{
+    display: block;
+    line-height: 30px;
 }
