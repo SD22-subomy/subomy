@@ -26,7 +26,7 @@
         <td><?php echo $value['name']; ?></td>
         <td><?php echo $value['gender']; ?></td>
         <td><?php echo $value['tel']; ?></td>
-        <td><?php echo $value['mall']; ?></td>
+        <td><?php echo $value['mail']; ?></td>
         <td><?php echo $value['pass']; ?></td>
         </tr>
       </tbody>
