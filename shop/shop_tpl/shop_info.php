@@ -11,7 +11,10 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                    
+                <p>ロゴ</p>
+                <form action="../func/shop_info.php" method="POST">
+                    <input type="submit" name="logout" value="ログアウト">
+                </form>
             </div>
 
             <div id="content">
