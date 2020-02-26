@@ -72,11 +72,7 @@ img{
 #navi li a{
     display: block;
     line-height: 30px;
-    width: 100px;
 }
-/* #navi li a:hover{
-    background-color: #e8ffcda8;
-} */
 #right{
     width: 80%;
 }

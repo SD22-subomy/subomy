@@ -36,6 +36,14 @@ if($row == ""){
 }
 if(isset($_POST['info'])){
     $_SESSION['shop_id'] = $id;
+    $_SESSION['genre'] = $row['genre'];
+    $_SESSION['access'] = $row['access'];
+    $_SESSION['shop_time'] = $row['shop_time'];
+    $_SESSION['holiday'] = $row['holiday'];
+    $_SESSION['budget'] = $irow['budget'];
+    $_SESSION['table_re'] = $row['table_re'];
+    $_SESSION['counter_re'] = $row['counter_re'];
+    $_SESSION['url'] = $row['url'];
     header('Location:info_change.php');
     exit;
 }    

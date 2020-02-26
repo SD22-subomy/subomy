@@ -36,7 +36,7 @@ function db_Register($cn,$table,$data){
     $value = "(".substr($value,0,strlen($value)-1).")";
     $sql = "INSERT INTO ".$table.$col." VALUES".$value.";";
     $result = mysqli_query($cn,$sql);
-    mysqli_close();
+    mysqli_close($cn);
     return $result;
 }
 
@@ -62,7 +62,22 @@ function shop_select($cn,$sql){
 
 //SQL SELECT文
 function sql_info($table,$col,$id){
-    $sql = "SELECT * FROM ".$table." WHERE ".$col." = ".$id.";";
+    $sql = "SELECT * FROM ".$table;
+    if($col != "" && $id != ""){
+        $sql = $sql." WHERE ".$col." = ".$id.";";
+    }else{
+        $sql = $sql.";";
+    }
+    return $sql;
+}
+
+function sql_seach($table,$seach,$col,$id){
+    $sql = "SELECT ".$seach." FROM ".$table;
+    if($col != "" && $id){
+        $sql = $sql." WHERE ".$col." = ".$id.";";
+    }else{
+        $sql = $sql.";";
+    }
     return $sql;
 }
 
