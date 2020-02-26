@@ -5,12 +5,12 @@
         <title>店舗　マイページ</title>
         <link rel="stylesheet" href="../shop_css/mypage.css">
         <script src="../../jquery-3.4.1.min.js"></script>
-        <script src="../javascript/mypage.js"></script>
+        <!-- <script src="../javascript/mypage.js"></script> -->
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
-                <p>ロゴ</p>
+                <p><img src="../../image/gulunte_logo.png"></p>
                 <form action="../func/mypage.php" method="POST">
                     <input type="submit" name="logout" value="ログアウト">
                 </form>
@@ -21,9 +21,9 @@
                         <ul>
                             <li><a href ="mypage.php">ホーム</a></li>
                             <li><a href="shop_info.php">店舗情報</a></li>
-                            <li><a href="">デザイン</a></li>
-                            <li><a href="">予約情報</a></li>
-                            <li><a href="">月額コース</a></li>
+                            <li><a href="design.php">デザイン</a></li>
+                            <li><a href="reservation.php">予約情報</a></li>
+                            <li><a href="price.php">月額コース</a></li>
                             <li><a href="">設定</a></li>
                         </ul>
                     </div>
