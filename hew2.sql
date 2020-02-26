@@ -5,7 +5,7 @@
 -- ホスト: 127.0.0.1
 -- 生成日時: 
 -- サーバのバージョン： 10.4.11-MariaDB
--- PHP のバージョン: 7.4.1
+-- PHP のバージョン: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -79,6 +79,19 @@ INSERT INTO `area` (`area_id`, `pre_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- テーブルの構造 `color`
+--
+
+CREATE TABLE `color` (
+  `color_id` int(11) NOT NULL COMMENT 'カラーID',
+  `genre_id` int(11) DEFAULT NULL COMMENT 'ジャンルID',
+  `code1` varchar(30) DEFAULT NULL COMMENT 'カラーコード1',
+  `code2` varchar(30) DEFAULT NULL COMMENT 'カラーコード2'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='カラーコード';
+
+-- --------------------------------------------------------
+
+--
 -- テーブルの構造 `commitment`
 --
 
@@ -127,8 +140,11 @@ CREATE TABLE `course` (
   `shop_id` int(11) DEFAULT NULL COMMENT '店舗ID',
   `name` varchar(100) DEFAULT NULL COMMENT 'コース名',
   `price` char(10) DEFAULT NULL COMMENT 'コース金額',
-  `other` varchar(200) DEFAULT NULL COMMENT 'コース内のその他'
+  `other` varchar(500) DEFAULT NULL COMMENT 'コース内のその他',
+  `title` varchar(300) NOT NULL COMMENT 'タイトル',
+  `img` varchar(100) NOT NULL COMMENT '写真'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='コース情報';
+
 
 -- --------------------------------------------------------
 
@@ -165,6 +181,24 @@ INSERT INTO `cuisine` (`cuisine_id`, `cuisine`) VALUES
 (4, '焼き鳥'),
 (5, 'パスタ'),
 (6, '鍋');
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `design`
+--
+
+CREATE TABLE `design` (
+  `design_id` int(11) NOT NULL COMMENT 'デザインID',
+  `design` varchar(50) DEFAULT NULL COMMENT 'その他デザイン'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='デザイン';
+
+--
+-- テーブルのデータのダンプ `design`
+--
+
+INSERT INTO `design` (`design_id`, `design`) VALUES
+(0, '未登録');
 
 -- --------------------------------------------------------
 
@@ -293,7 +327,8 @@ CREATE TABLE `reservation` (
   `shop_id` int(11) DEFAULT NULL COMMENT '店舗ID',
   `reser_date` date DEFAULT NULL COMMENT '来店日',
   `reser_time` varchar(10) DEFAULT NULL COMMENT '来店時間',
-  `reser_many` varchar(10) DEFAULT NULL COMMENT '来店人数'
+  `reser_many` varchar(10) DEFAULT NULL COMMENT '来店人数',
+  `reser_course` int(11) DEFAULT NULL COMMENT 'コースID'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='予約';
 
 -- --------------------------------------------------------
@@ -308,20 +343,23 @@ CREATE TABLE `shop` (
   `addres` varchar(100) DEFAULT NULL COMMENT '店舗住所',
   `tel` char(20) DEFAULT NULL COMMENT '電話番号',
   `mail` varchar(50) DEFAULT NULL COMMENT '店舗メール',
-  `login_id` varchar(7) CHARACTER SET utf8 COLLATE utf8_croatian_ci NOT NULL COMMENT 'ログインID',
+  `login_id` varchar(7) NOT NULL COMMENT 'ログインID',
   `pass` varchar(16) DEFAULT NULL COMMENT 'パスワード',
   `monthly` int(2) DEFAULT NULL COMMENT '課金状況'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店舗';
 
+-- --------------------------------------------------------
+
 --
--- テーブルのデータのダンプ `shop`
+-- テーブルの構造 `shop_design`
 --
 
-INSERT INTO `shop` (`shop_id`, `name`, `addres`, `tel`, `mail`, `login_id`, `pass`, `monthly`) VALUES
-(1, '大阪個室居酒屋 うまかばい 西梅田店 ', '大阪', 'dd', 'dd', 'ddddddd', 'dddddddddd', 0),
-(2, 'aaaa', 'bbbbb', '1111', 'cccc', 'aaa1111', 'a', 0),
-(3, '1', '2', '3', 'a@', 'a123456', 'a', 0),
-(4, 'a', 'bb', '1111', 'cccc', '123456a', 'a', 0);
+CREATE TABLE `shop_design` (
+  `id` int(11) NOT NULL,
+  `shop_id` int(11) DEFAULT NULL COMMENT '店舗ID',
+  `color_id` int(11) DEFAULT NULL COMMENT 'カラーID',
+  `design_id` int(11) DEFAULT NULL COMMENT 'デザインID'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店舗デザイン';
 
 -- --------------------------------------------------------
 
@@ -345,18 +383,8 @@ CREATE TABLE `shop_info` (
   `id` int(11) NOT NULL COMMENT '店舗情報ID',
   `shop_id` int(11) DEFAULT NULL COMMENT '店舗ID',
   `title` varchar(20) DEFAULT NULL COMMENT 'タイトル',
-  `info` varchar(100) DEFAULT NULL COMMENT '紹介文'
+  `info` varchar(300) DEFAULT NULL COMMENT '紹介文'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- テーブルのデータのダンプ `shop_info`
---
-
-INSERT INTO `shop_info` (`id`, `shop_id`, `title`, `info`) VALUES
-(1, 1, '疲れた', 'あああああああああああああああああああああ'),
-(2, 4, 'あああああああああ', 'あああああああああああああああっららら'),
-(3, 2, '疲れた', 'あああああああああああああああああああああ'),
-(4, 3, 'あああああああああ', 'あああああああああああああああっららら');
 
 -- --------------------------------------------------------
 
@@ -377,13 +405,6 @@ CREATE TABLE `shop_pos` (
   `counter_re` varchar(3) NOT NULL COMMENT 'カウンター座席数'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店舗情報の追記';
 
---
--- テーブルのデータのダンプ `shop_pos`
---
-
-INSERT INTO `shop_pos` (`id`, `shop_id`, `genre_id`, `access`, `shop_time`, `budget`, `holiday`, `url`, `table_re`, `counter_re`) VALUES
-(1, 1, 2, 'aaaaaaaaaaaaaaaa', '12222', 'saa', '艇', 'url', '70', '20'),
-(2, 2, 2, 'aaaaaaaaaaaaaaaa', '12222', 'asdf', '艇', 'url', '100', '10');
 
 -- --------------------------------------------------------
 
@@ -436,6 +457,12 @@ ALTER TABLE `area`
   ADD KEY `pre_id` (`pre_id`);
 
 --
+-- テーブルのインデックス `color`
+--
+ALTER TABLE `color`
+  ADD PRIMARY KEY (`color_id`);
+
+--
 -- テーブルのインデックス `commitment`
 --
 ALTER TABLE `commitment`
@@ -466,6 +493,12 @@ ALTER TABLE `cuisine`
   ADD PRIMARY KEY (`cuisine_id`);
 
 --
+-- テーブルのインデックス `design`
+--
+ALTER TABLE `design`
+  ADD PRIMARY KEY (`design_id`);
+
+--
 -- テーブルのインデックス `genre`
 --
 ALTER TABLE `genre`
@@ -494,6 +527,12 @@ ALTER TABLE `reservation`
 --
 ALTER TABLE `shop`
   ADD PRIMARY KEY (`shop_id`);
+
+--
+-- テーブルのインデックス `shop_design`
+--
+ALTER TABLE `shop_design`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- テーブルのインデックス `shop_img`
@@ -545,13 +584,13 @@ ALTER TABLE `conditions`
 -- テーブルのAUTO_INCREMENT `course`
 --
 ALTER TABLE `course`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'コースID';
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'コースID', AUTO_INCREMENT=3;
 
 --
 -- テーブルのAUTO_INCREMENT `course_img`
 --
 ALTER TABLE `course_img`
-  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'コース写真のID';
+  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'コース写真のID', AUTO_INCREMENT=5;
 
 --
 -- テーブルのAUTO_INCREMENT `monthly`
@@ -569,7 +608,13 @@ ALTER TABLE `reservation`
 -- テーブルのAUTO_INCREMENT `shop`
 --
 ALTER TABLE `shop`
-  MODIFY `shop_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店舗ID', AUTO_INCREMENT=5;
+  MODIFY `shop_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店舗ID', AUTO_INCREMENT=11;
+
+--
+-- テーブルのAUTO_INCREMENT `shop_design`
+--
+ALTER TABLE `shop_design`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- テーブルのAUTO_INCREMENT `shop_img`
@@ -587,7 +632,7 @@ ALTER TABLE `shop_info`
 -- テーブルのAUTO_INCREMENT `shop_pos`
 --
 ALTER TABLE `shop_pos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店舗情報の追記ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店舗情報の追記ID', AUTO_INCREMENT=4;
 
 --
 -- テーブルのAUTO_INCREMENT `user`
