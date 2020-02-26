@@ -72,7 +72,6 @@ header a{
 }
 
 #info{
-border: solid blue 1px;
   width: 700px;
 }
 
@@ -176,7 +175,34 @@ form li{
   border-bottom: solid#999b9a 1px;
 }
 .modaal-content-container{
-  height: 190px;
+  height: 220px;
+  padding: 0px 20px;
+}
+.course li{
+  padding: 20px;
+}
+.course > li:nth-child(1){
+  padding-top: 40px;
+}
+
+.modaal-content-container .seat li{
+  text-align: left;
+  border: none;
+}
+.modaal-content-container label{
+  position: relative;
+  left: 30px;
+  font-size: 13px;
+}
+.modaal-content-container li label input[type=radio]{  /* button */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 30px;
+  left: -20px;
+}
+.modaal-content-container li label span{
+  font-size: 18px;
 }
 
 form > p:last-child{  /* 予約するボタン */
