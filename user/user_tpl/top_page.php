@@ -13,7 +13,7 @@
         <?php if($login_flg){?>
         <div>
             <ul>
-            <li><a href="./index.php"><img src="./../image/gulunte_logo.png" width="200px"></a></li>
+            <li><a href="./index.php"><img src="./../image/gulunte_logo.png" width="220px"></a></li>
             <li><a href="./controller/my_page.php">マイページ</a></li>
             <li><input type="submit" name="logout" value="ログアウト"></li>
             </ul>
@@ -21,7 +21,7 @@
         <?php }else{?>
         <div>
             <ul>
-            <li><a href="./index.php"><img src="./../image/gulunte_logo.png" width="200px"></a></li>
+            <li><a href="./index.php"><img src="./../image/gulunte_logo.png" width="220px"></a></li>
             <li><a href="./controller/sign_up.php">新規会員登録</a></li>
             <li><a href="./controller/login.php">ログイン</a></li>
             </ul>
