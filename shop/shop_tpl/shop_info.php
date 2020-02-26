@@ -5,8 +5,7 @@
         <title>店舗情報</title>
         <link rel="stylesheet" href="../shop_css/shop_info.css">
         <script src="../../jquery-3.4.1.min.js"></script>
-        <script src="../javascript/shop_info.js"></script>
-        
+        <script src="../javascript/shop_info.js"></script> 
     </head>
     <body>
         <div id="wrapper">
@@ -16,13 +15,11 @@
                     <input type="submit" name="logout" value="ログアウト">
                 </form>
             </div>
-
             <div id="content">
                 <div id="left">
                     <div id="navi">
                         <ul>
                             <li><a href ="mypage.php">ホーム</a></li>
-                            <li><a href="">サイト作成</a></li>
                             <li><a href="shop_info.php">店舗情報</a></li>
                             <li><a href="">デザイン</a></li>
                             <li><a href ="">予約情報</a></li>

@@ -11,7 +11,9 @@
         <div id="wrapper">
             <div id="header">
                 <p>ロゴ</p>
-                <p>ログアウト</p>
+                <form action="../func/mypage.php" method="POST">
+                    <input type="submit" name="logout" value="ログアウト">
+                </form>
             </div>
             <div id="content">
                 <div id="left">
@@ -20,7 +22,7 @@
                             <li><a href ="mypage.php">ホーム</a></li>
                             <li><a href="shop_info.php">店舗情報</a></li>
                             <li><a href="">デザイン</a></li>
-                            <li><a href ="">予約情報</a></li>
+                            <li><a href="">予約情報</a></li>
                             <li><a href="">月額コース</a></li>
                             <li><a href="">設定</a></li>
                         </ul>
