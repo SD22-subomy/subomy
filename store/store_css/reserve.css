@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+*{
+    margin: 0 auto;
+    padding: 0px;
+}
+li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+body{
+
+}
+#wrapper{
+  background-color: #f9fffa;
+  width: 730px;
+  border: black 1px solid;
+}
+a{
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+button{
+  cursor: pointer;
+}
+
+header{
+  padding: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+}
+header p:nth-child(1){
+  position: relative;
+  left: -55px;
+}
+header ul{
+  display: flex;
+  position: relative;
+  right: -52px;
+  font-size: 15px;
+}
+header li{
+  margin-left: 20px;
+}
+header a{
+  background-color: #8aff6e;
+  padding: 5px 20px;
+}
+
+.back{
+  background-color: white;
+  height: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid #59e470 2px;
+  margin-bottom: 20px;
+}
+.back p:nth-child(1) a{
+  padding: 10px;
+  height: 30px;
+  position: relative;
+  top: -7px;
+  left: -170px;
+}
+.back p:nth-child(2){
+  position: relative;
+  right: 440px;
+  padding-top: 3px;
+}
+
+#info{
+border: solid blue 1px;
+  width: 700px;
+}
+
+#info > p:nth-child(1){  /* 店名 */
+  font-size: 23px;
+  color: #999b9a;
+  padding-left: 10px;
+}
+#info > p:nth-child(2), #info > p:nth-child(3){
+  width: 150px;
+  position: relative;
+  right: 250px;
+  font-size: 14px;
+}
+
+form p{
+  padding-left: 20px;
+}
+.wh{
+  padding: 5px;
+  color: #636363;
+  border: solid 1px #999b9a;
+  background-color: #c9ffd2;
+  margin: 5px 0px;
+}
+
+form section:nth-of-type(1){
+  height: 40px;
+  padding-top: 10px;
+}
+.change a{
+  border: solid #999b9a 1px;
+  width: 35px;
+  background-color: #dfdfdf;
+  border-radius: 10px;
+  padding: 5px 20px;
+  position: relative;
+  top: -27px;
+  right: -285px;
+}
+
+
+form{
+  margin-bottom: 100px;
+}
+ul button{
+  width: 50px;
+  height: 32px;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px 0px;
+  border: solid #999b9a 1px;
+  border-radius: 10px;
+}
+form > ul{
+  display: flex;
+  width: 700px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+form li{
+  padding-right: 10px;
+  display: inline-block;
+}
+
+/* モーダル */
+.modaal-container{
+  width: 600px;
+}
+.modaal-container p{
+  position: absolute;
+  top: -247px;
+  right: -111px;
+  height: 65px;
+  width: 100vw;
+  background-color: white;
+  padding-top: 0px;
+}
+.modaal-container p img{
+  padding: 10px;
+  width: 50px;
+  position: relative;
+  top: 16px;
+  left: -334px;
+}
+#modal1 > ul{
+  display: block;
+}
+.modaal-wrapper .modaal-close{  /* × */
+  position: absolute;
+  top: -237px;
+  left: -730px;
+  opacity: 0;
+}
+.modaal-content-container li{
+  padding: 10px;
+}
+.modaal-content-container li:nth-child(2){
+  border-top: solid #999b9a 1px;
+  border-bottom: solid#999b9a 1px;
+}
+.modaal-content-container{
+  height: 190px;
+}
+
+form > p:last-child{  /* 予約するボタン */
+  text-align: center;
+  margin-top: 70px;
+  padding: 0px;
+}
+form > p:last-child button{
+  width: 600px;
+  border: none;
+  color: white;
+  font-size: 19px;
+  padding: 5px;
+  background-color: #44eb5a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 5px;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 0 0 2px #777;
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 8px;
+  box-shadow: none;
+}
