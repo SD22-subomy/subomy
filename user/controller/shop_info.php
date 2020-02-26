@@ -18,6 +18,17 @@ if(isset($_GET['shop_id'])){
 	$course_list = get_course_list($_GET['shop_id']);
 }
 
+//予約ボタン
+if(isset($_GET['reserve'])){
+
+	$date = '';
+	if(isset($_GET['date'])){
+		$date = $_GET['date'];
+	}
+	$_SESSION['reserve_shop'] = $_GET['id'];
+	header("location: ./reserve.php#".$date."");
+	exit;
+}
 
 //デバック用
 // var_dump($shop_info);

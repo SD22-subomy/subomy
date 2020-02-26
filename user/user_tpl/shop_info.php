@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <form action="./reserve.php" method="get">
+    <form action="" method="get">
     <div id="content">
         <div class="center">
             <ul>
