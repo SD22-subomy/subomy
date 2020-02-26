@@ -26,3 +26,9 @@
 	display: block;
 	float: right;
 }
+
+#header ul li:nth-child(1){
+	padding: 30px;
+	display: block;
+	float: left;
+}
