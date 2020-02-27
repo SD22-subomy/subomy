@@ -19,7 +19,7 @@
             <ul>
                 <li>マイページメニュー</li>
                 <li><a href="./condition.php">条件登録</a></li>
-                <li><a href="#">予約確認</a></li>
+                <li><a href="./schedule.php">予約確認</a></li>
                 <li><a href="#">会員情報設定</a></li>
             </ul>
             <input type="submit" name="back" value="TOPへ戻る">

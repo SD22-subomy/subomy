@@ -378,4 +378,34 @@ function reserve($user_id,$shop_id,$date,$time,$num,$course){
 }
 
 
+/**
+ * ＜利用者＞会員IDで予約情報を取得する関数
+ *
+ * @param string $id 会員ID
+ * @return array 取得した予約情報の連想配列
+ */
+
+function get_reserve_info($id){
+
+    $list = [];
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT * FROM reservation WHERE user_id = '".$id."';";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+    while($row = mysqli_fetch_assoc($result)){
+        $info = [
+            'id' => $row['reser_id'],
+            'date' => $row['reser_date'],
+            'time' => $row['reser_time']
+        ];
+        $list[] = $info;
+    }
+
+    return $list;
+}
+
 ?>
