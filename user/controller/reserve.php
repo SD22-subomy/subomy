@@ -23,11 +23,15 @@ if(is_null($user_id)){
 $shop_id = $_SESSION['reserve_shop'];
 $shop_info = get_shop_info($shop_id);
 
+$date = $_SESSION['reserve_date'];
+if(isset($_GET['date'])){
+	$date = $_GET['date'];
+}
+
 //確認
 if(isset($_GET['check'])){
 
 	$number = $_GET['number'];
-	$date = $_GET['date'];
 	$time = $_GET['time'];
 	$course_id = $_GET['course'];
 
@@ -48,9 +52,6 @@ if(isset($_GET['check'])){
 //戻るボタン
 if(isset($_GET['back'])){
 
-	$date = $_GET['date'];
-
-
 	require_once './../user_tpl/reserve.php';
 	exit;
 }
@@ -64,6 +65,7 @@ if(isset($_GET['confirm'])){
 	$course_id = $_GET['course_id'];
 
 	reserve($user_id,$shop_id,$date,$time,$num,$course_id);
+
 	require_once './../user_tpl/reserve_over.php';
 	exit;
 }
