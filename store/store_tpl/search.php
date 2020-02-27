@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>検索結果</title>
     <link href="../store_css/search.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -51,19 +52,24 @@
               <p>すべて > <?php echo "イタリアン"; ?></p>
             </section>
 
-            <p>日付<input type="date" name="date" required min="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" max="<?php echo date("Y-m-d", strtotime("+1 month")); ?>"></p>
+            <ul>
+              <li>日付</li>
+              <li><input type="date" name="date" required min="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" max="<?php echo date("Y-m-d", strtotime("+1 month")); ?>"></li>
+            </ul>
 
-            <p>予算
-              <select name="">
-                <option value="">未選択</option>
-                <option value="1000">￥1,000~</option>
-                <option value="1500">￥1,500~</option>
-                <option value="2000">￥2,000~</option>
-                <option value="2500">￥2,500~</option>
-                <option value="3000">￥3,000~</option>
-              </select>
-              ～
-              <select name="">
+            <ul>
+              <li>予算<li>
+              <li>
+                <select name="">
+                  <option value="">未選択</option>
+                  <option value="1000">￥1,000~</option>
+                  <option value="1500">￥1,500~</option>
+                  <option value="2000">￥2,000~</option>
+                  <option value="2500">￥2,500~</option>
+                  <option value="3000">￥3,000~</option>
+                </select>
+                ~
+                <select name="">
                 <option value="">未選択</option>
                 <option value="5000">~￥5,000</option>
                 <option value="6000">~￥6,000</option>
@@ -72,25 +78,28 @@
                 <option value="9000">~￥9,000</option>
                 <option value="10000">~￥10,000</option>
               </select>
-            </p>
+              </li>
+            </ul>
 
             <section>
               <p class="gray">営業</p>
               <select name="">
                 <option value="">営業時間　指定なし</option>
-                <option value="朝">朝営業（5時～10時）</option>
-                <option value="ランチ">ランチ（10時～14時）</option>
-                <option value="午後">午後営業（14時～17時）</option>
-                <option value="ディナー">ディナータイム（）17時～24時</option>
-                <option value="深夜">深夜営業（23時～29時）</option>
+                <option value="朝">朝営業(5時～10時)</option>
+                <option value="ランチ">ランチ(10時～14時)</option>
+                <option value="午後">午後営業(14時～17時)</option>
+                <option value="ディナー">ディナータイム(17時～24時)</option>
+                <option value="深夜">深夜営業(23時～29時)</option>
                 <option value="24時間">24時間営業</option>
               </select>
             </section>
 
             <section>
-              <p>席タイプ</p>
-              <p><input type="checkbox" name="room" value="">個室あり</p>
-              <p><input type="checkbox" name="counter" value="">カウンター</p>
+              <p class="gray">席タイプ</p>
+              <ul>
+                <li><input type="checkbox" name="room" value="">個室あり</li>
+                <li><input type="checkbox" name="counter" value="">カウンター</li>
+              </ul>
             </section>
 
             <section>
@@ -103,12 +112,14 @@
             </section>
 
             <section>
-              <p>宴会</p>
-              <p><input type="checkbox" name="room" value="">飲み放題あり</p>
-              <p><input type="checkbox" name="counter" value="">食べ放題あり</p>
+              <p class="gray">宴会</p>
+              <ul>
+              <li><input type="checkbox" name="room" value="">飲み放題あり</li>
+              <li><input type="checkbox" name="counter" value="">食べ放題あり</li>
+              </ul>
             </section>
 
-            <p><button type="submit"><img src="../image/search.png" width="15">検索する</button></p>
+            <p><button type="submit"><img src="../image/search.png" width="20">検索する</button></p>
           </form>
         </div>  <!-- left -->
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>店名</title>
     <link href="../store_css/store_top.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
   </head>
   <body>
 

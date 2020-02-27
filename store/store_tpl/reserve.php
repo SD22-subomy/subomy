@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>予約画面</title>
     <link href="../store_css/modaal.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet"> 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="../store_js/modaal.min.js"></script>
     <link href="../store_css/reserve.css" rel="stylesheet" type="text/css">
@@ -79,7 +80,7 @@
 
           <div id="modal1" style="display:none">
             <p><img src="../image/arrow1.png" width="25" alt="arrow">コース選択</p>
-            <ul>
+            <ul class="course">
               <li>コースを指定せずに席のみ予約する</li>
               <li>飲み放題コース</li>
               <li>食べ放題コース</li>
@@ -94,10 +95,20 @@
             <p class="change"><a href="#modal2" class="modal2">変更</a><p>
           </section>
 
-          <div id="modal2" >
+          <div id="modal2" style="display:none">
             <p><img src="../image/arrow1.png" width="25" alt="arrow">席選択</p>
-            <label><input type="radio" name="seat" value="" checked>テーブル（喫煙）</label>
-            <label><input type="radio" name="seat" value="">カウンター</label>
+            <ul class="seat">
+              <li><label><input type="radio" name="seat" value="" checked>
+                <span>テーブル（喫煙）</span><br>
+                　　２名～<br>
+                　　予約時２時間制／未成年者の見のご利用不可
+              </label></li>
+              <li><label><input type="radio" name="seat" value="">
+                <span>カウンター</span><br>
+                　　１名～<br>
+                　　予約時２時間制／未成年者の見のご利用不可
+              </label></li>
+            </ul>
           </div>
 
           <script type="text/javascript">
