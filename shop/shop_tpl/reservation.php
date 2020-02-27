@@ -30,8 +30,36 @@
                 </div>
                 <div id="right">
                     <div id="r_header">
-                        <h3></h3>
+                        <form action="../func/reservation.php" method="POST">
+                            <ul>
+                                <li>
+                                    <input type="hidden" name="prevDay" value="<?= $yesterday?>">                                   
+                                    <input type="submit" name="prev" value="＜">
+                                </li>
+                                <li><?= $daies?></li>
+                                <li>
+                                    <input type="hidden" name="nextDay" value="<?= $yesterday?>">
+                                    <input type="submit" name="next" value="＞">
+                                </li>
+                            </ul>
+                        </form>
                     </div>
+                    <div id="createS">
+                        <div class="s_header">
+                        <?php
+                            for($i=0;$i < count($times); $i++){
+                                $time = $i % 2;
+                                if($time == 0){
+                        ?>
+                            <div class="time"><?= $times[$i]?></div>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                        <?= $html?>
+                    </div>
+                    <?= $msg?>
                 </div>
             </div>
             <div id="footer">

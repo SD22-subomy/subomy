@@ -141,4 +141,59 @@ function shop_inner($table,$col,$id,$where){
     }
     return $sql;
 }
+
+//結合2
+function inner_sql2($table,$col,$id,$where,$and_col,$and){
+    $sql = "SELECT * FROM ".$table[0];
+    if($table[1] != ""){
+        $linking1 = $table[0].".".$col[0];
+        $linking2 = $table[1].".".$col[1];
+        $sql = $sql." INNER JOIN ".$table[1]." ON ".$linking1." = ".$linking2;
+    }
+    if($table[2] != ""){
+        if($col[3] != ""){
+            $linking3 = $table[2].".".$col[2];
+            for($i = 0;$i < 3; $i++){
+                if($col[$i] == $col[3]){
+                    if($i == 2){
+                        $a = $i - 1;
+                        $linking4 = $table[$a].".".$col[3];
+                    }else{
+                        $linking4 = $table[$i].".".$col[3];
+                    }
+                }
+            }
+            $sql = $sql." INNER JOIN ".$table[2]." ON ".$linking4." = ".$linking3;
+        }else{
+            $linking3 = $table[2].".".$col[2];
+            if($col[0] == $col[2]){
+                $sql = $sql." INNER JOIN ".$table[2]." ON ".$linking1." = ".$linking3;
+            }elseif($col[1] == $col[2]){
+                $sql = $sql." INNER JOIN ".$table[2]." ON ".$linking2." = ".$linking3;
+            }
+        }
+    }
+    if($id != ""){
+        if($where != ""){
+            $sql = $sql." WHERE ".$where." = ".$id;
+        }else{
+            $sql = $sql." WHERE ".$linking1." = ".$id;
+        }
+        if($and_col != ""){
+            $sql = $sql." AND ".$and_col." = '".$and."'";
+        }
+    }
+    $sql = $sql.";";
+    return $sql;
+}
+
+
+// function set_month($date) {
+//     $ret = "";
+//     $str = str_split($date);
+//     $ret.=$str[5] . $str[6] ;
+//     return $ret;
+// }
+
+
 ?>
