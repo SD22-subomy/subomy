@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>予約画面</title>
     <link href="./../user_css/modaal.min.css" rel="stylesheet" type="text/css">
-    <link href="./../user_css/reserve.css" rel="stylesheet" type="text/css">
     <link href="./../user_css/calendar.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet"> 
+    <link href="./../user_css/reserve.css" rel="stylesheet" type="text/css">
+<!--     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">  -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="./../user_js/modaal.min.js"></script>
   </head>
 <body>
     <div id="wrapper">
 
-      <header>
-        <p><img src="./../image/gulunte.png" width="250" alt="logo"></p>
+<!--       <header>
+        <p><a href="./../index.php"><img src="./../image/gulunte.png" width="200" alt="logo"></a></p>
         <ul>
           <li><a href="">新規登録</a></li>
           <li><a href="">ログイン</a></li>
+        </ul>
+      </header> -->
+
+      <header>
+        <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
+        <ul class="sign">
+            <li><a href="./my_page.php">マイページ</a></li>
+            <li><input type="submit" name="logout" value="ログアウト"></li>
         </ul>
       </header>
 
