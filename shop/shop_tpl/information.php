@@ -38,8 +38,8 @@
                 <td><?= $row['table_re']?>席</td>
             </tr>
             <tr>
-                <th>カウンター座席数</th>
-                <td><?= $row['counter_re']?>席</td>
+                <th>カウンター</th>
+                <td><?= $row['counter_re']?></td>
             </tr>
             <tr>
                 <th>ホームページ</th>

@@ -15,6 +15,7 @@ $s_row = mysqli_fetch_assoc(shop_select($cn,$sql));
 //データベース接続(color)
 $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
 mysqli_set_charset($cn,'utf8');
+$sql = sql_info('color',)
 $sql = sql_info('color','genre_id',$s_row['genre_id']);
 $color = mysqli_fetch_assoc(shop_select($cn,$sql));
 
