@@ -5,7 +5,8 @@
         <title>店舗　デザイン</title>
         <link rel="stylesheet" href="../shop_css/design.css">
         <script src="../../jquery-3.4.1.min.js"></script>
-        <!-- <script src="../javascript/mypage.js"></script> -->
+        <script src="../javascript/imageselect.js"></script>
+        <script src="../javascript/design.js"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -29,7 +30,54 @@
                     </div>
                 </div>
                 <div id="right">
+                    <!-- <table>
+                        <tr>
+                            <th>カラー</th>
+                            <td>
+                                <select>
+                                    <option></option>
+                                </select>
+                            </td>
+                            <th>デザイン</th>
+                            <td>
+                                <select name="design">
+                                    <option>選択なし</option>
+                                    <?php
+                                    for($i=1;$i<$cnt;$i++){
+                                    ?>
+                                    <option value="<?=$i?>">../../design/<?= $tbl[$i]['design']?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
+                            </td>
+                        </tr>
+                    </table> -->
                     <?=$color['code1']?>
+                    <?=$color['code2']?>
+                    <form id="design">
+                        <h3>デザイン</h3>
+                        <label>
+                            <input type="radio" name="design[]">選択なし
+                        </label>
+                        <?php
+                            for($i=1;$i<$cnt;$i++){
+                        ?>
+                        <label>
+                            <input type="radio" name="design[]" value="<?=$tbl[$i]['design']?>">
+                            <img src="../../design/<?= $tbl[$i]['design']?>">
+                        </label>
+                        <?php
+                            }
+                        ?>
+                    </form>
+                    <form action="" method="POST">
+                        <div id="sample">
+                            <header>サンプル</header>
+                            <p>■<?=$info['title']?></p>
+                            <p><?=$info['info']?></p>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div id="footer">

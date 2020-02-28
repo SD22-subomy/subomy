@@ -186,14 +186,4 @@ function inner_sql2($table,$col,$id,$where,$and_col,$and){
     $sql = $sql.";";
     return $sql;
 }
-
-
-// function set_month($date) {
-//     $ret = "";
-//     $str = str_split($date);
-//     $ret.=$str[5] . $str[6] ;
-//     return $ret;
-// }
-
-
 ?>
