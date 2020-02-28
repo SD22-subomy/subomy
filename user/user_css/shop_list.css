@@ -1,25 +1,256 @@
 @charset "utf-8";
+*{
+    margin: 0 auto;
+	padding: 0px;
+	margin: 0;
+}
+li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+header{
+  padding: 10px;
+  background-color: #f0f0f0;
+  height: 50px;
+}
+
+.sign{
+  position: relative;
+  top: -45px;
+  right: -309px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.sign a{
+  background-color: #8aff6e;
+  padding: 10px 30px;
+  margin-left: 30px;
+}
+/* header form{
+  height: 40px;
+}
+header .input1{
+	height: 30px;
+	width: 130px;  
+}
+header .input2{
+	height: 30px;
+	width: 230px;  
+}
+header select{
+  height: 33px;
+  width: 170px;
+}
+header button{
+  height: 33px;
+  width: 150px;
+  text-decoration: none;
+  border: none;
+  background-color: #8aff6e;
+  position: relative;
+  top: 3px;
+} */
+header button img{
+  position: relative;
+  top: 5px;
+  padding-left: 5px;
+}
+
+#wrapper{
+  border: solid blue 1px;
+  width: 730px;
+  margin: auto;
+}
+#main{
+	position: relative;
+}
+#main form{
+  height: 40px;
+}
+#main .input1{
+	height: 30px;
+	width: 130px;  
+}
+#main .input2{
+	height: 30px;
+	width: 230px;  
+}
+#main select{
+  height: 33px;
+  width: 170px;
+}
+#main button{
+  height: 33px;
+  width: 150px;
+  text-decoration: none;
+  border: none;
+  background-color: #8aff6e;
+  position: relative;
+  top: 3px;
+}
+
+.clear {
+    width: 730px;
+    height: 300px;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+	top: 0;
+}
+.seach{
+	width: 730px;
+	position: absolute;
+	top: 125px;
+	text-align: center;
+	/* left: 95px; */
+	/* border: solid 1px red; */
+}
+
+.about {
+    border-top: solid 1px;
+	padding: 10px;
+	display: flex;	
+}
+.left {
+    right: 255px;
+    width: 200px;
+}
+.left section{
+  padding: 0px 0px 5px 0px;
+  margin: 10px 0px;
+}
+.left section:nth-of-type(1), .left section:nth-of-type(2){
+  border: solid gray 1px;
+}
+.left section:nth-child(1){
+  margin: 0px;
+}
+.left section:nth-child(1) p:nth-child(1), .left section:nth-child(2) p:nth-child(1){
+  font-size: 15px;
+  padding: 5px;
+}
+.left section:nth-child(1) p:nth-child(2), .left section:nth-child(2) p:nth-child(2){
+  font-size: 11px;
+  padding-left: 10px;
+}
+
+.left ul{  /* date,money */
+  display: flex;
+}
+.left > form > ul:nth-of-type(1) li:nth-of-type(1), .left > form > ul:nth-of-type(2) li:nth-of-type(1){
+  padding: 5px;
+  font-size: 14px;
+}
+.left > form > ul:nth-of-type(1) li:nth-of-type(2), .left > form > ul:nth-of-type(2) li:nth-of-type(3){
+  padding-top: 4px;
+  width: 156px;
+}
+.left ul:nth-of-type(1) input{
+  width: 146px;
+  margin-bottom: 10px;
+}
+.left ul:nth-of-type(2) select{
+  width: 65px;
+}
 
 
-/*#content{
-	width: 900px;
-	padding: 50px;
-	float: right;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: pink;
-}*/
+.gray{
+  width: 190px;
+  padding: 5px;
+  color: #404040;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background-color: #dbdbdb;
+}
+.left section:nth-of-type(3) select, .left section:nth-of-type(5) select{  /* open time, smoking */
+  width: 180px;
+  padding: 5px;
+  margin-left: 10px;
+}
 
-.shop_list ul li{
-/*	width: 800px;*/
+.left section:nth-of-type(4) input{  /* seat type */
+  width: 15px;
+  margin: 0px 3px;
+}
+.left section:nth-of-type(4) ul li, .left section:nth-of-type(6) ul li{
+  font-size: 14px;
+}
+.left section:nth-of-type(4) ul li:nth-child(1){
+  width: 80px;
+}
+.left section:nth-of-type(4) ul li:nth-child(2){
+  width: 110px;
+  /* padding-top: 5px; */
+}
+
+.left section:nth-of-type(6) ul{  /* party */
+  display: block;
+}
+.left section:nth-of-type(6) input{
+  width: 15px;
+  margin: 0px 3px;
+}
+.left section:nth-of-type(6) ul li{
+  padding: 5px;
+}
+
+.left button{
+  border: none;
+  width: 200px;
+  padding: 5px;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #59e470;
+}
+.left button img{
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+}
+
+.right {
+	width: 500px;
+	margin-left: 10px;
+}
+/* .right ul li{
 	height: 150px;
 	margin: 20px;
 	background-color: #90f390;
-}
+} */
 
-.shop_list ul li a{
+.right ul li{
+	border: solid gray 1px;
+    background-color: white;
+    padding: 10px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.right ul li a{
 	text-decoration: none;
 	display: block;
 	width: 100%;
 	height: 100%;
 }
+
+
+
+footer{
+	background-color: #59e470;
+	padding: 20px 10px;
+	font-size: 11px;
+	color: dimgray;
+  }
+  footer ul{
+	display: flex;
+  }
+  footer p{
+	text-align: center;
+	padding-top: 10px;
+  }
+  

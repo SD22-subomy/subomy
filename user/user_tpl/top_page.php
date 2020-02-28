@@ -10,7 +10,7 @@
 <div id="wrapper">
 <form action="" method="POST">
       <header>
-        <p><img src="./../image/gulunte_logo.png" width="300" alt="logo"></p>
+        <p><a href="./index.php"><img src="./../image/gulunte_logo.png" width="300" alt="logo"></a></p>
         <?php if($login_flg){?>
             <ul class="sign">
                 <li><a href="./controller/my_page.php">マイページ</a></li>
@@ -90,10 +90,20 @@
         </div>
     </div>
 
-    <div id="footer">
-        <div class="center">
-        </div>
-    </div>
+    <footer>
+        <ul>
+          <li>サイトマップ</li>
+          <li>キーワード一覧</li>
+          <li>ヘルプ・お問合わせ</li>
+          <li>プレミアムサービス</li>
+          <li>個人情報保護方針</li>
+          <li>利用契約</li>
+          <li>企業情報</li>
+          <li>採用情報</li>
+        </ul>
+        <p>Copyright (C) Hal Event Week, Inc All Rights Reserved</p>
+      </footer>
+
 
 </div>
 </body>
