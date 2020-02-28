@@ -14,7 +14,7 @@
     <div id="wrapper">
 
       <header>
-        <p><img src="./../../image/gulunte_logo.png" width="250" alt="logo"></p>
+        <p><img src="./../image/gulunte.png" width="250" alt="logo"></p>
         <ul>
           <li><a href="">新規登録</a></li>
           <li><a href="">ログイン</a></li>
@@ -22,7 +22,7 @@
       </header>
 
       <section class="back">
-        <p><a href=""><img src="./../../image/arrow1.png" width="25" alt="arrow"></a></p>
+        <p><a href=""><img src="./../image/arrow1.png" width="25" alt="arrow"></a></p>
         <p>予約</p>
       </section>
 
