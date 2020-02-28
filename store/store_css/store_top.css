@@ -13,7 +13,9 @@ a{
   color: black;
 }
 
-
+body{
+  font-family: 'M PLUS 1p';
+}
 
 header{
   padding: 10px;
