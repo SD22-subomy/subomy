@@ -11,7 +11,7 @@
 <div id="wrapper">
 
       <header>
-        <p><img src="./../../image/gulunte_logo.png" width="300" alt="logo"></p>
+        <p><a href="../index.php"><img src="./../../image/gulunte_logo.png" width="300" alt="logo"></a></p>
         <?php if($login_flg){?>
             <ul class="sign">
                 <li><a href="./my_page.php">マイページ</a></li>
@@ -33,7 +33,7 @@
                 <option value="貸切">貸切</option>
                 <option value="おしゃれ">おしゃれ</option>
             </select>
-          <button type="submit">検索<img src="./../../image/search.png" width="20" alt="search"></button>
+          <button type="submit">検索<img src="../image/search.png" width="20" alt="search"></button>
       </header>
 
     <form action="" method="get">
