@@ -8,7 +8,10 @@
 //  });
 function myCheck(){
     var flag = false; // 選択されているか否かを判定するフラグ
-   
+    $('design[]').on('click',function(){
+        var index = $('design').index(this);
+        console.log(index)
+    })
    //　ラジオボタンの数だけ判定を繰り返す（ボタンを表すインプットタグがあるので１引く）
     for(var i=0; i<document.design.fruits.length-1;i++){
  
