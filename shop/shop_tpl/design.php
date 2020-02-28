@@ -55,6 +55,11 @@
                     </table> -->
                     <?=$color['code1']?>
                     <?=$color['code2']?>
+                    <form id="color">
+                        <?php
+                            for($i=0;$i<)
+                        ?>
+                    </form>
                     <form id="design">
                         <h3>デザイン</h3>
                         <label>
@@ -70,6 +75,9 @@
                         <?php
                             }
                         ?>
+                    </form>
+                    <form id="season">
+                        <h3>季節</h3>
                     </form>
                     <form action="" method="POST">
                         <div id="sample">
