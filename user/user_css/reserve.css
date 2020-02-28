@@ -13,10 +13,11 @@ body{
 }
 
 #wrapper{
-  background-color: #f9fffa;
+  border: solid blue 1px;
   width: 730px;
-  border: black 1px solid;
+  margin: auto;
 }
+
 a{
   text-decoration: none;
   color: black;
@@ -27,27 +28,28 @@ button{
 }
 
 header{
-  padding: 10px;
+    padding: 10px 10px 11.5px 10px;
   background-color: #f0f0f0;
   display: flex;
 }
 header p:nth-child(1){
   position: relative;
-  left: -55px;
+  left: -40px;
 }
 header ul{
   display: flex;
   position: relative;
-  right: -52px;
+/*  right: -52px;*/
   font-size: 15px;
 }
 header li{
   margin-left: 20px;
 }
-header a{
+header li a{
   background-color: #8aff6e;
   padding: 5px 20px;
 }
+
 
 .back{
   background-color: white;
@@ -240,4 +242,12 @@ form > p:last-child button{
 
 #calendar_form{
   height: 450px;
+}
+
+#calendar_form td {
+    padding: 5px 20px;
+}
+
+html{
+  scroll-behavior: smooth;
 }
