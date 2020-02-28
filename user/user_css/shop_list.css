@@ -1,83 +1,17 @@
 @charset "utf-8";
 
-*{
-    margin: 0 auto;
-    padding: 0px;
-}
-li {
-    list-style-type: none;
-    list-style-position: outside;
-}
-a{
-  text-decoration: none;
-  color: black;
-}
-header{
-  padding: 10px 10px 11.5px 10px;
-  background-color: #f0f0f0;
-}
-.sign{
-  position: relative;
-  top: -45px;
-  right: -309px;
-  width: 500px;
-  display: flex;
-  justify-content: center;
-}
-.sign a{
-  background-color: #8aff6e;
-  padding: 10px 30px;
-  margin-left: 30px;
-}
-header form{
-  height: 60px;
-  border: solid 1px red;
-}
-header .input1{
-	height: 30px;
-	width: 130px;  
-}
-header .input2{
-	height: 30px;
-	width: 230px;  
-}
-header select{
-  height: 33px;
-  width: 170px;
-}
-header button{
-  height: 33px;
-  width: 150px;
-  text-decoration: none;
-  border: none;
-  background-color: #8aff6e;
-  position: relative;
-  top: 3px;
-}
-header button img{
-  position: relative;
-  top: 5px;
-  padding-left: 5px;
-}
 
-#wrapper{
-  border: solid blue 1px;
-  width: 730px;
-  margin: auto;
-}
-
-
-#content{
+/*#content{
 	width: 900px;
 	padding: 50px;
 	float: right;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: pink;
-}
+}*/
 
 .shop_list ul li{
-	width: 800px;
+/*	width: 800px;*/
 	height: 150px;
 	margin: 20px;
 	background-color: #90f390;

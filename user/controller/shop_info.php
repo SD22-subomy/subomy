@@ -11,6 +11,17 @@ require_once './../function/user_func.php';
 
 session_start();
 
+//ログアウト
+if(isset($_POST['logout'])){
+
+	$_SESSION = array();
+	session_destroy();
+}
+
+//ログイン判定
+$login_flg = isset($_SESSION['user_id']);
+
+
 //店舗情報取得
 if(isset($_GET['shop_id'])){
 
