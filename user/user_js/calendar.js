@@ -5,7 +5,7 @@ let month = date.getMonth() + 1
 let pageCnt = 1
 const config = {
     show: 1,
-    pagemax: 3,
+    pagemax: 4,
 }
 
 function showCalendar(year, month) {
