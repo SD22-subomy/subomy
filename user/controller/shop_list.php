@@ -11,6 +11,17 @@ require_once './../function/user_func.php';
 
 session_start();
 
+//ログアウト
+if(isset($_POST['logout'])){
+
+	$_SESSION = array();
+	session_destroy();
+}
+
+//ログイン判定
+$login_flg = isset($_SESSION['user_id']);
+
+
 
 if(isset($_GET['genre'])){
 	$shop_id = search_genre($_GET['genre']);
