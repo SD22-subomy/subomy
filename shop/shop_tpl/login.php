@@ -8,8 +8,7 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <div class="center">
-                </div>
+                <p><img src="../../image/gulunte_logo.png"></p>
             </div>
             <div id="content">
                 <div class="center">
