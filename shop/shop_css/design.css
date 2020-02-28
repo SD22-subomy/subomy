@@ -76,3 +76,8 @@ img{
 #right{
     width: 80%;
 }
+#design img{
+    max-height: 100px;
+}
+
+
