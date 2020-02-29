@@ -78,6 +78,8 @@ header a{
   border: solid 1px gray;
   padding: 20px;
   width: 660px;
+  position: relative;
+  top: -45px;
 }
 #area p:nth-child(1){
   color: #59e470;
@@ -204,6 +206,7 @@ header a{
 }
 #osusume section p:nth-child(2){
   width: 145px;
+  height: 45px;
   position: relative;
   top: -156px;
   left: 80px;
