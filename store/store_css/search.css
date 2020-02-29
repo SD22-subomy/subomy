@@ -50,9 +50,6 @@ header a{
   padding: 5px 20px;
 }
 
-.main{
-
-}
 .clear{
   width: 730px;
   height: 338px;
@@ -65,7 +62,7 @@ header a{
   border: solid 1px;
   position: absolute;
   top: 200px;
-  left: 95px;
+  left: 360px;
 }
 .main form button{
   height: 33px;
@@ -73,8 +70,6 @@ header a{
   text-decoration: none;
   border: none;
   background-color: #8aff6e;
-  /* position: relative;
-  top: 3px; */
 }
 
 .about{
@@ -151,7 +146,6 @@ header a{
 }
 .left section:nth-of-type(4) ul li:nth-child(2){
   width: 110px;
-  /* padding-top: 5px; */
 }
 
 .left section:nth-of-type(6) ul{  /* party */
@@ -190,7 +184,7 @@ header a{
   border: solid gray 1px;
   background-color: white;
   padding: 10px;
-  height: 200px;
+  height: 150px;
   margin-bottom: 20px;
 }
 .right section p:nth-child(2){
