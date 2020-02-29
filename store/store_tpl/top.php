@@ -155,7 +155,7 @@
             <section class="right">
               <p><img src="../image/<?php echo "j_french.jpg"; ?>" width="150"></p>
               <p><?php echo "son-ju-cue"; ?></p>
-              <p><img src="../image/star_yellow.png" width="25"><img src="../image/star_yellow.png" width="25"><img src="../image/star_yellow.png" width="25"><img src="../image/star.png" width="25"><img src="../image/star.png" width="25"></p>
+              <p><img src="../image/star_yellow.png" width="21"><img src="../image/star_yellow.png" width="21"><img src="../image/star_yellow.png" width="21"><img src="../image/star.png" width="21"><img src="../image/star.png" width="21"></p>
               <p><img src="../image/sun.png" width="15"><?php echo "営業時間外"; ?><br><img src="../image/moon.png" width="15"><?php echo " ~￥4,000"; ?></p>
               <ul>
                 <li><span>最寄り駅：</span><?php echo "四ツ橋駅"; ?></li>
@@ -182,7 +182,7 @@
             <section class="right">
               <p><img src="../image/<?php echo "j_french.jpg"; ?>" width="150"></p>
               <p><?php echo "son-ju-cue"; ?></p>
-              <p><img src="../image/star_yellow.png" width="25"><img src="../image/star_yellow.png" width="25"><img src="../image/star_yellow.png" width="25"><img src="../image/star.png" width="25"><img src="../image/star.png" width="25"></p>
+              <p><img src="../image/star_yellow.png" width="21"><img src="../image/star_yellow.png" width="21"><img src="../image/star_yellow.png" width="21"><img src="../image/star.png" width="21"><img src="../image/star.png" width="21"></p>
               <p><img src="../image/sun.png" width="15"><?php echo "営業時間外"; ?><br><img src="../image/moon.png" width="15"><?php echo " ~￥4,000"; ?></p>
               <ul>
                 <li><span>最寄り駅：</span><?php echo "四ツ橋駅"; ?></li>
