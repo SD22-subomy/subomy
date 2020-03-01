@@ -16,7 +16,14 @@ mysqli_set_charset($cn,'utf8');
 $sql = sql_info('shop_info','shop_id',$id);
 
 //SQL取得
-$row = mysqli_fetch_assoc(shop_select($cn,$sql));
+$result = shop_select($cn,$sql);
+$tbl = [];
+$cnt = 0;
+while ($row = mysqli_fetch_assoc($result)) {
+    $tbl[] = $row;
+    $cnt++;
+}
+// $row = mysqli_fetch_assoc(shop_select($cn,$sql));
 if($row == ""){
     $row = [
         'title' => "ーーー",

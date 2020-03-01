@@ -168,9 +168,13 @@ body {overflow-y:hidden;}
     text-align: center;
 }
 #introdu table{
-    margin: auto;
+    margin-left: 100px;
+    margin-bottom: 30px;
     border-collapse: collapse;
     text-align: center;
+}
+#introdu tbody{
+    padding-top: 30px;
 }
 #introdu table th{
     width: 200px;
@@ -190,13 +194,13 @@ body {overflow-y:hidden;}
     border-bottom: solid 1px #069c06a9;
     border-right: solid 1px #069c06a9;
 }
-#introdu  tr:last-child td{
+/* #introdu  tr:last-child td{
     border-right-style:none; 
     border-left-style:none;
     border-style: none;
     background-color: #fff;
     padding: 20px;
-}
+} */
 /*------------course_list-------------*/
 #course_list{
     padding: 50px;

@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/*初期化*/
+*{
+	margin:0px;
+	padding:0px;
+}
+html{
+	scroll-behavior: smooth;
+}
+li{
+	list-style-type: none;
+	list-style-position: outside;
+}
+a{
+	text-decoration: none;
+}
+div{
+   box-sizing: border-box;
+}
+img{
+	height: 80vh;
+}
+/*--------------header--------------*/
+#header{
+    border-bottom: solid 1px #c4c2c2;
+    outline: solid 3px #e9e7e7;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#header p:first-child{
+	margin-left: 30px;
+}
+#header img{
+    max-height: 40px;
+    margin-top: 25px;
+}
+
+#header input[type="submit"]{
+    line-height: 30px;
+    margin-right: 30px;
+    margin-top:35px;
+    border-style: none;
+    border:solid 1px #90c455;
+    border-radius: 5%;
+    background-color: #fff;
+    color:#009944;
+    cursor:pointer;
+    font-size: 1em;
+}
+#header input[type="submit"]:hover{
+    background-color: #009944;
+    color:#fff;
+    font-weight: bold;
+}
+
+/*------------------------------------*/
+#content{
+    margin-top: 50px;
+    display: flex;
+}
+#left{
+    width: 20%;
+}
+#navi{
+    padding-left: 30px;
+}
+#navi li{
+    margin: 30px;
+}
+#navi li a{
+    display: block;
+    line-height: 30px;
+}
+#right{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#sLift{
+    width: 95%;
+    /* border: solid 1px red; */
+}
+#designHeader{
+    text-align: center;
+    line-height: 40px;
+    border: solid 1px #90c455;
+}
+/*-----------------design---------------*/
+#design{
+    text-align: center;
+    margin: auto;
+    /* width: 900px; */
+    height: 275px;
+    overflow-y:scroll;
+    margin-bottom: 20px;
+    /* border: solid 1px rgb(79, 136, 46); */
+}
+#design img{
+    max-height: 100px;
+    /* border: solid 1px red; */
+}
+#radio1{
+    position: relative;
+    top: -40px;
+    line-height: 100px;
+    width: 130px;
+    text-align: center;
+}
+label{
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+}
+label input[type="radio"]{
+    display: none;
+    padding: 10px;
+}
+
+#color{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    /* border: solid 1px red; */
+    width: 200px;
+    padding: 20px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#color select{
+    height: 30px;
+}
+
+.check{
+    background-color: rgb(170, 170, 170);
+    /* display: inline-block; */
+}
+/*---------sample-----------*/
+.sampleHeader{
+    text-align: center;
+    line-height: 40px;
+}
+#scroll{
+    width: 700px;
+    height: 570px;
+    overflow-y:scroll;
+}
+#main{
+    width: 700px;
+    margin: auto;
+}
+#main header{
+    width: 390px;
+    right: 148px;
+    font-weight: lighter;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.img img{
+    max-width: 500px;
+    max-height: 280px;
+}
+#info ul{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 10px;
+}
+
+#info li{
+    width: 170px;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+/*-------intro--------*/
+.introduction{
+    width: 500px;
+}
+.introContent{
+    margin-bottom: 10px;
+}
+.cTop{
+    margin: 10px;
+}
+hr {
+    margin: 20px 10px 40px 10px;
+    color: black;
+}
+.intro{
+    position: relative;
+    padding:10px;
+}
+#changeDesign{
+    position: absolute;
+    max-width: 500px;
+    max-height: 400px;
+}
+/*--------shop_info--------*/
+.what{
+    padding: 0px 10px;
+    margin-bottom: 5px;
+}
+#shop_info table{
+    width: 500px;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: solid 1px darkgray;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+#shop_info tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+#shop_info table td:nth-of-type(1) {
+    background-color: white;
+    width: 120px;
+}
+
+#shop_info table td {
+    border-bottom: solid 1px darkgray;
+    padding: 10px;
+}
+#shop_info table tr:nth-last-of-type(1) td {
+    border-bottom: none;
+}
+
+/*---------main footer-----------*/
+#main footer{
+    background-color: #59e470;
+    padding: 20px 10px;
+    font-size: 11px;
+    color: dimgray;
+}
+#main footer ul{
+    display: flex;
+    justify-content: space-around;
+}
+#main footer p{
+    text-align: center;
+    padding-top: 10px;
+}
