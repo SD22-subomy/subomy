@@ -32,8 +32,9 @@ function select_one($id, $table) {
 
 function delete($id, $table) {
   $arrayTbl = [
-    'user'=>'user_id',
-    'shop'=>'shop_id',
+    'user' => 'user_id',
+    'shop' => 'shop_id',
+    'reservation' => 'reser_id',
     ];
   $col = $arrayTbl[$table];
   $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);

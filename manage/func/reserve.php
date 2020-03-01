@@ -2,15 +2,13 @@
 
 require_once 'sql.php';
 
-$table_name = "shop";
+$table_name = 'reservation';
 
 if ( isset($_GET['del']) ) {
   delete($_GET['del'], $table_name);
-  header('Location: ./../views/shop.php');
+  header('Location: ./../views/reserve.php');
   exit;
 }
 
-$shop_list = select_user_all($table_name);
-
-
+$reser_list = select_user_all($table_name);
 ?>
