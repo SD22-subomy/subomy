@@ -31,9 +31,15 @@ function select_one($id, $table) {
 }
 
 function delete($id, $table) {
+  $arrayTbl = [
+    'user' => 'user_id',
+    'shop' => 'shop_id',
+    'reservation' => 'reser_id',
+    ];
+  $col = $arrayTbl[$table];
   $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
   mysqli_set_charset($cn,'utf8');
-  $sql = "DELETE FROM ".$table." WHERE user_id = '".$id."' ;";
+  $sql = "DELETE FROM ".$table." WHERE ".$col." = '".$id."' ;";
   mysqli_query($cn,$sql);
   mysqli_close($cn);
 }

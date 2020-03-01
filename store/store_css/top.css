@@ -58,19 +58,39 @@ header a{
   top: 65px;
 }
 .main form{
-  border: solid 1px;
+  height: 40px;
   position: absolute;
   top: 200px;
-  left: 360px;
+  left: 324px;
+}
+.main input:nth-child(1){
+  height: 30px;
+  width: 125px;
+  padding-left: 5px;
+}
+.main input:nth-child(2){
+  height: 30px;
+  width: 225px;
+  padding-left: 5px;
+}
+.main select{
+  height: 33px;
+  width: 170px;
 }
 .main form button{
   height: 33px;
   width: 150px;
+  padding-bottom: 3px;
   text-decoration: none;
   border: none;
   background-color: #8aff6e;
-  /* position: relative;
-  top: 3px; */
+  position: relative;
+  top: 3px;
+}
+.main form img{
+  position: relative;
+  top: 5px;
+  padding-left: 5px;
 }
 
 #area{
@@ -79,7 +99,7 @@ header a{
   padding: 20px;
   width: 660px;
   position: relative;
-  top: -45px;
+  top: -55px;
 }
 #area p:nth-child(1){
   color: #59e470;
@@ -102,6 +122,11 @@ header a{
   border: none;
 }
 
+#pics{
+  position: relative;
+  top: -30px;
+}
+
 .janru{
   height: 250px;
 }
@@ -120,7 +145,7 @@ header a{
   margin-bottom: 15px;
 }
 .janru p, .scene p, .jyoken p{
-  padding-left: 10px;
+  padding: 5px 25px;
 }
 .janru ul, .scene ul, .jyoken ul{
   display: flex;
@@ -188,7 +213,7 @@ header a{
 }
 #osusume{
   margin-top: 40px;
-  height: 465px;
+  height: 440px;
 }
 #osusume section{
   border: solid gray 1px;
