@@ -1,42 +1,80 @@
-// $(function() {
-//     $('select[name=design]').ImageSelect({
-//     dropdownWidth:100, //幅指定
-//     dropdownHeight:100, //高さ指定
-//     backgroundColor:'#FFFFFF', //背景色
-//     borderColor:'#CCCCCC' //枠線の色
-//     });
-//  });
-function myCheck(){
-    var flag = false; // 選択されているか否かを判定するフラグ
-    $('design[]').on('click',function(){
-        var index = $('design').index(this);
-        console.log(index)
-    })
-   //　ラジオボタンの数だけ判定を繰り返す（ボタンを表すインプットタグがあるので１引く）
-    for(var i=0; i<document.design.fruits.length-1;i++){
- 
-        // i番目のラジオボタンがチェックされているかを判定
-        if(document.design.fruits[i].checked){ 
-            flag = true;    
-            alert(document.design.fruits[i].value + "が選択されました。");
-        }
-    }
-  
-    // 何も選択されていない場合の処理
-    if(!flag){ 
-        alert("項目が選択されていません。");
-    }
-}
 $(function(){
-    var radio = document.getElementsByName("design[]");
-    console.log(radio)
-    $(this).on(function(){
-        myCheck()
-        var index = $('design[]').index(this);
+    $.ajax({
+        url:'../func/json.php',
+        data:({name:'list'})
     })
-    // if ( element.checked ) {
+    .done(function(data){
+        result = data['design']
+        console.log(result)
+        var season_img = new Array('spring.png','summer.png','autumn.png','winter.png')
+        var season = season_img.some( function( value ) {
+            return value === result
+        })
+        console.log(season)
+        if(data['design'] == 0){
+            $(".intro").css({
+                "padding":"10px",
+                'height':'auto'
+            });
+        }else if(season){
+            $("#main").css({
+                'background-image':'url(../../design/'+data['design']+")",
+                'background-repeat': 'no-repeat',
+                'background-position': '90% 92%',
+                'background-attachment': 'fixed',
+                'background-size':'40% auto'
+            })
+        }else{
+            $(".intro").css({
+                'background-image':'url(../../design/'+result+")",
+                'background-repeat': 'no-repeat',
+                'background-size':'500px auto',
+                'padding':'40px',
+                'height':'300px'
+            })
+        }
+        // for(let i=0;i<4;i++){
+        //     if(data['design'] === season_img[i]){
+        //         // var html = "<img src = '../../design/"+ data['design'] +"'>"
+        //         // document.getElementById("changeDesign").innerHTML = html
+        //         $("#main").css({
+        //             'background-image':'url(../../design/'+data['design']+")",
+        //             'background-repeat': 'no-repeat',
+        //             'background-position': '90% 92%',
+        //             'background-attachment': 'fixed',
+        //             'background-size':'40% auto'
+        //         })
+        //     }else{
+        //         $(".intro").css({
+        //             'background-image':'url(../../design/'+data['design']+")",
+        //             'background-repeat': 'no-repeat',
+        //             'padding':'40px',
+        //         })
+        //     }
+        // }
+        // if(data['design'] == 0){
+        //     // $(".intro").css({
+        //     //     "padding":"10px"
+        //     // });
+        //     $('.intro').after('<hr>');
+        // }
 
-    // } else {
-    //     // チェックされていない
-    // }    
-});
+        $('#main').css({
+            "background-color":data['code2']
+        })
+        $("#info ul").css({
+            "background-color":data['code2']
+        })
+        $("#info li").css({
+            "border":"solid 1px"+ data['code1']
+        })
+        $("#info li:first-child").css({
+            "background-color":data['code1'],
+            "color":"#fff",
+            "font-size":"15px"
+        })
+        $(".what").css({
+            "border-left":"solid 5px"+data['code1']
+        })
+    })    
+})

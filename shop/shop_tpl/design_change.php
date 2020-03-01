@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>店舗　デザイン</title>
-        <link rel="stylesheet" href="../shop_css/design.css">
+        <link rel="stylesheet" href="../shop_css/design_change.css">
         <script src="../../jquery-3.4.1.min.js"></script>
-        <script src="../javascript/design.js"></script>
+        <script src="../javascript/imageselect.js"></script>
+        <script src="../javascript/design_change.js"></script>
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
                 <p><img src="../../image/gulunte_logo.png"></p>
-                <form action="../func/design.php" method="POST">
+                <form action="../func/mypage.php" method="POST">
                     <input type="submit" name="logout" value="ログアウト">
                 </form>
             </div>
@@ -29,11 +30,40 @@
                     </div>
                 </div>
                 <div id="right">
-                    <form action="../func/design.php" method="POST">
-                        <header class="sampleHeader">
-                            現在のデザイン
-                            <input type="submit" name="change" value="変更">
-                        </header>
+                    <div id="sLift">
+                        <form id="color">
+                            <p>背景色</p>
+                                <select id="clorfulSelect">
+                            <?php
+                                for($i=0;$i<$codeCnt;$i++){
+                            ?>
+                            <option value="<?= $code[$i]['code1']?>,<?= $code[$i]['code2']?>"><?=$code[$i]['color_name']?></option>
+                            <?php
+                                }
+                            ?>
+                            </select>
+                        </form>
+                        <p id="designHeader">デザイン</p>
+                        <form id="design">
+                            <label class="check" id="radio1">
+                                <input type="radio" name="selectDesign" value="" checked>
+                                選択なし
+                            </label>
+                            <?php
+                                for($i=1;$i<$cnt;$i++){
+                            ?>
+                            <label>
+                                <input type="radio" name="selectDesign" value="<?=$tbl[$i]['design']?>">
+                                <img src="../../design/<?= $tbl[$i]['design']?>">
+                            </label>
+                            <?php
+                                }
+                            ?>
+                        </form>
+                        <form></form>
+                    </div>
+                    <form action="" method="POST">
+                        <header class="sampleHeader">サンプル</header>
                         <div id="main">
                             <div id="scroll">
                                 <header><?=$shop['name']?></header>
@@ -52,7 +82,7 @@
                                     <p class="cTop">お店の紹介文　お店のアピールポイント</p>
                                     <div class="intro">
                                         <?php
-                                            for($i=0;$i<$cnt;$i++){
+                                            for($i=0;$i<$infoCnt;$i++){
                                         ?>
                                             <div class="introContent">
                                                 <p>■<?=$info[$i]['title']?></p>
@@ -117,6 +147,32 @@
                                 </footer>
                             </div>
                         </div>
+
+                        <!-- <header>サンプル</header>
+                        <div id="sample">
+                            <h1 id="sHeader"><?=$shop['name']?></h1>
+                            <ul class="sNavi">
+                                <li>TOP</li>
+                                <li>写真</li>
+                                <li>メニュー</li>
+                                <li>地図</li>
+                            </ul>
+                            <div class="introduction">
+                                <p id="changeDesign"></p>
+                                <div class="intro">
+                                    <?php
+                                        for($i=0;$i<$infoCnt;$i++){
+                                    ?>
+                                        <div class="introContent">
+                                            <p>■<?=$info[$i]['title']?></p>
+                                            <p><?=$info[$i]['info']?></p>
+                                        </div>
+                                    <?php
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                        </div> -->
                     </form>
                 </div>
             </div>

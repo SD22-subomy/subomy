@@ -118,6 +118,12 @@ for($i=0;$i < count($tbl);$i++){
     $html = $html."</div>";
 }
 
+if(isset($_POST['logout'])){
+    session_destroy();
+    header('Location:login.php');
+}
+
+
 
 require '../shop_tpl/reservation.php';
 

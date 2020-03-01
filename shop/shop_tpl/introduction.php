@@ -1,19 +1,23 @@
 <form action="../func/introduction.php" method="POST">
     <div id="introdu">
+        <?php
+            for($i=0;$i<$cnt;$i++){
+        ?>
         <table>
-            <tr>
-                <th>タイトル</th>
-                <td><?= $row['title']?>
-            </tr>
-            <tr>
-                <th>紹介文（100文字以内）</th>
-                <td><?= $row['info']?>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="intro" value="変更">
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>タイトル</th>
+                    <td><?= $tbl[$i]['title']?>
+                </tr>
+                <tr>
+                    <th>紹介文（100文字以内）</th>
+                    <td><?= $tbl[$i]['info']?>
+                </tr>
+            </tbody>
         </table>
+        <?php
+            }
+        ?>
+        <input type="submit" name="intro" value="変更">
     </div>
 </form>
