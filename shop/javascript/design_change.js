@@ -6,6 +6,7 @@ $(function(){
         var color = colorStr.split(',');
         var backgroundColor = color[1]
         var btn = color[0]
+        var color_id = color[2]
         $("#main").css({
             "background-color":backgroundColor
         })
@@ -17,6 +18,7 @@ $(function(){
             "color":"#fff",
             "font-size":"15px"
         })
+        $("#color_id").val(color_id)
     });
     // var cheackCnt = $('input[name="selectDesign"]').length;
     $('input[name="selectDesign"]').click(function(){
@@ -77,26 +79,6 @@ $(function(){
                 'background-image':'none',
             })
         }
-
-
-        // if(result == ""){
-        //    var html = "";
-        //    $(".intro").css({
-        //     "padding":"0px"
-            // })
-        //     $('label').removeClass("check");
-        //     var cnt = count +2
-        //     $('label:nth-child('+cnt+')').addClass("check");
-
-        // }else{
-        //     $('label').removeClass("check");
-        //     var html = "<img src = '../../design/"+ result +"'>"
-        //     $(".intro").css({
-        //         "padding":"40px"
-        //     });
-        //     var cnt = count +2
-        //     $('label:nth-child('+cnt+')').addClass("check");
-        // }
-        // document.getElementById("changeDesign").innerHTML = html
+        $("#design_id").val(count)
     })
 });

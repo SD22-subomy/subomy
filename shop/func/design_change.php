@@ -77,6 +77,12 @@ mysqli_set_charset($cn,'utf8');
 $sql = sql_info('course_img',"shop_id",$id);
 $course_img = mysqli_fetch_assoc(shop_select($cn,$sql));
 
+if(isset($_POST['designChange'])){
+    $_SESSION['id'] =$id;
+    $_SESSION['color_id'] = $_POST['color_id'];
+    $_SESSION['design_id'] = $_POST['design_id'];
+    header('Location:design_Register.php');
+}
 
 require '../shop_tpl/design_change.php';
 ?>

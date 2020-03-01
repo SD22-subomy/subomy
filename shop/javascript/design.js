@@ -20,9 +20,9 @@ $(function(){
             $("#main").css({
                 'background-image':'url(../../design/'+data['design']+")",
                 'background-repeat': 'no-repeat',
-                'background-position': '90% 92%',
+                'background-position': '100% 100%',
                 'background-attachment': 'fixed',
-                'background-size':'40% auto'
+                'background-size':'75% auto'
             })
         }else{
             $(".intro").css({

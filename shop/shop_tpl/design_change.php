@@ -31,20 +31,26 @@
                 </div>
                 <div id="right">
                     <div id="sLift">
-                        <form id="color">
+                        <div id="color">
                             <p>背景色</p>
                                 <select id="clorfulSelect">
                             <?php
                                 for($i=0;$i<$codeCnt;$i++){
+                                    if($i == 0){
                             ?>
-                            <option value="<?= $code[$i]['code1']?>,<?= $code[$i]['code2']?>"><?=$code[$i]['color_name']?></option>
+                            <option value="<?= $code[$i]['code1']?>,<?= $code[$i]['code2']?>,<?= $code[$i]['color_id']?>" selected><?=$code[$i]['color_name']?></option>
                             <?php
+                                }else{
+                            ?>
+                            <option value="<?= $code[$i]['code1']?>,<?= $code[$i]['code2']?>,<?= $code[$i]['color_id']?>"><?=$code[$i]['color_name']?></option>
+                            <?php
+                                    }
                                 }
                             ?>
                             </select>
-                        </form>
+                        </div>
                         <p id="designHeader">デザイン</p>
-                        <form id="design">
+                        <div id="design">
                             <label class="check" id="radio1">
                                 <input type="radio" name="selectDesign" value="" checked>
                                 選択なし
@@ -59,10 +65,14 @@
                             <?php
                                 }
                             ?>
+                        </div>
+                        <form action="../func/design_change.php" method="POST">
+                            <input type="hidden" name="color_id" id="color_id" value="0">
+                            <input type="hidden" name="design_id" id="design_id" value="0">
+                            <input type="submit" name="designChange" value="変更">
                         </form>
-                        <form></form>
                     </div>
-                    <form action="" method="POST">
+                    <div id="sample">
                         <header class="sampleHeader">サンプル</header>
                         <div id="main">
                             <div id="scroll">
@@ -173,7 +183,7 @@
                                 </div>
                             </div>
                         </div> -->
-                    </form>
+                    </div>
                 </div>
             </div>
             <div id="footer">
