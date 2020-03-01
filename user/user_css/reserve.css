@@ -1,9 +1,253 @@
 @charset "utf-8";
 
-#content{
-	width: 1200px;
-	padding: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #fff;
+*{
+    margin: 0 auto;
+    padding: 0px;
+}
+li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+body{
+  font-family: 'M PLUS 1p';
+}
+
+#wrapper{
+  border: solid blue 1px;
+  width: 730px;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+button{
+  cursor: pointer;
+}
+
+header{
+    padding: 10px 10px 11.5px 10px;
+  background-color: #f0f0f0;
+  display: flex;
+}
+header p:nth-child(1){
+/*  position: relative;
+/*  left: -10px;*/
+}
+header ul{
+  display: flex;
+  position: relative;
+/*  right: -52px;*/
+  font-size: 15px;
+}
+header li{
+  margin-left: 20px;
+}
+header li a{
+  background-color: #8aff6e;
+  padding: 5px 20px;
+}
+
+
+.back{
+  background-color: white;
+  height: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid #59e470 2px;
+  margin-bottom: 20px;
+}
+.back p:nth-child(1) a{
+  padding: 10px;
+  height: 30px;
+  position: relative;
+  top: -7px;
+  left: -170px;
+}
+.back p:nth-child(2){
+  position: relative;
+  right: 440px;
+  padding-top: 3px;
+}
+
+#info{
+  width: 700px;
+}
+
+#info > p:nth-child(1){  /* 店名 */
+  font-size: 23px;
+  color: #999b9a;
+  padding-left: 10px;
+}
+#info > p:nth-child(2), #info > p:nth-child(3){
+  width: 150px;
+  position: relative;
+  right: 250px;
+  font-size: 14px;
+}
+
+form p{
+  padding-left: 20px;
+}
+.wh{
+  padding: 5px;
+  color: #636363;
+  border: solid 1px #999b9a;
+  background-color: #c9ffd2;
+  margin: 5px 0px;
+}
+
+form section:nth-of-type(1){
+  height: 40px;
+  padding-top: 10px;
+}
+.change a{
+  border: solid #999b9a 1px;
+  width: 35px;
+  background-color: #dfdfdf;
+  border-radius: 10px;
+  padding: 5px 20px;
+  position: relative;
+  top: -27px;
+  right: -285px;
+}
+
+
+form{
+  margin-bottom: 100px;
+}
+ul button{
+  width: 50px;
+  height: 32px;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px 0px;
+  border: solid #999b9a 1px;
+  border-radius: 10px;
+}
+form > ul{
+  display: flex;
+  width: 700px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+form li{
+  padding-right: 10px;
+  display: inline-block;
+}
+
+/* モーダル */
+.modaal-container{
+  width: 600px;
+}
+.modaal-container p{
+  position: absolute;
+  top: -235px;
+  right: -65px;
+  height: 65px;
+  width: 730px;
+  background-color: white;
+  padding-right: 60px;
+}
+.modaal-container p img{
+  padding: 10px;
+  width: 50px;
+  position: relative;
+  top: 16px;
+  left: -265px;
+}
+#modal1 > ul{
+  display: block;
+}
+.modaal-wrapper .modaal-close{  /* × */
+  position: absolute;
+  top: -220px;
+  left: -650px;
+  opacity: 0;
+}
+.modaal-content-container li{
+  padding: 10px;
+}
+.modaal-content-container li:nth-child(2){
+  border-top: solid #999b9a 1px;
+  border-bottom: solid#999b9a 1px;
+}
+.modaal-content-container{
+  height: 220px;
+  padding: 0px 20px;
+}
+.course li{
+  padding: 20px;
+}
+.course > li:nth-child(1){
+  padding-top: 40px;
+}
+
+.modaal-content-container .seat li{
+  text-align: left;
+  border: none;
+}
+.modaal-content-container label{
+  position: relative;
+  left: 30px;
+  font-size: 13px;
+}
+.modaal-content-container li label input[type=radio]{  /* button */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 30px;
+  left: -20px;
+}
+.modaal-content-container li label span{
+  font-size: 18px;
+}
+
+form > p:last-child{  /* 予約するボタン */
+  text-align: center;
+  margin-top: 20px;
+  padding: 0px;
+}
+form > p:last-child button{
+  width: 600px;
+  border: none;
+  color: white;
+  font-size: 19px;
+  padding: 5px;
+  background-color: #44eb5a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 5px;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 0 0 2px #777;
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/*以下勝手に付け足しました*/
+
+#calendar_form{
+  height: 450px;
+}
+
+#calendar_form td {
+    padding: 5px 20px;
+}
+
+html{
+  scroll-behavior: smooth;
 }

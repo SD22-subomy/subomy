@@ -11,6 +11,17 @@ require_once './../function/user_func.php';
 
 session_start();
 
+//ログアウト
+if(isset($_POST['logout'])){
+
+	$_SESSION = array();
+	session_destroy();
+}
+
+//ログイン判定
+$login_flg = isset($_SESSION['user_id']);
+
+
 //店舗情報取得
 if(isset($_GET['shop_id'])){
 
@@ -18,6 +29,19 @@ if(isset($_GET['shop_id'])){
 	$course_list = get_course_list($_GET['shop_id']);
 }
 
+//予約ボタン
+if(isset($_GET['reserve'])){
+
+	$date = '';
+	if(isset($_GET['date'])){
+		$date = $_GET['date'];
+	}
+	$_SESSION['reserve_date'] = $date;
+	$_SESSION['reserve_shop'] = $_GET['id'];
+
+	header("location: ./reserve.php#".$date);
+	exit;
+}
 
 //デバック用
 // var_dump($shop_info);
