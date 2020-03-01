@@ -18,6 +18,7 @@
 
 <body>
 
+<h1>利用者情報</h1>
 
 <?php if (isset($user_list)) { ?>
   <div class="container">
@@ -46,15 +47,14 @@
       <?php } ?>
     </table>
   </div>
-      
-      
+
 <?php } else { ?>
 
   <p>該当する利用者はいません。</p>
 
 <?php } ?>
 
-
+<div><a href="./manage.php">メニュー画面へ戻る</a></div>
 
 </body>
 
