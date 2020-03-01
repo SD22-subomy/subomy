@@ -75,24 +75,80 @@ img{
 }
 #right{
     width: 80%;
-    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
 }
-/*---------form---------*/
-.sampleHeader{
+#sLift{
+    width: 95%;
+    /* border: solid 1px red; */
+}
+#designHeader{
+    text-align: center;
+    line-height: 40px;
+    border: solid 1px #90c455;
+}
+/*-----------------design---------------*/
+#design{
+    text-align: center;
+    margin: auto;
+    /* width: 900px; */
+    height: 275px;
+    overflow-y:scroll;
     margin-bottom: 20px;
+    /* border: solid 1px rgb(79, 136, 46); */
+}
+#design img{
+    max-height: 100px;
+    /* border: solid 1px red; */
+}
+#radio1{
+    position: relative;
+    top: -40px;
+    line-height: 100px;
+    width: 130px;
     text-align: center;
 }
-.sampleHeader input[type="submit"]{
-    margin-left: 50px;
+label{
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
 }
-/*--------------main---------------*/
+label input[type="radio"]{
+    display: none;
+    padding: 10px;
+}
+
+#color{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    /* border: solid 1px red; */
+    width: 200px;
+    padding: 20px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#color select{
+    height: 30px;
+}
+
+.check{
+    background-color: rgb(170, 170, 170);
+    /* display: inline-block; */
+}
+/*---------sample-----------*/
+.sampleHeader{
+    text-align: center;
+    line-height: 40px;
+}
 #scroll{
-    width: 746px;
+    width: 700px;
     height: 570px;
     overflow-y:scroll;
 }
 #main{
-    width: 730px;
+    width: 700px;
     margin: auto;
 }
 #main header{
@@ -114,7 +170,7 @@ img{
 }
 
 #info li{
-    width: 175px;
+    width: 170px;
     text-align: center;
     padding: 5px;
     font-size: 14px;
@@ -130,12 +186,18 @@ img{
 .cTop{
     margin: 10px;
 }
-/* .intro{
-    padding: 10px;
-} */
 hr {
     margin: 20px 10px 40px 10px;
     color: black;
+}
+.intro{
+    position: relative;
+    padding:10px;
+}
+#changeDesign{
+    position: absolute;
+    max-width: 500px;
+    max-height: 400px;
 }
 /*--------shop_info--------*/
 .what{

@@ -11,7 +11,7 @@
         <div id="wrapper">
             <div id="header">
                 <p><img src="../../image/gulunte_logo.png"></p>
-                <form action="../func/mypage.php" method="POST">
+                <form action="../func/reservation.php" method="POST">
                     <input type="submit" name="logout" value="ログアウト">
                 </form>
             </div>
