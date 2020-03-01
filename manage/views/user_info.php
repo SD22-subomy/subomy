@@ -22,30 +22,32 @@
 
 <?php if (isset($user_list)) { ?>
   <div class="container">
-    <table class="table table-bordered text-nowrap table-hover">
-      <thead class="thead-dark">
-        <tr>
-          <th>利用者ID</th><th>名前</th><th>性別</th><th>電話番号</th><th>メールアドレス</th><th>パスワード</th><th>削除</th><th>パスワード変更</th>
-        </tr>
-      </thead>
-
-      <?php foreach ($user_list as $key => $value) { ?>
-
-        <tbody>
+    <div class="table-responsive">
+      <table class="table table-bordered text-nowrap table-hover">
+        <thead class="thead-dark">
           <tr>
-          <td scope="row"><?php echo $value['user_id']; ?></td>
-          <td><?php echo $value['name']; ?></td>
-          <td><?php echo $value['gender']; ?></td>
-          <td><?php echo $value['tel']; ?></td>
-          <td><?php echo $value['mail']; ?></td>
-          <td><?php echo $value['pass']; ?></td>
-          <td><a type="button" class="btn btn-link btn-sm" href="?del=<?php echo $value['user_id']; ?>">削除</a></td>
-          <td><a type="button" class="btn btn-link btn-sm" href="permute_pass.php?id=<?php echo $value['user_id']; ?>">変更</a></td>
+            <th>利用者ID</th><th>名前</th><th>性別</th><th>電話番号</th><th>メールアドレス</th><th>パスワード</th><th>削除</th><th>パスワード変更</th>
           </tr>
-        </tbody>
+        </thead>
 
-      <?php } ?>
-    </table>
+        <?php foreach ($user_list as $key => $value) { ?>
+
+          <tbody>
+            <tr>
+            <td scope="row"><?php echo $value['user_id']; ?></td>
+            <td><?php echo $value['name']; ?></td>
+            <td><?php echo $value['gender']; ?></td>
+            <td><?php echo $value['tel']; ?></td>
+            <td><?php echo $value['mail']; ?></td>
+            <td><?php echo $value['pass']; ?></td>
+            <td><a type="button" class="btn btn-link btn-sm" href="?del=<?php echo $value['user_id']; ?>">削除</a></td>
+            <td><a type="button" class="btn btn-link btn-sm" href="permute_pass.php?id=<?php echo $value['user_id']; ?>">変更</a></td>
+            </tr>
+          </tbody>
+
+        <?php } ?>
+      </table>
+    </div>
   </div>
 
 <?php } else { ?>
