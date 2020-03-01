@@ -149,6 +149,7 @@
         </div>  <!-- right -->
 
       </div>  <!-- about -->
+
       <footer>
         <ul>
           <li>サイトマップ</li>

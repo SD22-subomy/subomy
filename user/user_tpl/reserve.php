@@ -23,10 +23,6 @@
 
       <header>
         <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
-        <ul class="sign">
-            <li><a href="./my_page.php">マイページ</a></li>
-            <li><input type="submit" name="logout" value="ログアウト"></li>
-        </ul>
       </header>
 
       <section class="back">
@@ -36,7 +32,7 @@
 
       <div id="info">
 
-        <p><?php echo "PIZZA SALVATORE CUOMO & GRILL"; ?></p>  <!-- 店名 -->
+        <p><?php echo $shop_info['name']; ?></p>  <!-- 店名 -->
         <p><?php echo "イタリアン"; ?></p>  <!-- ジャンル -->
         <p><?php echo "阪急梅田"; ?></p>  <!-- 最寄り駅 -->
 
@@ -97,8 +93,9 @@
             <p><img src="../image/arrow1.png" width="25" alt="arrow">コース選択</p>
             <ul class="course">
               <li>コースを指定せずに席のみ予約する</li>
-              <li>飲み放題コース</li>
-              <li>食べ放題コース</li>
+              <?php foreach($course_list as $v){?>
+              <li><?php echo $v['name'];?></li>
+              <?php }?>
             </ul>
           </div>
 
