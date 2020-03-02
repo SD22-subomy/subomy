@@ -8,6 +8,31 @@
 <link rel="stylesheet" href="./../user_css/main.css">
 </head>
 <body>
+<script type="text/javascript">
+    //今日の日時を表示
+        window.onload = function () {
+            //今日の日時を表示
+            var date = new Date()
+            var year = date.getFullYear()
+            var month = date.getMonth() + 1
+            var day = date.getDate()
+          
+            var toTwoDigits = function (num, digit) {
+              num += ''
+              if (num.length < digit) {
+                num = '0' + num
+              }
+              return num
+            }
+            
+            var yyyy = toTwoDigits(year, 4)
+            var mm = toTwoDigits(month, 2)
+            var dd = toTwoDigits(day, 2)
+            var ymd = yyyy + "-" + mm + "-" + dd;
+            
+            document.getElementById("today").value = ymd;
+        }
+</script>
 <div id="wrapper">
 
       <header>
@@ -73,7 +98,7 @@
           <form class="" action="index.html" method="post">
             <section class="calender">
               <p>来店日
-                <input type="date" name="date" required min="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" max="<?php echo date("Y-m-d", strtotime("+1 month")); ?>">
+                <input type="date" name="date" id="today" value="" required min="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" max="<?php echo date("Y-m-d", strtotime("+1 month")); ?>">
               </p>
             </section>
 
@@ -240,6 +265,6 @@
       </footer>
     </div> -->
 </div>
-<script src="./../user_js/calendar.js"></script>
+<!-- <script src="./../user_js/calendar.js"></script> -->
 </body>
 </html>
