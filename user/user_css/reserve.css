@@ -245,7 +245,7 @@ form > p:last-child button{
 }
 
 #calendar_form td {
-    padding: 5px 20px;
+    padding: 5px 10px;
 }
 
 html{
@@ -255,4 +255,12 @@ html{
 .active{
   color: green;
   font-weight: bold;
+}
+
+p.err {
+  font-weight: bold;
+  color: red;
+  border: solid 1px red;
+  margin: 20px;
+  text-align: center;
 }

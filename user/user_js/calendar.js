@@ -77,7 +77,7 @@ function createCalendar(year, month) {
                 dayCount++
             } else {
                 let dayId = year+'/'+month+'/'+dayCount
-                calendarHtml += '<td class="calendar_td" id="'+dayId+'">'+ dayCount +'<br><a href="#'+dayId+'" class="day_click" data-date="'+dayId+'">〇</a></td>'
+                calendarHtml += '<td class="calendar_td" id="'+dayId+'">'+ dayCount +'<br><button type="button" class="day_click" value="'+dayId+'">〇</button></td>'
                 dayCount++
             }
         }
@@ -141,11 +141,29 @@ function pageCalendar(e){
 document.querySelector('#prev').addEventListener('click', moveCalendar)
 document.querySelector('#next').addEventListener('click', moveCalendar)
 
-document.addEventListener("click", function(e) {
-    if(e.target.classList.contains("day_click")) {
-        document.getElementById('hidden_date').innerHTML = '<input type="hidden" name="date" value="'+ e.target.dataset.date + '">'
-    }
-})
+
+// document.addEventListener("click", function(e) {
+//     if(e.target.classList.contains("day_click")) {
+//         document.getElementById('hidden_date').innerHTML = '<input type="hidden" name="date" value="'+ e.target.dataset.date + '">'
+//     }
+// })
+
+
 
 document.getElementById('prev').disabled = true
 showCalendar(year, month)
+
+$(function(){
+    var btn3 = $('.day_click');
+    var pre = ''
+
+    btn3.click(function(){
+        if(pre != ''){
+            document.getElementById(pre).style.backgroundColor='';
+        }
+        document.getElementById($(this).val()).style.backgroundColor='#b0fdb0';
+        document.getElementById('hidden_date').innerHTML = '<input type="hidden" name="date" value="'+ $(this).val() + '">'
+        pre = $(this).val();
+    })
+
+})

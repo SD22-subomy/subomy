@@ -104,30 +104,30 @@
 
             <section>
               <p>人数
-                <select name="">
-                  <option value=""><?php echo "〇"; ?>１名</option>
-                  <option value="２名"><?php echo "〇"; ?>２名</option>
-                  <option value="３名"><?php echo "〇"; ?>３名</option>
-                  <option value="４名"><?php echo "〇"; ?>４名</option>
-                  <option value="５名"><?php echo "〇"; ?>５名</option>
-                  <option value="６名"><?php echo "〇"; ?>６名</option>
-                  <option value="７名"><?php echo "〇"; ?>７名</option>
-                  <option value="８名"><?php echo "〇"; ?>８名</option>
-                  <option value="９名"><?php echo "〇"; ?>９名</option>
-                  <option value="１０名"><?php echo "〇"; ?>１０名</option>
-                  <option value="１１名"><?php echo "〇"; ?>１１名</option>
-                  <option value="１２名"><?php echo "〇"; ?>１２名</option>
-                  <option value="１３名"><?php echo "〇"; ?>１３名</option>
-                  <option value="１４名"><?php echo "〇"; ?>１４名</option>
-                  <option value="１５名"><?php echo "〇"; ?>１５名</option>
+                <select name="num">
+                  <option value="1"><?php echo "〇"; ?>１名</option>
+                  <option value="2"><?php echo "〇"; ?>２名</option>
+                  <option value="3"><?php echo "〇"; ?>３名</option>
+                  <option value="4"><?php echo "〇"; ?>４名</option>
+                  <option value="5"><?php echo "〇"; ?>５名</option>
+                  <option value="6"><?php echo "〇"; ?>６名</option>
+                  <option value="7"><?php echo "〇"; ?>７名</option>
+                  <option value="8"><?php echo "〇"; ?>８名</option>
+                  <option value="9"><?php echo "〇"; ?>９名</option>
+                  <option value="10"><?php echo "〇"; ?>１０名</option>
+                  <option value="11"><?php echo "〇"; ?>１１名</option>
+                  <option value="12"><?php echo "〇"; ?>１２名</option>
+                  <option value="13"><?php echo "〇"; ?>１３名</option>
+                  <option value="14"><?php echo "〇"; ?>１４名</option>
+                  <option value="15"><?php echo "〇"; ?>１５名</option>
                 </select>
               </p>
             </section>
 
             <section>
               <p>時間
-                <select name="">
-                  <option value=""><?php echo "〇"; ?>18:00</option>
+                <select name="time">
+                  <option value="18:00"><?php echo "〇"; ?>18:00</option>
                   <option value="18:30"><?php echo "〇"; ?>18:30</option>
                   <option value="19:00"><?php echo "〇"; ?>19:00</option>
                   <option value="19:30"><?php echo "〇"; ?>19:30</option>

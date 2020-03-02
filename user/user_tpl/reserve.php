@@ -34,28 +34,32 @@
       <div id="info">
 
         <p><?php echo $shop_info['name']; ?></p>  <!-- 店名 -->
-        <p><?php echo "イタリアン"; ?></p>  <!-- ジャンル -->
+        <p><?php echo $shop_info['genre']; ?></p>  <!-- ジャンル -->
         <p><?php echo "阪急梅田"; ?></p>  <!-- 最寄り駅 -->
 
         <form action="" method="GET">
 
+          <?php if($err != 0){?>
+          <p class="err">未入力の項目があります</p>
+          <?php }?>
+
           <p class="wh">人数</p>
           <ul>
-            <li><button type="button" class="num" value="１名">１名</button></li>
-            <li><button type="button" class="num" value="２名">２名</button></li>
-            <li><button type="button" class="num" value="３名">３名</button></li>
-            <li><button type="button" class="num" value="４名">４名</button></li>
-            <li><button type="button" class="num" value="５名">５名</button></li>
-            <li><button type="button" class="num" value="６名">６名</button></li>
-            <li><button type="button" class="num" value="７名">７名</button></li>
-            <li><button type="button" class="num" value="８名">８名</button></li>
-            <li><button type="button" class="num" value="９名">９名</button></li>
-            <li><button type="button" class="num" value="１０名">１０名</button></li>
-            <li><button type="button" class="num" value="１１名">１１名</button></li>
-            <li><button type="button" class="num" value="１２名">１２名</button></li>
-            <li><button type="button" class="num" value="１３名">１３名</button></li>
-            <li><button type="button" class="num" value="１４名">１４名</button></li>
-            <li><button type="button" class="num" value="１５名">１５名</button></li>
+            <li><button type="button" class="num" value="1">１名</button></li>
+            <li><button type="button" class="num" value="2">２名</button></li>
+            <li><button type="button" class="num" value="3">３名</button></li>
+            <li><button type="button" class="num" value="4">４名</button></li>
+            <li><button type="button" class="num" value="5">５名</button></li>
+            <li><button type="button" class="num" value="6">６名</button></li>
+            <li><button type="button" class="num" value="7">７名</button></li>
+            <li><button type="button" class="num" value="8">８名</button></li>
+            <li><button type="button" class="num" value="9">９名</button></li>
+            <li><button type="button" class="num" value="10">１０名</button></li>
+            <li><button type="button" class="num" value="11">１１名</button></li>
+            <li><button type="button" class="num" value="12">１２名</button></li>
+            <li><button type="button" class="num" value="13">１３名</button></li>
+            <li><button type="button" class="num" value="14">１４名</button></li>
+            <li><button type="button" class="num" value="15">１５名</button></li>
           </ul>
 
           <p class="wh">日付</p>
