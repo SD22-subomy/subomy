@@ -34,7 +34,7 @@ if(isset($_GET['reserve'])){
 
 	$date = '';
 	if(isset($_GET['date'])){
-		$date = $_GET['date'];
+		$date = str_replace("-","/",$_GET['date']);
 	}
 	$_SESSION['reserve_date'] = $date;
 	$_SESSION['reserve_shop'] = $_GET['id'];

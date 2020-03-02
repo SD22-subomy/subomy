@@ -41,9 +41,9 @@ section {
     font-weight: bold;
 }
 
-.calendar_td:target{
+/*.calendar_td:target{
     background-color: #b0fdb0;
-}
+}*/
 
 a.day_click {
     color: green;
@@ -51,5 +51,20 @@ a.day_click {
 }
 
 a.day_click:hover{
+    color: red;
+}
+
+button.day_click{
+    background-color: transparent;
+    padding: 0px;
+    color: green;
+    border-style: none;
+}
+
+button.day_click:focus {
+    outline:0;
+}
+
+button.day_click:hover{
     color: red;
 }
