@@ -40,7 +40,7 @@
       <div id="main">
         <div id="info">
           <div class="kihon">
-            <p>ジャンル ＞ イタリアン</p>  <!-- パンくずリスト？ -->
+            <p>ジャンル ＞ <?php echo $shop_info['genre'];?></p>  <!-- パンくずリスト？ -->
             <h1><?php echo $shop_info['name'];?></h1>
             <p><img src="../image/star_yellow.png" width="40"><img src="../image/star_yellow.png" width="40"><img src="../image/star_yellow.png" width="40"><img src="../image/star.png" width="40"><img src="../image/star.png" width="40"></p>
 
@@ -55,8 +55,8 @@
 
             <ul>
               <li><span>最寄り駅：</span><?php echo "aa"; ?></li>
-              <li><span>ジャンル：</span><?php echo "aa"; ?></li>
-              <li><span>予算：</span><img src="../image/sun.png" width="15"><?php echo "￥1,000 ~ ￥1,999"; ?>　<img src="../image/moon.png" width="15"><?php echo "￥3,000 ~ ￥3,999"; ?></li>
+              <li><span>ジャンル：</span><?php echo $shop_info['genre']; ?></li>
+              <li><span>予算：</span><!-- <img src="../image/sun.png" width="15"><?php echo "￥1,000 ~ ￥1,999"; ?>　<img src="../image/moon.png" width="15"><?php echo "￥3,000 ~ ￥3,999"; ?> --><?php echo $shop_info['budget'];?></li>
             </ul>
           </div>  <!-- kihon -->
 
@@ -117,7 +117,7 @@
               </p>
             </section>
 
-            <button type="submit">予約する</button>
+            <button type="submit" name="reserve">予約する</button>
           </form>
         </div>  <!-- right -->
 
@@ -128,8 +128,8 @@
           <div class="introduction">
             <p class="cTop">お店の紹介文　お店のアピールポイント</p>
             <div class="introContent">
-              <p><?php echo 'title';?></p>
-              <p><?php echo 'content';?></p>
+              <p><?php echo $shop_info['title']; ?></p>
+              <p><?php echo $shop_info['info']; ?></p>
             </div>
             <hr>
 
@@ -141,7 +141,7 @@
             </tr>
             <tr>
               <td>ジャンル</td>
-              <td><?php echo "イタリアン"; ?></td>
+              <td><?php echo $shop_info['genre']; ?></td>
             </tr>
             <tr>
               <td>予約・お問合わせ</td>
@@ -153,32 +153,26 @@
             </tr>
             <tr>
               <td>交通手段</td>
-              <td><?php echo "阪急梅田駅から徒歩10分<br>JR大阪駅から徒歩5分"; ?></td>
+              <td><?php echo $shop_info['access']; ?></td>
             </tr>
             <tr>
               <td>営業時間・定休日</td>
-              <td>
-                <?php echo "営業時間<br>
-                              【月～日】<br>
-                              Lunch：11:00 - 15:30<br>
-                              Cafe：14:30 - 16:00<br>
-                              Dinner：17:00 - 23:00<br>
-                              <br>
-                              定休日<br>
-                              元旦"; ?></td>
+              <td><?php echo $shop_info['holiday']; ?></td>
             </tr>
             <tr>
               <td>予算</td>
-              <td><img src="../image/sun.png" width="15"><?php echo "￥1,000 ~ ￥1,999"; ?>　<img src="../image/moon.png" width="15"><?php echo "￥3,000 ~ ￥3,999"; ?></td>
+              <td><?php echo $shop_info['budget']; ?><!-- <img src="../image/sun.png" width="15"><?php echo "￥1,000 ~ ￥1,999"; ?>　<img src="../image/moon.png" width="15"><?php echo "￥3,000 ~ ￥3,999"; ?> --></td>
             </tr>
             <tr>
               <td>ホームページ</td>
-              <td>▶<?php echo "http://www.salvatore.jp/restaurant/osaka"; ?></td>
+              <td>▶<?php echo $shop_info['url']; ?></td>
             </tr>
           </table>
 
         </div>  <!-- left -->
 
+        <div id="hidden_date"></div>
+        <input type="hidden" name="id" value="<?php echo $shop_info['id'];?>">
       </div> <!-- main -->
 
       <footer>
