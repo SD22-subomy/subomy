@@ -251,3 +251,8 @@ form > p:last-child button{
 html{
   scroll-behavior: smooth;
 }
+
+.active{
+  color: green;
+  font-weight: bold;
+}
