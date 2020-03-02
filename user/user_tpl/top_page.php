@@ -22,6 +22,12 @@
                 <li><a href="./controller/login.php">ログイン</a></li>
             </ul>
             <?php }?>
+        </header>
+        
+      <div id="main">
+        <p><img src="image/top3.png" width="730"></p>
+        <p class="clear"></p>
+        <div class="seach">
             <input type="text" class="input1" name="" placeholder="エリア">
             <input type="text" class="input2" name="" placeholder="ジャンル・目的・店名">
             <select name="">
@@ -32,37 +38,27 @@
                 <option value="貸切">貸切</option>
                 <option value="おしゃれ">おしゃれ</option>
             </select>
-          <button type="submit">検索<img src="./image/search.png" width="20" alt="search"></button>
-      </header>
-    <!-- <div id="header">
-        <?php if($login_flg){?>
-        <div>
-            <ul>
-            <li><a href="./index.php"><img src="./../image/gulunte_logo.png" width="300"></a></li>
-            <li><a href="./controller/my_page.php">マイページ</a></li>
-            <li><input type="submit" name="logout" value="ログアウト"></li>
-            </ul>
+          <button type="submit">検索<img src="../image/search.png" width="20" alt="search"></button>
         </div>
-        <?php }else{?>
-        <div>
-            <ul>
-            <li><a href="./index.php"><img src="./../image/gulunte_logo.png" width="300"></a></li>
-            <li><a href="./controller/login.php">ログイン</a></li>
-            <li><a href="./controller/sign_up.php">新規登録</a></li>
-            </ul>
-        </div>
-        <?php }?>
-    </div> -->
-</form>
-
+       </div>
+    </form>
+    <div id="area">
+        <p>≪ 都道府県一覧へ戻る</p>
+        <p>大阪</p>
+    </div>
     <div id="content">
         <div class="center">
-            <div class="section">
-            <h2>ジャンル</h2>
+            <div class="janru">
+            <p>ジャンル</p>
             <ul>
                 <?php foreach($genre as $v){?>
                 <?php if($v['genre_id'] != 0){?>
-                <li><a href="./controller/shop_list.php?genre=<?php echo $v['genre_id']?>"><?php echo $v['genre'];?></a></li>
+                <li>
+                    <a href="./controller/shop_list.php?genre=<?php echo $v['genre_id']?>">
+                        <img src="image/j_<?= $v['genre_id']?>.jpg" width="100">
+                        <span class="mozi"><?php echo $v['genre'];?></span>
+                    </a>
+                </li>
                 <?php }?>
                 <?php }?>
             </ul>

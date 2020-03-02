@@ -56,7 +56,10 @@ function shop_select($cn,$sql){
     return $result;
 }
 
-
+function update($cn,$sql){
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+}
 //////////////////////////////////////////////////
 //SQL文
 
@@ -184,6 +187,12 @@ function inner_sql2($table,$col,$id,$where,$and_col,$and){
         }
     }
     $sql = $sql.";";
+    return $sql;
+}
+
+//SQL更新(UPDATE)
+function shopDesign($table,$col,$what,$id){
+    $sql = "UPDATE ".$table." SET ".$col[0]." = " .$what[0]." , ".$col[1]." = " .$what[1]." WHERE shop_id = ".$id.";";
     return $sql;
 }
 ?>

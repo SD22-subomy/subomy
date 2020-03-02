@@ -1,7 +1,8 @@
 @charset "utf-8";
 *{
-    margin: 0 auto;
-    padding: 0px;
+  margin: 0 auto;
+	padding: 0px;
+	margin: 0;
 }
 li {
     list-style-type: none;
@@ -12,9 +13,11 @@ a{
   color: black;
 }
 header{
-  padding: 10px 10px 11.5px 10px;
+  padding: 10px;
   background-color: #f0f0f0;
+  height: 50px;
 }
+
 .sign{
   position: relative;
   top: -45px;
@@ -28,31 +31,6 @@ header{
   padding: 10px 30px;
   margin-left: 30px;
 }
-header form{
-  height: 60px;
-  border: solid 1px red;
-}
-header .input1{
-	height: 30px;
-	width: 130px;  
-}
-header .input2{
-	height: 30px;
-	width: 230px;  
-}
-header select{
-  height: 33px;
-  width: 170px;
-}
-header button{
-  height: 33px;
-  width: 150px;
-  text-decoration: none;
-  border: none;
-  background-color: #8aff6e;
-  position: relative;
-  top: 3px;
-}
 header button img{
   position: relative;
   top: 5px;
@@ -64,6 +42,98 @@ header button img{
   width: 730px;
   margin: auto;
 }
+#main{
+	position: relative;
+}
+#main form{
+  height: 40px;
+}
+#main .input1{
+	height: 30px;
+	width: 130px;  
+}
+#main .input2{
+	height: 30px;
+	width: 230px;  
+}
+#main select{
+  height: 33px;
+  width: 170px;
+}
+#main button{
+  height: 33px;
+  width: 150px;
+  text-decoration: none;
+  border: none;
+  background-color: #8aff6e;
+  position: relative;
+  top: 3px;
+}
+
+.clear {
+    width: 730px;
+    height: 335px;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+	top: 0;
+}
+.seach{
+	width: 730px;
+	position: absolute;
+	top: 125px;
+	text-align: center;
+}
+
+/*------area------*/
+#area{
+  margin: auto;
+  background-color: white;
+  border: solid 1px gray;
+  padding: 20px;
+  width: 660px;
+  position: relative;
+  top: -55px;
+}
+#area p:nth-child(1){
+  color: #59e470;
+  margin-bottom: 10px;
+}
+#area p:nth-child(2){
+  color: green;
+  margin-bottom: 10px;
+}
+/*------janru------*/
+.janru{
+  height: 250px;
+  /* width: 700px; */
+  margin: auto;
+}
+.janru ul{
+  display: flex;
+  flex-wrap:wrap;
+  /* justify-content: space-around; */
+}
+.janru li{
+  position: relative;
+  padding: 10px;
+}
+.janru img{
+  background-color: white;
+  opacity: 0.5;
+  position: relative;
+}
+.mozi{
+  position: absolute;
+  line-height: 50px;
+  left: 25px;
+  top: 35px;
+}
+#wrapper{
+  border: solid black 1px;
+  width: 730px;
+  margin: auto;
+}
 
 
 footer{
@@ -71,12 +141,12 @@ footer{
 	padding: 20px 10px;
 	font-size: 11px;
 	color: dimgray;
-  }
-  footer ul{
+}
+footer ul{
 	display: flex;
-  }
-  footer p{
+}
+footer p{
 	text-align: center;
 	padding-top: 10px;
-  }
+}
   
