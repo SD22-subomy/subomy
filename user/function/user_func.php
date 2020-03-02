@@ -221,6 +221,28 @@ function search_genre($genre){
 }
 
 /**
+ * ＜利用者＞ジャンルIDでジャンルを取得する関数
+ *
+ * @param string $id ジャンルID
+ * @return string ジャンル名
+ */
+
+function get_genre($id){
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT genre FROM genre WHERE genre_id = '".$id."';";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+    $row = mysqli_fetch_assoc($result);
+
+    return $row['genre'];
+
+}
+
+/**
  * ＜利用者＞IDで店舗情報を取得する関数
  *
  * @param string $id 店舗ID
@@ -232,14 +254,15 @@ function get_shop_info($id){
     /*--------------データベース処理-------------------------*/
     $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
     mysqli_set_charset($cn,'utf8');
-    $sql = "SELECT name FROM shop WHERE shop_id = '".$id."';";
+    $sql = "SELECT name,genre_id FROM shop INNER JOIN shop_pos ON shop.shop_id = shop_pos.shop_id WHERE shop_id = '".$id."';";
     $result = mysqli_query($cn,$sql);
     mysqli_close($cn);
 
     $row = mysqli_fetch_assoc($result);
     $info = [
         'id' => $id,
-        'name' => $row['name']
+        'name' => $row['name'],
+        'genre' => get_genre($row['genre_id'])
     ];
     
     return $info;
@@ -258,7 +281,7 @@ function get_shop_detail($id){
     /*--------------データベース処理-------------------------*/
     $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
     mysqli_set_charset($cn,'utf8');
-    $sql = "SELECT name,addres,tel FROM shop WHERE shop_id = '".$id."';";
+    $sql = "SELECT name,addres,tel,genre_id,access,shop_time,budget,holiday,url,title,info FROM (shop INNER JOIN shop_pos ON shop.shop_id = shop_pos.shop_id) INNER JOIN shop_info ON shop.shop_id = shop_info.shop_id WHERE shop.shop_id = '".$id."';";
     $result = mysqli_query($cn,$sql);
     mysqli_close($cn);
 
@@ -267,7 +290,15 @@ function get_shop_detail($id){
         'id' => $id,
         'name' => $row['name'],
         'address' => $row['addres'],
-        'tel' => $row['tel']
+        'tel' => $row['tel'],
+        'genre' => get_genre($row['genre_id']),
+        'access' => $row['access'],
+        'shop_time' => $row['shop_time'],
+        'budget' => $row['budget'],
+        'holiday' => $row['holiday'],
+        'url' => $row['url'],
+        'title' => $row['title'],
+        'info' => $row['info']
     ];
     
     return $info;

@@ -220,7 +220,6 @@
                 </tr>
                 <?php }?>
             </table>
-
             <div id="calendar_form">
               <ul>
                 <li><button id="prev" type="button">＜</button></li>
@@ -228,7 +227,6 @@
                 <li><button id="next" type="button">＞</button></li>
               </ul>
             </div>
-
             <div id="hidden_date"></div>
             <input type="hidden" name="id" value="<?php echo $shop_info['id'];?>">
             <input type="submit" name="reserve" value="予約">
