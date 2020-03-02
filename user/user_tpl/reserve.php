@@ -9,6 +9,7 @@
 <!--     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">  -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="./../user_js/modaal.min.js"></script>
+
   </head>
 <body>
     <div id="wrapper">
@@ -40,21 +41,21 @@
 
           <p class="wh">人数</p>
           <ul>
-            <li><button type="button" name="１名">１名</button></li>
-            <li><button type="button" name="２名">２名</button></li>
-            <li><button type="button" name="３名">３名</button></li>
-            <li><button type="button" name="４名">４名</button></li>
-            <li><button type="button" name="５名">５名</button></li>
-            <li><button type="button" name="６名">６名</button></li>
-            <li><button type="button" name="７名">７名</button></li>
-            <li><button type="button" name="８名">８名</button></li>
-            <li><button type="button" name="９名">９名</button></li>
-            <li><button type="button" name="１０名">１０名</button></li>
-            <li><button type="button" name="１１名">１１名</button></li>
-            <li><button type="button" name="１２名">１２名</button></li>
-            <li><button type="button" name="１３名">１３名</button></li>
-            <li><button type="button" name="１４名">１４名</button></li>
-            <li><button type="button" name="１５名">１５名</button></li>
+            <li><button type="button" class="num" value="１名">１名</button></li>
+            <li><button type="button" class="num" value="２名">２名</button></li>
+            <li><button type="button" class="num" value="３名">３名</button></li>
+            <li><button type="button" class="num" value="４名">４名</button></li>
+            <li><button type="button" class="num" value="５名">５名</button></li>
+            <li><button type="button" class="num" value="６名">６名</button></li>
+            <li><button type="button" class="num" value="７名">７名</button></li>
+            <li><button type="button" class="num" value="８名">８名</button></li>
+            <li><button type="button" class="num" value="９名">９名</button></li>
+            <li><button type="button" class="num" value="１０名">１０名</button></li>
+            <li><button type="button" class="num" value="１１名">１１名</button></li>
+            <li><button type="button" class="num" value="１２名">１２名</button></li>
+            <li><button type="button" class="num" value="１３名">１３名</button></li>
+            <li><button type="button" class="num" value="１４名">１４名</button></li>
+            <li><button type="button" class="num" value="１５名">１５名</button></li>
           </ul>
 
           <p class="wh">日付</p>
@@ -68,19 +69,19 @@
 
           <p class="wh">時間</p>
           <ul>
-            <li><button type="button" name="17:00">◎17:00</button></li>
-            <li><button type="button" name="17:30">◎17:30</button></li>
-            <li><button type="button" name="18:00">◎18:00</button></li>
-            <li><button type="button" name="18:30">◎18:30</button></li>
-            <li><button type="button" name="19:00">◎19:00</button></li>
-            <li><button type="button" name="19:30">◎19:30</button></li>
-            <li><button type="button" name="20:00">◎20:00</button></li>
-            <li><button type="button" name="20:30">◎20:30</button></li>
-            <li><button type="button" name="21:00">◎21:00</button></li>
-            <li><button type="button" name="21:30">◎21:30</button></li>
-            <li><button type="button" name="22:00">◎22:00</button></li>
-            <li><button type="button" name="22:30">◎22:30</button></li>
-            <li><button type="button" name="23:00">◎23:00</button></li>
+            <li><button type="button" class="time" value="17:00">◎17:00</button></li>
+            <li><button type="button" class="time" value="17:30">◎17:30</button></li>
+            <li><button type="button" class="time" value="18:00">◎18:00</button></li>
+            <li><button type="button" class="time" value="18:30">◎18:30</button></li>
+            <li><button type="button" class="time" value="19:00">◎19:00</button></li>
+            <li><button type="button" class="time" value="19:30">◎19:30</button></li>
+            <li><button type="button" class="time" value="20:00">◎20:00</button></li>
+            <li><button type="button" class="time" value="20:30">◎20:30</button></li>
+            <li><button type="button" class="time" value="21:00">◎21:00</button></li>
+            <li><button type="button" class="time" value="21:30">◎21:30</button></li>
+            <li><button type="button" class="time" value="22:00">◎22:00</button></li>
+            <li><button type="button" class="time" value="22:30">◎22:30</button></li>
+            <li><button type="button" class="time" value="23:00">◎23:00</button></li>
           </ul>
 
           <p class="wh">コース</p>
@@ -92,13 +93,14 @@
           <div id="modal1" style="display:none">
             <p><img src="../image/arrow1.png" width="25" alt="arrow">コース選択</p>
             <ul class="course">
-              <li>コースを指定せずに席のみ予約する</li>
+              <li><label><input type="radio" name="course" value="0" checked>
+                コースを指定せずに席のみ予約する</li>
               <?php foreach($course_list as $v){?>
-              <li><?php echo $v['name'];?></li>
+              <li><label><input type="radio" name="course" value="<?php echo $v['id']?>">
+                <span><?php echo $v['name'];?></span></li>
               <?php }?>
             </ul>
           </div>
-
 
           <p class="wh">席</p>
           <section>
@@ -128,8 +130,11 @@
             $('.modal2').modaal();  /* 席 */
           </script>
 
-          <p><button type="submit">予約する</button></p>
           <div id="hidden_date"></div>
+          <div id="hidden_time"></div>
+          <div id="hidden_num"></div>
+          <input type="hidden" name="id" value="<?php echo $shop_id;?>">
+          <input type="submit" name="check" value="確認">
         </form>
 
       </div>  <!-- info -->
@@ -203,6 +208,26 @@
     </div>
 
 </div> -->
+<script type="text/javascript">
+
+    $(function(){
+        var btn1 = $('.time');
+        btn1.click(function(){
+            btn1.removeClass('active');
+            $(this).addClass('active');
+            document.getElementById('hidden_time').innerHTML = '<input type="hidden" name="time" value="'+ $(this).val() + '">'
+        })
+
+        var btn2 = $('.num');
+        btn2.click(function(){
+            btn2.removeClass('active');
+            $(this).addClass('active');
+            document.getElementById('hidden_num').innerHTML = '<input type="hidden" name="number" value="'+ $(this).val() + '">'
+        })
+    })
+
+
+</script>
 <script src="./../user_js/calendar.js"></script>
 </body>
 </html>
