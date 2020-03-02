@@ -18,6 +18,9 @@ $(function(){
             "color":"#fff",
             "font-size":"15px"
         })
+        $(".what").css({
+            "border-left":"solid 5px"+btn
+        })
         $("#color_id").val(color_id)
     });
     // var cheackCnt = $('input[name="selectDesign"]').length;
