@@ -253,7 +253,7 @@ html{
 }
 
 .active{
-  color: green;
+  background-color: #b0fdb0;
   font-weight: bold;
 }
 
@@ -263,4 +263,32 @@ p.err {
   border: solid 1px red;
   margin: 20px;
   text-align: center;
+}
+
+#btn{
+  text-align: center;
+}
+
+.btn1{  /* 予約するボタン */
+  margin-top: 20px;
+  padding: 0px;
+  width: 500px;
+  border: none;
+  color: white;
+  font-size: 19px;
+  padding: 5px;
+  background-color: #44eb5a;
+  border-radius: 5px;
+}
+
+.btn2{
+  margin-top: 20px;
+  padding: 0px;
+  width: 400px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+  background-color: gray;
+  border-radius: 5px;
 }

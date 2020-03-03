@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>予約確認ページ</title>
-<link rel="stylesheet" href="./../user_css/main.css">
+<!-- <link rel="stylesheet" href="./../user_css/main.css"> -->
 <link rel="stylesheet" href="./../user_css/reserve.css">
 </head>
 <body>
 <div id="wrapper">
 
-    <div id="header">
-        <div class="center">
-        </div>
-    </div>
+      <header>
+        <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
+      </header>
 
     <form action="" method="get">
     <div id="content">
@@ -53,17 +52,14 @@
             <input type="hidden" name="date" value="<?php echo $date;?>">
             <input type="hidden" name="time" value="<?php echo $time;?>">
             <input type="hidden" name="course_id" value="<?php echo $course_id;?>">
-            <input type="submit" name="back" value="戻る">
-            <input type="submit" name="confirm" value="確定">
+            <div id='btn'>
+                <button type="submit" name="confirm" class="btn1">予約を確定する</button>
+                <button type="submit" name="back" class="btn2">戻る</button>
+            </div>
 
         </div>
     </div>
     </form>
-
-    <div id="footer">
-        <div class="center">
-        </div>
-    </div>
 
 </div>
 </body>

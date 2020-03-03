@@ -63,12 +63,17 @@
                 <?php }?>
             </ul>
             </div>
-            <div class="section">
-            <h2>利用シーン</h2>
+            <div class="janru">
+            <p>利用シーン</p>
             <ul>
                 <?php foreach($use_scene as $v){?>
                 <?php if($v['use_id'] != 0){?>
-                <li><a href="./controller/shop_list.php?use_scene=<?php echo $v['use_id']?>"><?php echo $v['use_scene'];?></a></li>
+                <li>
+                    <a href="./controller/shop_list.php?genre=<?php echo $v['use_id']?>">
+                        <img src="image/s_<?= $v['use_id']?>.jpg" width="100">
+                        <span class="mozi"><?php echo $v['use_scene'];?></span>
+                    </a>
+                </li>
                 <?php }?>
                 <?php }?>
             </ul>

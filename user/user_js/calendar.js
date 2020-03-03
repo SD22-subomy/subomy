@@ -5,7 +5,7 @@ let month = date.getMonth() + 1
 let pageCnt = 1
 const config = {
     show: 1,
-    pagemax: 4,
+    pagemax: 2,
 }
 
 function showCalendar(year, month) {
@@ -138,8 +138,30 @@ function pageCalendar(e){
 
 }
 
+
 document.querySelector('#prev').addEventListener('click', moveCalendar)
 document.querySelector('#next').addEventListener('click', moveCalendar)
+
+// document.addEventListener("click", function(e) {
+//     if(e.target.classList.contains("day_click")) {
+//         var selector;
+//         if(pre != ''){
+//             // sele = document.getElementById(pre)
+//             // sele.style.backgroundColor='';
+//             selector = document.getElementById(pre);
+//             $(selector).removeClass('day_active');
+//             // document.getElementById(pre).addClass='day_active';
+//         }
+//         console.log(pre);
+//         // document.getElementById(pre).addClass='day_active';
+//         selector = document.getElementById($(this).val());
+//         $(selector).addClass('day_active');
+//         // sele.style.backgroundColor='#b0fdb0';
+//         document.getElementById('hidden_date').innerHTML = '<input type="hidden" name="date" value="'+ $(this).val() + '">'
+//         pre = $(this).val();
+//         console.log(pre);
+//     }
+// })
 
 
 // document.addEventListener("click", function(e) {
@@ -151,19 +173,5 @@ document.querySelector('#next').addEventListener('click', moveCalendar)
 
 
 document.getElementById('prev').disabled = true
+document.getElementById('next').disabled = true
 showCalendar(year, month)
-
-$(function(){
-    var btn3 = $('.day_click');
-    var pre = ''
-
-    btn3.click(function(){
-        if(pre != ''){
-            document.getElementById(pre).style.backgroundColor='';
-        }
-        document.getElementById($(this).val()).style.backgroundColor='#b0fdb0';
-        document.getElementById('hidden_date').innerHTML = '<input type="hidden" name="date" value="'+ $(this).val() + '">'
-        pre = $(this).val();
-    })
-
-})

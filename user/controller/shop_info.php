@@ -39,7 +39,7 @@ if(isset($_GET['reserve'])){
 	$_SESSION['reserve_date'] = $date;
 	$_SESSION['reserve_shop'] = $_GET['id'];
 
-	header("location: ./reserve.php#".$date);
+	header("location: ./reserve.php");
 	exit;
 }
 
