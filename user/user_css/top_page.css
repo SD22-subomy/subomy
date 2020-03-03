@@ -36,12 +36,6 @@ header button img{
   top: 5px;
   padding-left: 5px;
 }
-
-#wrapper{
-  border: solid blue 1px;
-  width: 730px;
-  margin: auto;
-}
 #main{
 	position: relative;
 }
@@ -103,6 +97,20 @@ header button img{
   color: green;
   margin-bottom: 10px;
 }
+
+#area button{
+  background-color: white;
+  color: #2f7f3c;
+  padding: 3px;
+  border: none;
+}
+#area ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+#area li{
+  padding: 10px;
+}
 /*------janru------*/
 .janru{
   height: 250px;
@@ -157,12 +165,12 @@ header button img{
 
 .com{
   padding-bottom: 30px;
-  margin: auto;
+  margin: 5px;
 }
 .com ul{
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
 }
 .com li{
@@ -183,7 +191,116 @@ header button img{
   border: solid black 1px;
   width: 730px;
   margin: auto;
+  background-color: #f9fffa;
 }
+
+/*--------osusume------*/
+.square {
+  border: solid darkgray 1px;
+  background-color: #e2ffef;
+  width: 660px;
+  height: 110px;
+  padding: 20px;
+  margin: auto;
+}
+#conO{
+  width: 680px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  top: -90px;
+  margin: auto;
+}
+#osusume{
+  height: 480px;
+}
+#osusume section{
+  border: solid gray 1px;
+  background-color: white;
+  padding: 10px;
+  height: 150px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+.section{
+  position: relative;
+}
+.left{
+  position: absolute;
+  left: 0;
+}
+.right{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 145px;
+}
+.right p:nth-child(2),
+.right p:nth-child(3){
+  font-size: 0.8em;
+}
+/* #osusume{
+  margin-top: 40px;
+  height: 440px;
+}
+#osusume section{
+  border: solid gray 1px;
+  background-color: white;
+  padding: 10px;
+  height: 150px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+#osusume ul {
+  display: flex;
+  width: 680px;
+  position: relative;
+  top: -90px;
+}
+
+#osusume section ul{
+  width: 140px;
+  font-size: 12px;
+  position: relative;
+  top: -155px;
+  left: 80px;
+}
+#osusume section ul span{
+  font-weight: bolder;
+} 
+#osusume section p:nth-child(2){
+  width: 145px;
+  height: 45px;
+  position: relative;
+  top: -156px;
+  left: 80px;
+}
+#osusume section p:nth-child(3){
+  width: 125px;
+  position: relative;
+  top: -157px;
+  left: 70px;
+}
+#osusume section p:nth-child(4){
+  font-size: 11.5px;
+  width: 140px;
+  position: relative;
+  top: -158px;
+  left: 80px;
+}
+#osusume section ul{
+  width: 140px;
+  font-size: 12px;
+  position: relative;
+  top: -155px;
+  left: 80px;
+}
+#osusume section ul li:nth-of-type(1){
+  margin-bottom: 2px;
+}
+
+*/
 
 
 footer{
