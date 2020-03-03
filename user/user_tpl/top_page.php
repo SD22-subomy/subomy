@@ -72,12 +72,14 @@
                 <?php }?>
             </ul>
             </div>
+
             <div class="scene">
             <p>利用シーン</p>
             <ul>
                 <?php foreach($use_scene as $v){?>
                 <?php if($v['use_id'] != 0){?>
                 <li>
+
                     <a href="./controller/shop_list.php?use_scene=<?php echo $v['use_id']?>">
                         <span class="mozi"><?php echo $v['use_scene'];?></span>
                         <img src="image/s_<?= $v['use_id']?>.jpg" width="100">

@@ -98,7 +98,7 @@
             <p><img src="../image/arrow1.png" width="25" alt="arrow">コース選択</p>
             <ul class="course">
               <li><label><input type="radio" name="course" value="0" checked>
-                コースを指定せずに席のみ予約する</li>
+                <span>コースを指定せずに席のみ予約する</span></li>
               <?php foreach($course_list as $v){?>
               <li><label><input type="radio" name="course" value="<?php echo $v['id']?>">
                 <span><?php echo $v['name'];?></span></li>
@@ -116,12 +116,12 @@
           <div id="modal2" style="display:none">
             <p><img src="../image/arrow1.png" width="25" alt="arrow">席選択</p>
             <ul class="seat">
-              <li><label><input type="radio" name="seat" value="" checked>
+              <li><label><input type="radio" name="seat" value="0" checked>
                 <span>テーブル（喫煙）</span><br>
                 　　２名～<br>
                 　　予約時２時間制／未成年者の見のご利用不可
               </label></li>
-              <li><label><input type="radio" name="seat" value="">
+              <li><label><input type="radio" name="seat" value="1">
                 <span>カウンター</span><br>
                 　　１名～<br>
                 　　予約時２時間制／未成年者の見のご利用不可
@@ -138,7 +138,7 @@
           <div id="hidden_time"></div>
           <div id="hidden_num"></div>
           <input type="hidden" name="id" value="<?php echo $shop_id;?>">
-          <input type="submit" name="check" value="確認">
+          <p><button type="submit" name="check">確認</button></p>
         </form>
 
       </div>  <!-- info -->
@@ -228,8 +228,20 @@
             $(this).addClass('active');
             document.getElementById('hidden_num').innerHTML = '<input type="hidden" name="number" value="'+ $(this).val() + '">'
         })
-    })
 
+        var btn3 = $('.day_click');
+        var pre = ''
+
+        btn3.click(function(){
+            if(pre != ''){
+            document.getElementById(pre).style.backgroundColor='';
+            }
+            console.log(pre);
+            document.getElementById($(this).val()).style.backgroundColor='#b0fdb0';
+            document.getElementById('hidden_date').innerHTML = '<input type="hidden" name="date" value="'+ $(this).val() + '">'
+            pre = $(this).val();
+        })
+    })
 
 </script>
 <script src="./../user_js/calendar.js"></script>

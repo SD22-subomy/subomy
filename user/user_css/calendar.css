@@ -68,3 +68,7 @@ button.day_click:focus {
 button.day_click:hover{
     color: red;
 }
+
+.day_active{
+    background-color: #b0fdb0;
+}
