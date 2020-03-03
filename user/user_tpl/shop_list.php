@@ -25,7 +25,7 @@
       </header>
 
       <div id="main">
-        <p><img src="../image/top.jpg" width="730"></p>
+        <p><img src="../image/img_<?php echo $_GET['genre'];?>.jpg" width="730" height="300"></p>
         <p class="clear"></p>
         <div class="seach">
             <input type="text" class="input1" name="" placeholder="エリア">

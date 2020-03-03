@@ -6,6 +6,9 @@
 <!-- <link rel="stylesheet" href="./../user_css/calendar.css"> -->
 <link rel="stylesheet" href="./../user_css/shop_info.css">
 <link rel="stylesheet" href="./../user_css/main.css">
+<script src="../../jquery-3.4.1.min.js"></script>
+<script src="../user_js/design.js"></script>
+
 </head>
 <body>
 <script type="text/javascript">
@@ -34,7 +37,6 @@
         }
 </script>
 <div id="wrapper">
-
       <header>
         <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
         <?php if($login_flg){?>
@@ -153,7 +155,7 @@
           <div class="introduction">
             <p class="cTop">お店の紹介文　お店のアピールポイント</p>
             <div class="introContent">
-              <p><?php echo $shop_info['title']; ?></p>
+              <p>■<?php echo $shop_info['title']; ?></p>
               <p><?php echo $shop_info['info']; ?></p>
             </div>
             <hr>
@@ -199,8 +201,9 @@
         <div id="hidden_date"></div>
         <input type="hidden" name="id" value="<?php echo $shop_info['id'];?>">
       </div> <!-- main -->
-
-      <footer>
+    </form>
+  </div>
+  <footer>
         <ul>
           <li>サイトマップ</li>
           <li>キーワード一覧</li>
@@ -212,10 +215,7 @@
           <li>採用情報</li>
         </ul>
         <p>Copyright (C) Hal Event Week, Inc All Rights Reserved</p>
-      </footer>
-
-    </form>
-  </div>
+      </footer> 
 </div>
 
     <!-- <div id="content">
