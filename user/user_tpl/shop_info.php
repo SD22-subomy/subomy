@@ -67,7 +67,7 @@
       <div id="main">
         <div id="info">
           <div class="kihon">
-            <p>ジャンル ＞ <?php echo $shop_info['genre'];?></p>  <!-- パンくずリスト？ -->
+            <p>ジャンル ＞ <a href="./shop_list.php?genre="><?php echo $shop_info['genre'];?></a></p>  <!-- パンくずリスト？ -->
             <h1><?php echo $shop_info['name'];?></h1>
             <p><img src="../image/star_yellow.png" width="40"><img src="../image/star_yellow.png" width="40"><img src="../image/star_yellow.png" width="40"><img src="../image/star.png" width="40"><img src="../image/star.png" width="40"></p>
 
@@ -81,9 +81,8 @@
             </section>
 
             <ul>
-              <li><span>最寄り駅：</span><?php echo "aa"; ?></li>
               <li><span>ジャンル：</span><?php echo $shop_info['genre']; ?></li>
-              <li><span>予算：</span><!-- <img src="../image/sun.png" width="15"><?php echo "￥1,000 ~ ￥1,999"; ?>　<img src="../image/moon.png" width="15"><?php echo "￥3,000 ~ ￥3,999"; ?> --><?php echo $shop_info['budget'];?></li>
+              <li><span>予算：</span><?php echo $shop_info['budget'];?></li>
             </ul>
           </div>  <!-- kihon -->
 

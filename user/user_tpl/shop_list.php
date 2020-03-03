@@ -129,11 +129,19 @@
             <div class="right">
                 <ul>
                     <?php foreach($shop_info as $v){?>
-                    <li>
                     <a href="./shop_info.php?shop_id=<?php echo $v['id'];?>">
-                        店舗名：<?php echo $v['name'];?>
+                        <li class="rContent">
+                            <span class="rLeft">
+                                <p><img src="image/" width="150"></p>
+                            </span>
+                            <span class="rRight">
+                                <?php echo $v['name'];?>
+                                <p><img src="../image/star_yellow.png" width="30"><img src="../image/star_yellow.png" width="30"><img src="../image/star_yellow.png" width="30"><img src="../image/star.png" width="30"><img src="../image/star.png" width="30"></p>
+                                <p><?php echo '金額'?></p>
+                                <p><span>ジャンル：</span><?php echo $v['genre'];?>
+                            </span>
+                        </li>
                     </a>
-                    </li>
                     <?php }?>
                 </ul>
             </div>
