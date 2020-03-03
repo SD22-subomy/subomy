@@ -45,6 +45,15 @@
     <div id="area">
         <p>≪ 都道府県一覧へ戻る</p>
         <p>大阪</p>
+        <ul>
+            <?php
+            for($i = 0;$i<25;$i++){
+            ?>
+                <li><button type="submit">area</button></li>
+            <?php
+            }
+            ?>
+        </ul>
     </div>
     <div id="content">
         <div class="center">
@@ -55,30 +64,40 @@
                 <?php if($v['genre_id'] != 0){?>
                 <li>
                     <a href="./controller/shop_list.php?genre=<?php echo $v['genre_id']?>">
-                        <img src="image/j_<?= $v['genre_id']?>.jpg" width="100">
                         <span class="mozi"><?php echo $v['genre'];?></span>
+                        <img src="image/j_<?= $v['genre_id']?>.jpg" width="100">
                     </a>
                 </li>
                 <?php }?>
                 <?php }?>
             </ul>
             </div>
-            <div class="section">
-            <h2>利用シーン</h2>
+            <div class="scene">
+            <p>利用シーン</p>
             <ul>
                 <?php foreach($use_scene as $v){?>
                 <?php if($v['use_id'] != 0){?>
-                <li><a href="./controller/shop_list.php?use_scene=<?php echo $v['use_id']?>"><?php echo $v['use_scene'];?></a></li>
+                <li>
+                    <a href="./controller/shop_list.php?use_scene=<?php echo $v['use_id']?>">
+                        <span class="mozi"><?php echo $v['use_scene'];?></span>
+                        <img src="image/s_<?= $v['use_id']?>.jpg" width="100">
+                    </a>
+                </li>
                 <?php }?>
                 <?php }?>
             </ul>
             </div>
-            <div class="section">
-            <h2>こだわり条件</h2>
+            <div class="com">
+            <p>こだわり条件</p>
             <ul>
                 <?php foreach($commitment as $v){?>
                 <?php if($v['com_id'] != 0){?>
-                <li><a href="./controller/shop_list.php?commitment=<?php echo $v['com_id']?>"><?php echo $v['commitment'];?></a></li>
+                <li>
+                    <a href="./controller/shop_list.php?commitment=<?php echo $v['com_id']?>">
+                        <span class="mozi"><?php echo $v['commitment'];?></span>
+                        <img src="image/k_<?= $v['com_id']?>.jpg" width="100">
+                    </a>
+                </li>
                 <?php }?>
                 <?php }?>
             </ul>
@@ -99,8 +118,6 @@
         </ul>
         <p>Copyright (C) Hal Event Week, Inc All Rights Reserved</p>
       </footer>
-
-
 </div>
 </body>
 </html>

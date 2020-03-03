@@ -10,7 +10,6 @@
 require_once './../function/user_func.php';
 
 session_start();
-
 //ログアウト
 if(isset($_POST['logout'])){
 
@@ -46,8 +45,6 @@ if(isset($_GET['reserve'])){
 //デバック用
 // var_dump($shop_info);
 // var_dump($course_list);
-
 require_once './../user_tpl/shop_info.php';
-
 
 ?>

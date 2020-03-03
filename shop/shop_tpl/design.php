@@ -46,7 +46,7 @@
                                     </ul>
                                 </div>
                                 <div class="img">
-                                    <img src="../course_img/<?=$course_img['img']?>" alt="store_image">
+                                    <img src="../../shop_img/<?=$course_img['shop_id']?>/<?=$course_img['img']?>" alt="store_image">
                                 </div>
                                 <div class="introduction">
                                     <p class="cTop">お店の紹介文　お店のアピールポイント</p>
