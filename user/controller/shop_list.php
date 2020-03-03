@@ -34,5 +34,4 @@ if(isset($_GET['genre'])){
 
 require_once './../user_tpl/shop_list.php';
 
-
 ?>

@@ -60,7 +60,7 @@ header button img{
 }
 
 #wrapper{
-  border: solid blue 1px;
+  border: solid black 1px;
   width: 730px;
   margin: auto;
 }
@@ -69,7 +69,7 @@ header button img{
 
 #main{
   margin: 15px 15px 0px 15px;
-  background-color: #eeffe8;
+  /* background-color: #eeffe8; */
   padding-bottom: 5px;
   position: relative;
 }
@@ -149,12 +149,9 @@ h1{
 
 #main > ul{
   display: flex;
-  border: solid #8aff6e 1px;
-  border-bottom: solid #8aff6e 2px;
   margin-bottom: 10px;
 }
 #main > ul >li{
-  border: solid #8aff6e 1px;
   width: 175px;
   text-align: center;
   padding: 5px;
@@ -162,8 +159,6 @@ h1{
   cursor: pointer;
 }
 #main > ul >li:nth-child(1){
-  background-color: #8aff6e;
-  color: white;
   font-size: 15px;
   font-weight: bolder;
 }
@@ -187,11 +182,11 @@ h1{
   padding: 5px;
 }
 .right button{
-  border: solid green 1px;
+  /* border: solid green 1px; */
   width: 190px;
   padding: 5px;
   margin-top: 10px;
-  background-color: #59e470;
+  /* background-color: #59e470; */
   cursor: pointer;
 }
 
@@ -201,17 +196,19 @@ h1{
   right: 0;
 }
 
-.introduction{
+/* .introduction{
   padding: 10px;
 }
-
+.introContent p{
+  padding: 10px;
+} */
 hr{
   margin: 20px 10px 40px 10px;
   color: black;
 }
 
 .what{  /* what kind of info */
-  border-left: solid 5px #8aff6e;
+  /* border-left: solid 5px #8aff6e; */
   padding: 0px 10px;
   margin-bottom: 5px;
 }

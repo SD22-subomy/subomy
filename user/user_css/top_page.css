@@ -106,29 +106,79 @@ header button img{
 /*------janru------*/
 .janru{
   height: 250px;
-  /* width: 700px; */
-  margin: auto;
+  margin: 5px;
+  padding-bottom: 30px;
 }
 .janru ul{
   display: flex;
   flex-wrap:wrap;
-  /* justify-content: space-around; */
+  text-align: center;
 }
 .janru li{
+  width: 100px;
+  height: 100px;
+  margin: 9px;
   position: relative;
-  padding: 10px;
 }
 .janru img{
   background-color: white;
   opacity: 0.5;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .mozi{
-  position: absolute;
-  line-height: 50px;
-  left: 25px;
-  top: 35px;
+  line-height: 100px;
 }
+
+.scene{
+  margin: 5px;
+  padding-bottom: 30px;
+
+}
+.scene ul{
+  display: flex;
+  flex-wrap:wrap;
+  text-align: center;
+}
+.scene li{
+  width: 100px;
+  height: 100px;
+  margin: 9px;
+  position: relative;
+}
+.scene img{
+  background-color: white;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.com{
+  padding-bottom: 30px;
+  margin: auto;
+}
+.com ul{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+.com li{
+  width: 100px;
+  height: 100px;
+  margin: 9px;
+  position: relative;
+}
+.com img{
+  background-color: white;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 #wrapper{
   border: solid black 1px;
   width: 730px;

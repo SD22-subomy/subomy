@@ -57,7 +57,6 @@ if(isset($_POST['change'])){
     header('Location:design_change.php');
 }
 
-
 require '../shop_tpl/design.php';
 
 ?>
