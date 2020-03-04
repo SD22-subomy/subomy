@@ -32,7 +32,7 @@
             <tr>
             <td scope="row"><?php echo $value['shop_id']; ?></td>
             <td><?php echo $value['name']; ?></td>
-            <td><?php echo $value['address']; ?></td>
+            <td><?php echo $value['addres']; ?></td>
             <td><?php echo $value['tel']; ?></td>
             <td><?php echo $value['mail']; ?></td>
             <td><?php echo $value['login_id']; ?></td>

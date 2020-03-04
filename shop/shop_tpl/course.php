@@ -8,7 +8,7 @@
     ?>
     <h3><?= $tbl[$i]['title']?></h3>
     <div class="top">
-        <p><img src="../course_img/<?= $tbl[$i]['img']?>"></p>
+        <p><img src="../../course/<?=$id?>/<?= $tbl[$i]['img']?>"></p>
         <p><?= $tbl[$i]['name']?></p>
     </div>
         <table>

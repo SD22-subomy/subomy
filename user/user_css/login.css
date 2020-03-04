@@ -20,12 +20,15 @@ div{
 }
 
 /*--------------------------------------*/
+#header{
+    margin-top: 125px;
+}
 #content{
     margin: auto;
 	border: solid 1px rgb(180, 179, 179);
 	border-radius: 5%;
 	width: 500px;
-	text-align: center;
+    text-align: center;
 }
 #registration{
 	border-bottom: solid 1px #ccc;
