@@ -13,7 +13,7 @@
         <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
       </header>
 
-    <form action="" method="get">
+    <form class="check" action="" method="get">
     <div id="content">
         <div class="center">
 
