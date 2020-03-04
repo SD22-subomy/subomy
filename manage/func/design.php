@@ -13,6 +13,11 @@ if ( isset($_POST['design']) ) {
   exit;
 }
 
+if ( isset($_GET['del']) ) {
+  delete($_GET['del'], $table_name);
+  header('Location: ./../views/design.php');
+  exit;
+}
 
 $design_list = select_user_all($table_name);
 
