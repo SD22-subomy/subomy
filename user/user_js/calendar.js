@@ -76,7 +76,7 @@ function createCalendar(year, month) {
                 calendarHtml += '<td>'+ dayCount +'<br>-</td>'
                 dayCount++
             } else {
-                let dayId = year+'/'+month+'/'+dayCount
+                let dayId = year+'/'+Number(month)+'/'+Number(dayCount)
                 calendarHtml += '<td class="calendar_td" id="'+dayId+'">'+ dayCount +'<br><button type="button" class="day_click" value="'+dayId+'">〇</button></td>'
                 dayCount++
             }

@@ -6,10 +6,10 @@
 <link rel="stylesheet" href="./../user_css/monthly.css">
 <link rel="stylesheet" href="./../user_css/main.css">
 <link rel="stylesheet" href="./../user_css/schedule.css">
-</head>
+<link rel="stylesheet" href="./../user_css/mypage.css">
 <script src="./../../jquery-3.4.1.min.js"></script>
 <script src="./../user_js/monthly.js"></script>
-<!-- <script src="./../user_js/schedule.js"></script> -->
+<!-- <script src="./../user_js/event.js"></script> -->
 <script>
 var Events = {
 "monthly": [
@@ -24,7 +24,6 @@ var Events = {
 <?php }?>
 ]
 };
-
 
 window.onload = function(){
 
@@ -51,10 +50,9 @@ document.addEventListener("click", function(e) {
 <body>
 <div id="wrapper">
 
-    <div id="header">
-        <div class="center">
-        </div>
-    </div>
+    <header>
+        <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
+    </header>
     <form action="" method="POST">
     <div id="content">
         <div class="center">

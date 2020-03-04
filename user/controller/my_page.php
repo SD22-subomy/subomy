@@ -17,7 +17,7 @@ if(isset($_POST['back'])){
 	header("location: ./../index.php");
 	exit;
 }
-
+$event = get_reserve_info($_SESSION['user_id']);
 
 require_once './../user_tpl/my_page.php';
 
