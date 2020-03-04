@@ -77,6 +77,37 @@ img{
     width: 80%;
     padding-bottom: 30px;
 }
+.right{
+  width: 190px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  padding-top: 10px;
+}
+.right section p{
+  margin-bottom: 10px;
+}
+.right input{
+  width: 130px;
+}
+.right select{
+  margin-left: 20px;
+  width: 130px;
+  padding: 5px;
+}
+.right button{
+  /* border: solid green 1px; */
+  width: 190px;
+  padding: 5px;
+  margin-top: 10px;
+  /* background-color: #59e470; */
+  cursor: pointer;
+}
+.left{
+  width: 500px;
+  position: relative;
+  right: 0;
+}
 /*---------form---------*/
 .sampleHeader{
     margin-bottom: 20px;
@@ -90,6 +121,7 @@ img{
     width: 746px;
     height: 570px;
     overflow-y:scroll;
+    position: relative;
 }
 #main{
     width: 730px;

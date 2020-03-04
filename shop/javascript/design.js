@@ -50,5 +50,9 @@ $(function(){
         $(".what").css({
             "border-left":"solid 5px"+data['code1']
         })
+        $(".right button").css({
+            "background-color":data['code1'],
+            "border":"solid 1px "+data['cade2']
+        })
     })    
 })
