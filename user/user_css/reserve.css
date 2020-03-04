@@ -13,7 +13,8 @@ body{
 }
 
 #wrapper{
-  border: solid blue 1px;
+  border: solid black 1px;
+  background-color: #f9fffa;
   width: 730px;
   margin: auto;
 }
@@ -267,6 +268,9 @@ p.err {
 
 #btn{
   text-align: center;
+  width: 730px;
+  position: absolute;
+  bottom: 50px;
 }
 
 .btn1{  /* 予約するボタン */
@@ -291,4 +295,50 @@ p.err {
   padding: 5px;
   background-color: gray;
   border-radius: 5px;
+}
+
+
+#content{
+  height: 88vh;
+  border: solid white 1px;
+}
+.check table{
+  border: solid #3ebf54 1px;
+  margin-top: 100px;
+  width: 500px;
+  background-color: white;
+}
+.check table tr{
+  height: 30px;
+}
+.check table tr th{
+  background-color: #e0ffe6;
+  padding: 5px;
+}
+.check table tr td{
+  padding-left: 10px;
+}
+.check{
+  margin-bottom: 0px;
+}
+
+
+.center{
+  margin-top: 35vh;
+  text-align: center;
+}
+.center p:nth-child(1){
+  font-size: 20px;
+  padding-bottom: 50px;
+}
+.center p:nth-of-type(2){
+  font-size: 22px;
+  padding-right: 20px;
+  width: 110px;
+}
+.center p:nth-of-type(2):hover{
+  border-bottom: solid #44eb5a 2px;
+}
+.center p:nth-of-type(2):hover a{
+  color: #2ca93c;
 }
