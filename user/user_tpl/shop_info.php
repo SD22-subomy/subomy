@@ -67,7 +67,7 @@
       <div id="main">
         <div id="info">
           <div class="kihon">
-            <p>ジャンル ＞ <a href="./shop_list.php?genre="><?php echo $shop_info['genre'];?></a></p>  <!-- パンくずリスト？ -->
+            <p>ジャンル ＞ <a href="./shop_list.php?genre=<?php echo $shop_info['genre_id'];?>"><?php echo $shop_info['genre'];?></a></p>  <!-- パンくずリスト？ -->
             <h1><?php echo $shop_info['name'];?></h1>
             <p><img src="../image/star_yellow.png" width="40"><img src="../image/star_yellow.png" width="40"><img src="../image/star_yellow.png" width="40"><img src="../image/star.png" width="40"><img src="../image/star.png" width="40"></p>
 

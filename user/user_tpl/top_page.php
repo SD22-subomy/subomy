@@ -47,9 +47,9 @@
         <p>大阪</p>
         <ul>
             <?php
-            for($i = 0;$i<25;$i++){
+            foreach($area as $v){
             ?>
-                <li><button type="submit">area</button></li>
+                <li><button type="submit"><?php echo $v['name'];?></button></li>
             <?php
             }
             ?>

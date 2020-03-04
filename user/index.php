@@ -36,6 +36,7 @@ $login_flg = isset($_SESSION['user_id']);
 $genre = read_db('genre');
 $use_scene = read_db('use_scene');
 $commitment = read_db('commitment');
+$area = get_area('27');
 
 require_once 'user_tpl/top_page.php';
 
