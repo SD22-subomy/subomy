@@ -91,24 +91,44 @@ $result = shop_select($cn,$sql);
 //SQL取得
 $tbl = [];
 $cnt = 0;
+
+$course = [];
+$cCnt = 0;
 $html = "";
 while ($row = mysqli_fetch_assoc($result)) {
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+
+    $sql = sql_info("course","course_id",$row['reser_course']);
+    // var_dump($sql);
+    $result = shop_select($cn,$sql);
+    while($cou = mysqli_fetch_assoc($result)){
+        $course[] = $cou;
+        $cCnt++;
+    }
     $tbl[] = $row;
     $cnt++;
 }
+
 if(count($tbl) == 0){
     $msg = "<p class='msg'>予約者なし</p>";
 }
 else{
     $msg = "";
 }
-// var_dump(count($tbl));
+
+//course
 for($i=0;$i < count($tbl);$i++){
     $html = $html."<div class='schedule'>";
     for($a=0;$a < count($times);$a++){
         if($tbl[$i]['reser_time'] == $times[$a]){
             $html = $html."<div class='reser'>";
-            $html = $html.$tbl[$i]['name']."様<br>".$tbl[$i]['reser_many']."名";
+            $html = $html.$tbl[$i]['name']."様/".$tbl[$i]['reser_many']."名";
+            if(count($course) == 0){
+                $html = $html."<br>2時間コース(コース料理指定なし)";
+            }else{
+                $html = $html."<br>2時間コース(".$course[$i]['name'].")";
+            }
             $html = $html."</div>";
             $a = $a + 3;
         }else{
@@ -122,7 +142,6 @@ if(isset($_POST['logout'])){
     session_destroy();
     header('Location:login.php');
 }
-
 
 
 require '../shop_tpl/reservation.php';

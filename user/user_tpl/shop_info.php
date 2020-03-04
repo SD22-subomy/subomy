@@ -149,7 +149,7 @@
 
         <div class="left">
           <div id="img">
-            <img src="../image/img_1.jpg" width="500" alt="store_image">
+            <img src="../../shop_img/<?php echo $_GET['shop_id']?>/<?php echo 'course_img';?>" width="500" alt="course_img">
             </div>
           <div class="introduction">
             <p class="cTop">お店の紹介文　お店のアピールポイント</p>
