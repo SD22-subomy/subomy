@@ -132,7 +132,7 @@
                     <a href="./shop_info.php?shop_id=<?php echo $v['id'];?>">
                         <li class="rContent">
                             <span class="rLeft">
-                                <p><img src="image/" width="150"></p>
+                                <p><img src="../../shop_img/<?= $shop_id?>/<?php echo 'a';?>" width="150"></p>
                             </span>
                             <span class="rRight">
                                 <?php echo $v['name'];?>
