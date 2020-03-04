@@ -3,15 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>条件登録ページ</title>
-<link rel="stylesheet" href="#">
+<link rel="stylesheet" href="./../user_css/mypage.css">
 </head>
 <body>
 <div id="wrapper">
 
-    <div id="header">
-        <div class="center">
-        </div>
-    </div>
+    <header>
+        <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
+    </header>
 
     <div id="content">
         <div class="center">
