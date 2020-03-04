@@ -15,7 +15,7 @@
 
     <form class="check" action="" method="get">
     <div id="content">
-        <div class="center">
+        <!-- <div class="center"> -->
 
             <table>
                 <tr>
@@ -57,7 +57,7 @@
                 <button type="submit" name="back" class="btn2">戻る</button>
             </div>
 
-        </div>
+        <!-- </div> -->
     </div>
     </form>
 

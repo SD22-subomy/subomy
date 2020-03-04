@@ -10,8 +10,9 @@
 <div id="wrapper">
 
     <div id="header">
-        <div class="center">
-        </div>
+      <header>
+        <p><a href="../index.php"><img src="./../image/gulunte.png" width="300" alt="logo"></a></p>
+      </header>
     </div>
 
     <form action="" method="get">
@@ -23,10 +24,10 @@
     </div>
     </form>
 
-    <div id="footer">
+    <!-- <div id="footer">
         <div class="center">
         </div>
-    </div>
+    </div> -->
 
 </div>
 </body>
