@@ -11,8 +11,12 @@
   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <script src="../bootstrap/jquery-3.4.1.min.js"></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./../css/common.css">
+  <link rel="stylesheet" href="./../css/shop.css">
 </head>
 <body>
+
+<div id="wrapper">
 
 <h1>店舗一覧</h1>
 
@@ -53,5 +57,6 @@
 
 <div><a href="./manage.php">メニュー画面へ戻る</a></div>
 
+</div><!-- wrapper end -->
 </body>
 </html>

@@ -13,50 +13,56 @@
   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <script src="../bootstrap/jquery-3.4.1.min.js"></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./../css/common.css">
+  <link rel="stylesheet" href="./../css/user_info.css">
 </head>
 
 
 <body>
 
-<h1>利用者情報</h1>
+<div id="wrapper">
 
-<?php if (isset($user_list)) { ?>
-  <div class="container">
-    <div class="table-responsive">
-      <table class="table table-bordered text-nowrap table-hover">
-        <thead class="thead-dark">
-          <tr>
-            <th>利用者ID</th><th>名前</th><th>性別</th><th>電話番号</th><th>メールアドレス</th><th>パスワード</th><th>削除</th><th>パスワード変更</th>
-          </tr>
-        </thead>
+  <h1>利用者情報</h1>
 
-        <?php foreach ($user_list as $key => $value) { ?>
-
-          <tbody>
+  <?php if (isset($user_list)) { ?>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-bordered text-nowrap table-hover">
+          <thead class="thead-dark">
             <tr>
-            <td scope="row"><?php echo $value['user_id']; ?></td>
-            <td><?php echo $value['name']; ?></td>
-            <td><?php echo $value['gender']; ?></td>
-            <td><?php echo $value['tel']; ?></td>
-            <td><?php echo $value['mail']; ?></td>
-            <td><?php echo $value['pass']; ?></td>
-            <td><a type="button" class="btn btn-sm" href="?del=<?php echo $value['user_id']; ?>">削除</a></td>
-            <td><a type="button" class="btn btn-sm" href="permute_pass.php?id=<?php echo $value['user_id']; ?>">変更</a></td>
+              <th>利用者ID</th><th>名前</th><th>性別</th><th>電話番号</th><th>メールアドレス</th><th>パスワード</th><th>削除</th><th>パスワード変更</th>
             </tr>
-          </tbody>
+          </thead>
 
-        <?php } ?>
-      </table>
+          <?php foreach ($user_list as $key => $value) { ?>
+
+            <tbody>
+              <tr>
+              <td scope="row"><?php echo $value['user_id']; ?></td>
+              <td><?php echo $value['name']; ?></td>
+              <td><?php echo $value['gender']; ?></td>
+              <td><?php echo $value['tel']; ?></td>
+              <td><?php echo $value['mail']; ?></td>
+              <td><?php echo $value['pass']; ?></td>
+              <td><a type="button" class="btn btn-sm" href="?del=<?php echo $value['user_id']; ?>">削除</a></td>
+              <td><a type="button" class="btn btn-sm" href="permute_pass.php?id=<?php echo $value['user_id']; ?>">変更</a></td>
+              </tr>
+            </tbody>
+
+          <?php } ?>
+        </table>
+      </div>
     </div>
-  </div>
 
-<?php } else { ?>
+  <?php } else { ?>
 
-  <p>該当する利用者はいません。</p>
+    <p>該当する利用者はいません。</p>
 
-<?php } ?>
+  <?php } ?>
 
-<div><a href="./manage.php">メニュー画面へ戻る</a></div>
+  <div><a href="./manage.php">メニュー画面へ戻る</a></div>
+
+</div><!-- wrapper end -->
 
 </body>
 
