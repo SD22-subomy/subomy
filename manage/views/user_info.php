@@ -40,8 +40,8 @@
             <td><?php echo $value['tel']; ?></td>
             <td><?php echo $value['mail']; ?></td>
             <td><?php echo $value['pass']; ?></td>
-            <td><a type="button" class="btn btn-link btn-sm" href="?del=<?php echo $value['user_id']; ?>">削除</a></td>
-            <td><a type="button" class="btn btn-link btn-sm" href="permute_pass.php?id=<?php echo $value['user_id']; ?>">変更</a></td>
+            <td><a type="button" class="btn btn-sm" href="?del=<?php echo $value['user_id']; ?>">削除</a></td>
+            <td><a type="button" class="btn btn-sm" href="permute_pass.php?id=<?php echo $value['user_id']; ?>">変更</a></td>
             </tr>
           </tbody>
 

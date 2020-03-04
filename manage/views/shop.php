@@ -38,7 +38,7 @@
             <td><?php echo $value['login_id']; ?></td>
             <td><?php echo $value['pass']; ?></td>
             <td><?php echo $value['monthly']; ?></td>
-            <td><a type="button" class="btn btn-link btn-sm" href="?del=<?php echo $value['shop_id']; ?>">削除</a></td>
+            <td><a type="button" class="btn btn-sm" href="?del=<?php echo $value['shop_id']; ?>">削除</a></td>
             </tr>
           </tbody>
 

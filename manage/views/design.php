@@ -26,7 +26,7 @@
       <table class="table table-bordered text-nowrap table-hover">
         <thead class="thead-dark">
           <tr>
-            <th>デザインID</th><th>デザイン</th>
+            <th>デザインID</th><th>デザイン</th><th>削除</th>
           </tr>
         </thead>
 
@@ -36,6 +36,7 @@
             <tr>
               <td scope="row"><?php echo $value['design_id']; ?></td>
               <td><?php echo $value['design']; ?></td>
+              <td><a type="button" class="btn btn-sm" href="?del=<?php echo $value['design_id']; ?>">削除</a></td>
             </tr>
           </tbody>
 

@@ -36,7 +36,7 @@
             <td><?php echo $value['reser_date']; ?></td>
             <td><?php echo $value['reser_time']; ?></td>
             <td><?php echo $value['reser_many']; ?></td>
-            <td><a type="button" class="btn btn-link btn-sm" href="?del=<?php echo $value['shop_id']; ?>">削除</a></td>
+            <td><a type="button" class="btn btn-sm" href="?del=<?php echo $value['shop_id']; ?>">削除</a></td>
             </tr>
           </tbody>
 
