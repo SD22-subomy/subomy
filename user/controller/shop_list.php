@@ -29,6 +29,7 @@ if(isset($_GET['genre'])){
 	$shop_info = get_shop_list($shop_id);
 }
 
+
 //デバック用
 //var_dump($shop_info);
 
