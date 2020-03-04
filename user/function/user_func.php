@@ -243,6 +243,32 @@ function get_genre($id){
 }
 
 /**
+ * ＜利用者＞都道府県IDでエリアを取得する関数
+ *
+ * @param string $id 都道府県ID
+ * @return array 取得したエリア情報の配列
+ */
+
+function get_area($id){
+
+    $list = [];
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT name FROM area WHERE pre_id = '".$id."';";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+    while($row = mysqli_fetch_assoc($result)){
+        $list[] = $row;
+    }
+
+    return $list;
+
+}
+
+/**
  * ＜利用者＞IDで店舗情報を取得する関数
  *
  * @param string $id 店舗ID
@@ -291,6 +317,7 @@ function get_shop_detail($id){
         'name' => $row['name'],
         'address' => $row['addres'],
         'tel' => $row['tel'],
+        'genre_id' => $row['genre_id'],
         'genre' => get_genre($row['genre_id']),
         'access' => $row['access'],
         'shop_time' => $row['shop_time'],
