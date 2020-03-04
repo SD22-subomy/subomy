@@ -57,6 +57,11 @@ if(isset($_POST['change'])){
     header('Location:design_change.php');
 }
 
+if(isset($_POST['logout'])){
+    session_destroy();
+    header('Location:login.php');
+}
+
 require '../shop_tpl/design.php';
 
 ?>

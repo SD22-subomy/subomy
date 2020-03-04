@@ -84,5 +84,10 @@ if(isset($_POST['designChange'])){
     header('Location:design_Register.php');
 }
 
+if(isset($_POST['logout'])){
+    session_destroy();
+    header('Location:login.php');
+}
+
 require '../shop_tpl/design_change.php';
 ?>

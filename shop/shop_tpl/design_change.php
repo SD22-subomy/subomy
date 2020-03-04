@@ -67,7 +67,7 @@
                             ?>
                         </div>
                         <form action="../func/design_change.php" method="POST">
-                            <input type="hidden" name="color_id" id="color_id" value="0">
+                            <input type="hidden" name="color_id" id="color_id" value="1">
                             <input type="hidden" name="design_id" id="design_id" value="0">
                             <input type="submit" name="designChange" value="変更">
                         </form>

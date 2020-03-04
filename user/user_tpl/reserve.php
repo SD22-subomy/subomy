@@ -84,8 +84,6 @@
             <li><button type="button" class="time" value="21:00">◎21:00</button></li>
             <li><button type="button" class="time" value="21:30">◎21:30</button></li>
             <li><button type="button" class="time" value="22:00">◎22:00</button></li>
-            <li><button type="button" class="time" value="22:30">◎22:30</button></li>
-            <li><button type="button" class="time" value="23:00">◎23:00</button></li>
           </ul>
 
           <p class="wh">コース</p>

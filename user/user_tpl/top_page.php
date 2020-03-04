@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>TOPページ</title>
 <link rel="stylesheet" href="./user_css/top_page.css">
-<link rel="stylesheet" href="./user_css/main.css">
+<!-- <link rel="stylesheet" href="./user_css/main.css"> -->
 </head>
 <body>
 <div id="wrapper">
