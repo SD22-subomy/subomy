@@ -29,17 +29,24 @@
                     </div>
                 </div>
                 <div id="right">
-                    <?php
-                        for($i=0;$i < $cnt;$i++){
-                    ?>
-                        <div class="price">
-                            <h3>名前</h3>
-                            <p>金額</p>
-                            <p>内容</p>
-                        </div>
-                    <?php
-                        }
-                    ?>
+                    <div class="price">
+                        <label>
+                            <input type="radio" name="month" value="0" checked>
+                            <h3>無料プラン</h3>
+                            <p>無料</p>
+                            <p>無料で使えるフレーム4種類のみ</p>
+                            <p class="red"><?=$msg1?></p>
+                        </label>
+                    </div>
+                    <div class="price">
+                        <label>
+                            <input type="radio" name="month" value="<?=$row['mon_id']?>">
+                            <h3><?=$row['name']?></h3>
+                            <p><?=$row['monthly']?></p>
+                            <p><?=$row['description']?></p>
+                            <p class="red"><?=$msg2?></p>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div id="footer">

@@ -54,7 +54,7 @@ $(function(){
             $("#main").css({
                 'background-image':'url(../../design/'+result+")",
                 'background-repeat': 'no-repeat',
-                'background-position': '100% 100%',
+                'background-position': '70% 100%',
                 'background-attachment': 'fixed',
                 'background-size':'75% auto',
             })

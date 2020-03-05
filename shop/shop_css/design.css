@@ -118,13 +118,13 @@ img{
 }
 /*--------------main---------------*/
 #scroll{
-    width: 746px;
+    width: 710px;
     height: 570px;
     overflow-y:scroll;
     position: relative;
 }
 #main{
-    width: 730px;
+    width: 700px;
     margin: auto;
 }
 #main header{
@@ -146,7 +146,7 @@ img{
 }
 
 #info li{
-    width: 175px;
+    width: 170px;
     text-align: center;
     padding: 5px;
     font-size: 14px;
