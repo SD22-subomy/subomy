@@ -1,0 +1,15 @@
+#wrapper {
+ margin: auto;
+ position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+ /* font-size: 36px; */
+}
+
+input {
+ margin: 0.5rem;
+}
