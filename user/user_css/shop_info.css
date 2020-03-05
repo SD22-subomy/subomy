@@ -14,6 +14,7 @@ a{
 header{
   padding: 10px 10px 11.5px 10px;
   background-color: #f0f0f0;
+  height: 115px;
 }
 .sign{
   position: relative;
@@ -25,24 +26,24 @@ header{
 }
 .sign a{
   background-color: #8aff6e;
-  padding: 5px 30px;
+  padding: 10px 30px;
   margin-left: 30px;
 }
 .sign button{
+  height: 44.3px;
   color: green;
   background-color: #fff;
   border: solid 1px green;
-  padding: 5px;
+  padding: 10px 30px;
   margin-left: 5px;
-  margin-right: 10px;
   cursor: pointer;
   position: relative;
-  top: -5px;
+  top: -10px;
   font-weight: bold;
 }
 header form{
-  height: 60px;
-  border: solid 1px red;
+  position: relative;
+  top: -20px;
 }
 header .input1{
 	height: 30px;
@@ -56,7 +57,7 @@ header select{
   height: 33px;
   width: 170px;
 }
-header button{
+.kensaku{
   height: 33px;
   width: 150px;
   text-decoration: none;
@@ -65,7 +66,7 @@ header button{
   position: relative;
   top: 3px;
 }
-header button img{
+.kensaku img{
   position: relative;
   top: 5px;
   padding-left: 5px;
