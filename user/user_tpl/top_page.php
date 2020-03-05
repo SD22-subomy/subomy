@@ -23,7 +23,8 @@
             </ul>
             <?php }?>
         </header>
-        
+
+
       <div id="main">
         <p><img src="image/top3.png" width="730"></p>
         <p class="clear"></p>
