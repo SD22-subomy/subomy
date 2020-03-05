@@ -22,3 +22,18 @@ header{
 	border-bottom: solid 1px #c4c2c2
 
 }
+
+h2{
+	margin: 20px;
+	font-size: 1.0em;
+}
+
+ul{
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+li{
+	font-size: 1.1em;
+	margin-bottom: 5px;
+}

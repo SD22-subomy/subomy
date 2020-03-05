@@ -237,13 +237,15 @@ Monthly 2.2.2 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 					+ attr("title", eventTitle)
 					// BG and FG colors must match for left box shadow to create seamless link between dates
 					+ (eventColor ? attr("style", "background:" + eventColor + ";color:" + eventColor) : ""),
-				markupListEvent = "<a"
-					+ attr("href", eventURL)
+				markupListEvent = "<p"
+					// + attr("href", eventURL)
 					+ attr("class", "listed-event" + customClass)
 					+ attr("data-eventid", eventId)
 					+ (eventColor ? attr("style", "background:" + eventColor) : "")
 					+ attr("title", eventTitle)
-					+ ">" + eventTitle + " " + timeHtml + "</a>";
+					+ ">" + eventTitle + " " + timeHtml + "</p>"
+					+ "<p>" + "  店舗：" + _getEventDetail(event, "shop_name") + "　　人数："+_getEventDetail(event, "many")+"名"
+					"</p>";
 			for(var index = startDayNumber; index <= endDayNumber; index++) {
 				var doShowTitle = index === showEventTitleOnDay;
 				// Add to calendar view
