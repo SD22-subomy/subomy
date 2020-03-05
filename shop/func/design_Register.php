@@ -18,5 +18,10 @@ $what = [$color,$design];
 $sql = shopDesign('shop_design',$col,$what,$id);
 update($cn,$sql);
 
+if(isset($_POST['logout'])){
+    session_destroy();
+    header('Location:login.php');
+}
+
 require '../shop_tpl/design_Register.php';
 ?>

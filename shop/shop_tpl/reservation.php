@@ -60,6 +60,9 @@
                         <?= $html?>
                     </div>
                     <?= $msg?>
+                    <div id="syousai">
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <div id="footer">

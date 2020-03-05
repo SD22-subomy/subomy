@@ -11,8 +11,12 @@
   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <script src="../bootstrap/jquery-3.4.1.min.js"></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./../css/common.css">
+  <link rel="stylesheet" href="./../css/shop.css">
 </head>
 <body>
+
+<div id="wrapper">
 
 <h1>店舗一覧</h1>
 
@@ -32,13 +36,13 @@
             <tr>
             <td scope="row"><?php echo $value['shop_id']; ?></td>
             <td><?php echo $value['name']; ?></td>
-            <td><?php echo $value['address']; ?></td>
+            <td><?php echo $value['addres']; ?></td>
             <td><?php echo $value['tel']; ?></td>
             <td><?php echo $value['mail']; ?></td>
             <td><?php echo $value['login_id']; ?></td>
             <td><?php echo $value['pass']; ?></td>
             <td><?php echo $value['monthly']; ?></td>
-            <td><a type="button" class="btn btn-link btn-sm" href="?del=<?php echo $value['shop_id']; ?>">削除</a></td>
+            <td><a type="button" class="btn btn-sm" href="?del=<?php echo $value['shop_id']; ?>">削除</a></td>
             </tr>
           </tbody>
 
@@ -53,5 +57,6 @@
 
 <div><a href="./manage.php">メニュー画面へ戻る</a></div>
 
+</div><!-- wrapper end -->
 </body>
 </html>
