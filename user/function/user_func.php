@@ -445,6 +445,7 @@ function reserve($user_id,$shop_id,$date,$time,$num,$course){
 }
 
 
+
 /**
  * ＜利用者＞会員IDで予約情報を取得する関数
  *
@@ -464,10 +465,13 @@ function get_reserve_info($id){
     mysqli_close($cn);
 
     while($row = mysqli_fetch_assoc($result)){
+        $shop = get_shop_info($row['shop_id']);
         $info = [
             'id' => $row['reser_id'],
+            'shop_name' => $shop['name'],
             'date' => $row['reser_date'],
-            'time' => $row['reser_time']
+            'time' => $row['reser_time'],
+            'many' => $row['reser_many']
         ];
         $list[] = $info;
     }
@@ -475,4 +479,27 @@ function get_reserve_info($id){
     return $list;
 }
 
+/**
+ * ＜利用者＞会員IDで会員情報を取得する関数
+ *
+ * @param string $id 会員ID
+ * @return array 取得した会員情報の連想配列
+ */
+
+function get_user_info($id){
+
+    /*--------------データベース処理-------------------------*/
+    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
+    mysqli_set_charset($cn,'utf8');
+    $sql = "SELECT * FROM user WHERE user_id = '".$id."';";
+    $result = mysqli_query($cn,$sql);
+    mysqli_close($cn);
+
+    $row = mysqli_fetch_assoc($result);
+    $info = [
+        'name' => $row['name']
+    ];
+
+    return $info;
+}
 ?>
