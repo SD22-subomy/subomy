@@ -314,7 +314,7 @@ function get_shop_detail($id){
     mysqli_set_charset($cn,'utf8');
     $sql = "SELECT name,addres,tel,genre_id,access,shop_time,budget,holiday,url,title,info FROM (shop INNER JOIN shop_pos ON shop.shop_id = shop_pos.shop_id) INNER JOIN shop_info ON shop.shop_id = shop_info.shop_id WHERE shop.shop_id = '".$id."';";
     $result = mysqli_query($cn,$sql);
-    $sql= "SELECT img FROM course WHERE shop_id ='".$id."';";
+    $sql= "SELECT img FROM course_img WHERE shop_id ='".$id."';";
     $img = mysqli_query($cn,$sql);
     mysqli_close($cn);
 
