@@ -37,7 +37,7 @@
         <p><?php echo $shop_info['genre']; ?></p>  <!-- ジャンル -->
         <p><?php echo "阪急梅田"; ?></p>  <!-- 最寄り駅 -->
 
-        <form action="" method="GET">
+        <form id="target" action="" method="GET">
 
           <?php if($err != 0){?>
           <p class="err">未入力の項目があります</p>
@@ -88,7 +88,8 @@
 
           <p class="wh">コース</p>
           <section>
-            <p><?php echo "指定なし（席のみ予約）"; ?></p>
+          <div id="select_course"></div>
+<!--             <p><?php echo "指定なし（席のみ予約）"; ?></p> -->
             <p class="change"><a href="#modal1" class="modal1">変更</a><p>
           </section>
 
@@ -239,6 +240,23 @@
             document.getElementById('hidden_date').innerHTML = '<input type="hidden" name="date" value="'+ $(this).val() + '">'
             pre = $(this).val();
         })
+
+        document.getElementById('select_course').innerHTML ='<p>指定なし（席のみ予約）</p>';
+
+
+        $('input[type="radio"]').click(function(){
+
+          var c_id = $(this).val();
+
+          if(c_id == 0){
+            document.getElementById('select_course').innerHTML ='<p>指定なし（席のみ予約）</p>';
+          }else{
+            document.getElementById('select_course').innerHTML = '<p>韓国バルコース</p>' ;
+          }
+
+        });
+        
+
     })
 
 </script>
