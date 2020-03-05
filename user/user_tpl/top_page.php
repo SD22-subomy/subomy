@@ -14,7 +14,7 @@
         <?php if($login_flg){?>
             <ul class="sign">
                 <li><a href="./controller/my_page.php">マイページ</a></li>
-                <li><input type="submit" name="logout" value="ログアウト"></li>
+                <li><button type="submit" name="logout">ログアウト</button></li>
             </ul>
             <?php }else{?>
             <ul class="sign">
@@ -23,7 +23,8 @@
             </ul>
             <?php }?>
         </header>
-        
+
+
       <div id="main">
         <p><img src="image/top3.png" width="730"></p>
         <p class="clear"></p>

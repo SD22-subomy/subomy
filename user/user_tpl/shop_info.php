@@ -42,7 +42,7 @@
         <?php if($login_flg){?>
             <ul class="sign">
                 <li><a href="./my_page.php">マイページ</a></li>
-                <li><input type="submit" name="logout" value="ログアウト"></li>
+                <li><button type="submit" name="logout">ログアウト</button></li>
             </ul>
             <?php }else{?>
             <ul class="sign">
@@ -149,7 +149,7 @@
 
         <div class="left">
           <div id="img">
-            <img src="../../shop_img/<?php echo $_GET['shop_id']?>/<?php echo 'course_img';?>" width="500" alt="course_img">
+            <img src="../../shop_img/<?php echo $shop_info['img'];?>" width="500" alt="course_img">
             </div>
           <div class="introduction">
             <p class="cTop">お店の紹介文　お店のアピールポイント</p>
