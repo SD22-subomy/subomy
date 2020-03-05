@@ -280,7 +280,7 @@ function get_shop_info($id){
     /*--------------データベース処理-------------------------*/
     $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
     mysqli_set_charset($cn,'utf8');
-    $sql = "SELECT name,genre_id FROM shop INNER JOIN shop_pos ON shop.shop_id = shop_pos.shop_id WHERE shop.shop_id = '".$id."';";
+    $sql = "SELECT name,genre_id,budget FROM shop INNER JOIN shop_pos ON shop.shop_id = shop_pos.shop_id WHERE shop.shop_id = '".$id."';";
     $result = mysqli_query($cn,$sql);
     mysqli_close($cn);
 
@@ -288,7 +288,8 @@ function get_shop_info($id){
     $info = [
         'id' => $id,
         'name' => $row['name'],
-        'genre' => get_genre($row['genre_id'])
+        'genre' => get_genre($row['genre_id']),
+        'budget' => $row['budget']
     ];
     
     return $info;

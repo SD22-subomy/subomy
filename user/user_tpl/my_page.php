@@ -63,6 +63,7 @@ document.addEventListener("click", function(e) {
 <!--             <li><a href="./schedule.php">予約確認</a></li> -->
             <li><a href="#">会員情報設定</a></li>
         </ul>
+        
         <div class="monthly" id="mycalendar"></div>
         </form>
     </div>

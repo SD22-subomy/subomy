@@ -137,7 +137,7 @@
                             <span class="rRight">
                                 <?php echo $v['name'];?>
                                 <p><img src="../image/star_yellow.png" width="30"><img src="../image/star_yellow.png" width="30"><img src="../image/star_yellow.png" width="30"><img src="../image/star.png" width="30"><img src="../image/star.png" width="30"></p>
-                                <p><?php echo '金額'?></p>
+                                <p><?php echo $v['budget'];?></p>
                                 <p><span>ジャンル：</span><?php echo $v['genre'];?>
                             </span>
                         </li>
