@@ -110,24 +110,54 @@
     <div id="osusume">
         <p class="square">おすすめ</p>
         <div id="conO">
-        <?php
-            for($i=0;$i<4;$i++){
-        ?>
-                <div class="section">
-                    <section>
-                        <span calss="left">
-                            <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
-                        </span>
-                        <span class="right">
-                            <p><?php echo "PIZZA SALVATORE CUOMO & GRILL"; ?></p>
-                            <p><img src="../image/sun.png" width="15"><?php echo "￥1,000 ~ ￥1,999"; ?><br><img src="../image/moon.png" width="15"><?php echo "￥3,000 ~ ￥3,999"; ?></p>
-                            <p><span>ジャンル：</span><?php echo "イタリアン"; ?></p>
-                        </span>
-                    </section>
-                </div>
-        <?php
-            }
-        ?>
+        <div class="section">
+                <section>
+                    <span calss="left">
+                        <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
+                    </span>
+                    <span class="right">
+                        <p><?php echo "和風とんこつ かしや"; ?></p>
+                        <p><?php echo "ランチ ~ ￥1,000"; ?><br><?php echo "ディナー ~ ￥1,000"; ?></p>
+                        <p><span>ジャンル：</span><?php echo "和風"; ?></p>
+                    </span>
+                </section>
+            </div>
+            <div class="section">
+                <section>
+                    <span calss="left">
+                        <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
+                    </span>
+                    <span class="right">
+                        <p><?php echo "PIZZA SALVATORE CUOMO & GRILL"; ?></p>
+                        <p><?php echo "ランチ ~ ￥1,999"; ?><br><?php echo "ディナー ~ ￥3,999"; ?></p>
+                        <p><span>ジャンル：</span><?php echo "イタリアン"; ?></p>
+                    </span>
+                </section>
+            </div>
+            <div class="section">
+                <section>
+                    <span calss="left">
+                        <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
+                    </span>
+                    <span class="right">
+                        <p><?php echo "洋風食堂 枝"; ?></p>
+                        <p><?php echo "ランチ ~ ￥1,999"; ?><br><?php echo "ディナー ~ ￥3,999"; ?></p>
+                        <p><span>ジャンル：</span><?php echo "和風"; ?></p>
+                    </span>
+                </section>
+            </div>
+            <div class="section">
+                <section>
+                    <span calss="left">
+                        <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
+                    </span>
+                    <span class="right">
+                        <p><?php echo "和風味処 鬼太郎"; ?></p>
+                        <p><?php echo "ランチ ~ ￥2,000"; ?><br><?php echo "ディナー ~ ￥4,000"; ?></p>
+                        <p><span>ジャンル：</span><?php echo "和風"; ?></p>
+                    </span>
+                </section>
+            </div>
         </div>
     </div>  <!-- osusume -->
 

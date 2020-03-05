@@ -82,10 +82,13 @@ img{
     width: 95%;
     /* border: solid 1px red; */
 }
+#sLift form{
+    text-align: center;
+}
 #designHeader{
     text-align: center;
     line-height: 40px;
-    border: solid 1px #90c455;
+    /* border: solid 1px #90c455; */
 }
 /*-----------------design---------------*/
 #design{
@@ -171,12 +174,14 @@ label input[type="radio"]{
 }
 
 #info li{
+    border: solid 1px #8AFF6E;
     width: 170px;
     text-align: center;
     padding: 5px;
     font-size: 14px;
     cursor: pointer;
 }
+
 /*-------intro--------*/
 .introduction{
     width: 500px;
