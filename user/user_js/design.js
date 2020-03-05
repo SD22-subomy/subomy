@@ -25,7 +25,7 @@ $(function(){
             $("#main").css({
                 'background-image':'url(../../design/'+data['design']+")",
                 'background-repeat': 'no-repeat',
-                'background-position': '65% 80%',
+                'background-position': '65% 100%',
                 'background-attachment': 'fixed',
                 'background-size':'75% auto'
             })
@@ -40,16 +40,38 @@ $(function(){
         $('#main').css({
             "background-color":data['code2']
         })
-        $("#main > ul").css({
+        $(".navi").css({
             "background-color":data['code2']
         })
-        $("#main > ul > li").css({
+        $(".navi > li").css({
             "border":"solid 1px"+ data['code1']
         })
-        $("#main > ul >li:first-child").css({
+        $(".navi >li:first-child").css({
             "background-color":data['code1'],
             "color":"#fff",
             "font-size":"15px"
+        })
+        $(".navi li").hover(function(){
+            $(this).css({
+                "background-color":data['code1'],
+                "color":"#fff",
+                "font-size":"15px",
+                "font-weight":"bolder"
+            })
+        },
+        function(){
+            $(this).css({
+                "background-color":data['code2'],
+                "color":"#000",
+                "font-size":"15px",
+                "font-weight":"400"
+            })
+            $("#main > ul >li:first-child").css({
+                "background-color":data['code1'],
+                "color":"#fff",
+                "font-size":"15px",
+                "font-weight":"bolder"
+            })
         })
         $(".what").css({
             "border-left":"solid 5px"+data['code1']

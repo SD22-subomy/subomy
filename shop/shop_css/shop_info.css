@@ -194,21 +194,12 @@ body {overflow-y:hidden;}
     border-bottom: solid 1px #069c06a9;
     border-right: solid 1px #069c06a9;
 }
-/* #introdu  tr:last-child td{
-    border-right-style:none; 
-    border-left-style:none;
-    border-style: none;
-    background-color: #fff;
-    padding: 20px;
-} */
 /*------------course_list-------------*/
 #course_list{
     padding: 50px;
     width: 1000px;
-    height: 600px;
     margin: auto;
     text-align: center;
-    overflow-y:scroll;
 }
 
 #course_list h3{
@@ -227,13 +218,13 @@ body {overflow-y:hidden;}
 }
 .top p:last-child{
     width: 575px;
-
+    line-height: 120px;
 }
 #course_list table{
     margin: auto;
     border-collapse: collapse;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 #course_list table th{
     width: 200px;
@@ -253,39 +244,3 @@ body {overflow-y:hidden;}
     border-right: solid 1px #069c06a9;
 }
 
-/*------------course-------------*/
-#course{
-    padding: 50px;
-    width: 1000px;
-    margin: auto;
-    text-align: center;
-}
-#course table{
-    margin: auto;
-    border-collapse: collapse;
-    text-align: center;
-}
-#course table th{
-    width: 200px;
-    background-color: #fff;
-    font-weight: 500;
-    padding: 10px;
-    border-right-style: none;
-    border-top: solid 1px #069c06a9;
-    border-bottom: solid 1px #069c06a9;
-    border-left: solid 1px #069c06a9;
-}
-#course table td{
-    background-color: #b0fdb062;
-    width: 500px;
-    border-top: solid 1px #069c06a9;
-    border-bottom: solid 1px #069c06a9;
-    border-right: solid 1px #069c06a9;
-}
-#course  tr:last-child td{
-    border-right-style:none; 
-    border-left-style:none;
-    border-style: none;
-    background-color: #fff;
-    padding: 20px;
-}

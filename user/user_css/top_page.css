@@ -33,6 +33,7 @@ header{
 }
 
 .sign button{
+  height: 44.5px;
   color: green;
   background-color: #fff;
   border: solid 1px green;

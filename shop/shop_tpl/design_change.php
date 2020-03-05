@@ -85,6 +85,58 @@
                                         <li>地図</li>
                                     </ul>
                                 </div>
+                                <div class="right">
+                                    <form>
+                                        <section class="calender">
+                                        <p>来店日
+                                            <input type="date" name="date" id="today">
+                                        </p>
+                                        </section>
+
+                                        <section>
+                                        <p>人数
+                                            <select name="num">
+                                            <option value="1"><?php echo "〇"; ?>１名</option>
+                                            <option value="2"><?php echo "〇"; ?>２名</option>
+                                            <option value="3"><?php echo "〇"; ?>３名</option>
+                                            <option value="4"><?php echo "〇"; ?>４名</option>
+                                            <option value="5"><?php echo "〇"; ?>５名</option>
+                                            <option value="6"><?php echo "〇"; ?>６名</option>
+                                            <option value="7"><?php echo "〇"; ?>７名</option>
+                                            <option value="8"><?php echo "〇"; ?>８名</option>
+                                            <option value="9"><?php echo "〇"; ?>９名</option>
+                                            <option value="10"><?php echo "〇"; ?>１０名</option>
+                                            <option value="11"><?php echo "〇"; ?>１１名</option>
+                                            <option value="12"><?php echo "〇"; ?>１２名</option>
+                                            <option value="13"><?php echo "〇"; ?>１３名</option>
+                                            <option value="14"><?php echo "〇"; ?>１４名</option>
+                                            <option value="15"><?php echo "〇"; ?>１５名</option>
+                                            </select>
+                                        </p>
+                                        </section>
+
+                                        <section>
+                                        <p>時間
+                                            <select name="time">
+                                            <option value="18:00"><?php echo "〇"; ?>18:00</option>
+                                            <option value="18:30"><?php echo "〇"; ?>18:30</option>
+                                            <option value="19:00"><?php echo "〇"; ?>19:00</option>
+                                            <option value="19:30"><?php echo "〇"; ?>19:30</option>
+                                            <option value="20:00"><?php echo "〇"; ?>20:00</option>
+                                            <option value="20:30"><?php echo "〇"; ?>20:30</option>
+                                            <option value="21:00"><?php echo "〇"; ?>21:00</option>
+                                            <option value="21:30"><?php echo "〇"; ?>21:30</option>
+                                            <option value="22:00"><?php echo "〇"; ?>22:00</option>
+                                            <option value="22:30"><?php echo "〇"; ?>22:30</option>
+                                            <option value="23:00"><?php echo "〇"; ?>23:00</option>
+                                            </select>
+                                        </p>
+                                        </section>
+
+                                        <button type="submit" name="reserve">予約する</button>
+                                    </form>
+                                </div>  <!-- right -->
+
                                 <div class="img">
                                     <img src="../../shop_img/<?=$course_img['shop_id']?>/<?=$course_img['img']?>" alt="store_image">
                                 </div>

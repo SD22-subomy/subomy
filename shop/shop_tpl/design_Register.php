@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div id="right">
-                    <p>
+                    <p class=center>
                         店舗デザインの変更を完了しました
                     </p>
                 </div>
