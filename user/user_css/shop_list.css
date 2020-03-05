@@ -32,6 +32,7 @@ header{
   margin-left: 30px;
 }
 .sign button{
+  height: 44.3px;
   color: green;
   background-color: #fff;
   border: solid 1px green;
@@ -42,6 +43,7 @@ header{
   top: -10px;
   font-weight: bold;
 }
+
 header button img{
   position: relative;
   top: 5px;

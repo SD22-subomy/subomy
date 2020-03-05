@@ -50,6 +50,7 @@
                 <li><a href="./login.php">ログイン</a></li>
             </ul>
             <?php }?>
+        <form>
             <input type="text" class="input1" name="" placeholder="エリア">
             <input type="text" class="input2" name="" placeholder="ジャンル・目的・店名">
             <select name="">
@@ -60,7 +61,8 @@
                 <option value="貸切">貸切</option>
                 <option value="おしゃれ">おしゃれ</option>
             </select>
-          <button type="submit">検索<img src="../image/search.png" width="20" alt="search"></button>
+          <button type="submit" class="kensaku">検索<img src="../image/search.png" width="20" alt="search"></button>
+        </form>
       </header>
 
     <form action="" method="get">
