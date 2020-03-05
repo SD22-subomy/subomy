@@ -88,7 +88,7 @@
 
         </div>  <!-- info -->
 
-        <ul>
+        <ul class="navi">
           <li>TOP</li>
           <li>写真</li>
           <li>メニュー</li>

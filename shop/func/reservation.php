@@ -96,20 +96,10 @@ $course = [];
 $cCnt = 0;
 $html = "";
 while ($row = mysqli_fetch_assoc($result)) {
-    $cn = mysqli_connect(HOST,DB_USER,DB_PASS,DB_NAME);
-    mysqli_set_charset($cn,'utf8');
-
-    $sql = sql_info("course","course_id",$row['reser_course']);
-    // var_dump($sql);
-    $result = shop_select($cn,$sql);
-    while($cou = mysqli_fetch_assoc($result)){
-        $course[] = $cou;
-        $cCnt++;
-    }
     $tbl[] = $row;
     $cnt++;
 }
-
+// var_dump($tbl);
 if(count($tbl) == 0){
     $msg = "<p class='msg'>予約者なし</p>";
 }

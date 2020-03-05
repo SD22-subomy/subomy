@@ -113,7 +113,7 @@
         <div class="section">
                 <section>
                     <span calss="left">
-                        <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
+                        <p><img src="image/<?php echo "j_1.jpg"; ?>" width="150"></p>
                     </span>
                     <span class="right">
                         <p><?php echo "和風とんこつ かしや"; ?></p>
@@ -137,7 +137,7 @@
             <div class="section">
                 <section>
                     <span calss="left">
-                        <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
+                        <p><img src="image/<?php echo "j_8.jpg"; ?>" width="150"></p>
                     </span>
                     <span class="right">
                         <p><?php echo "洋風食堂 枝"; ?></p>
@@ -149,7 +149,7 @@
             <div class="section">
                 <section>
                     <span calss="left">
-                        <p><img src="image/<?php echo "j_10.jpg"; ?>" width="150"></p>
+                        <p><img src="image/<?php echo "j_3.jpg"; ?>" width="150"></p>
                     </span>
                     <span class="right">
                         <p><?php echo "和風味処 鬼太郎"; ?></p>
