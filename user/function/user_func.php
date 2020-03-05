@@ -282,14 +282,18 @@ function get_shop_info($id){
     mysqli_set_charset($cn,'utf8');
     $sql = "SELECT name,genre_id,budget FROM shop INNER JOIN shop_pos ON shop.shop_id = shop_pos.shop_id WHERE shop.shop_id = '".$id."';";
     $result = mysqli_query($cn,$sql);
+    $sql = "SELECT img FROM shop_img WHERE shop_id = '".$id."';";
+    $img = mysqli_query($cn,$sql);
     mysqli_close($cn);
 
     $row = mysqli_fetch_assoc($result);
+    $row2 = mysqli_fetch_assoc($img);
     $info = [
         'id' => $id,
         'name' => $row['name'],
         'genre' => get_genre($row['genre_id']),
-        'budget' => $row['budget']
+        'budget' => $row['budget'],
+        'img' => $id."/".$row2['img']
     ];
     
     return $info;
@@ -310,9 +314,12 @@ function get_shop_detail($id){
     mysqli_set_charset($cn,'utf8');
     $sql = "SELECT name,addres,tel,genre_id,access,shop_time,budget,holiday,url,title,info FROM (shop INNER JOIN shop_pos ON shop.shop_id = shop_pos.shop_id) INNER JOIN shop_info ON shop.shop_id = shop_info.shop_id WHERE shop.shop_id = '".$id."';";
     $result = mysqli_query($cn,$sql);
+    $sql= "SELECT img FROM course WHERE shop_id ='".$id."';";
+    $img = mysqli_query($cn,$sql);
     mysqli_close($cn);
 
     $row = mysqli_fetch_assoc($result);
+    $row2 = mysqli_fetch_assoc($img);
     $info = [
         'id' => $id,
         'name' => $row['name'],
@@ -326,7 +333,8 @@ function get_shop_detail($id){
         'holiday' => $row['holiday'],
         'url' => $row['url'],
         'title' => $row['title'],
-        'info' => $row['info']
+        'info' => $row['info'],
+        'img' => $id."/".$row2['img']
     ];
     
     return $info;

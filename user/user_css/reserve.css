@@ -311,6 +311,9 @@ p.err {
 .check table tr{
   height: 30px;
 }
+.check table th{
+  width: 170px;
+}
 .check table tr th{
   background-color: #e0ffe6;
   padding: 5px;
