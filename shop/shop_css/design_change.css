@@ -74,7 +74,7 @@ img{
     line-height: 30px;
 }
 #right{
-    width: 80%;
+    width: 1300px;
     display: flex;
     justify-content: space-around;
 }
@@ -109,7 +109,6 @@ img{
 
 #sLift{
     width: 400px;
-    /* border: solid 1px red; */
 }
 #sLift form{
     text-align: center;

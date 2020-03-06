@@ -141,6 +141,11 @@ header button img{
   margin: 9px;
   position: relative;
 }
+.janru li:hover,
+.scene li:hover,
+.com li:hover{
+  font-size: 1.2em;
+}
 .janru img{
   background-color: white;
   opacity: 0.5;
