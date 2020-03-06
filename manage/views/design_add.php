@@ -22,7 +22,7 @@
 <div id="wrapper">
   <h1>デザインの追加</h1>
   <form action="" method="post">
-    <input type="text" name="design" value="">
+    <input type="file" name="design" value="">
     <input type="submit" name="design_btn" value="追加">
   </form>
   <div><a href="./design.php">キャンセル</a></div>
